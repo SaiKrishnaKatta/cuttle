@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RegisterService } from '../../services/auth/register.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private route: Router,
-    private registerService: RegisterService,
+    private authService: AuthService,
     private _fb: FormBuilder
   ) {}
 
@@ -34,9 +34,9 @@ export class RegisterComponent implements OnInit {
 
   onRegister() {
     if (this.registerForm.valid) {
-      this.registerService.onSignUp(this.registerForm.value).subscribe((res) => {
+      this.authService.onSignUp(this.registerForm.value).subscribe((res) => {
         console.log(res);
-        // this.route.navigate(['/dashboard']);
+        this.route.navigate(['/dashboard']);
       })
     }
   }
