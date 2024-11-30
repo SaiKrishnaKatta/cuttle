@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from '../../services/auth/login.service';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private route: Router,
     private _fb: FormBuilder,
-    private loginService: LoginService
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       const payload = this.loginForm.value;
       delete payload['areaCode'];
-      this.loginService.onLogin(payload).subscribe((res) => {
+      this.authService.onLogin(payload).subscribe((res) => {
         this.route.navigate(['/dashboard']);
       })
     }

@@ -1,20 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forgot-password',
-  standalone: true,
-  imports: [],
   templateUrl: './forgot-password.component.html',
-  styleUrl: './forgot-password.component.scss'
+  styleUrl: './forgot-password.component.scss',
 })
-export class ForgotPasswordComponent {
+export class ForgotPasswordComponent implements OnInit {
+  form: FormGroup = new FormGroup({});
+
   constructor(
-    private route: Router
+    private route: Router, 
+    private _fb: FormBuilder
   ) {}
 
+  ngOnInit(): void {
+    this.initForm();
+  }
+
+  initForm() {
+    this.form = this._fb.group({
+      areaCode: '',
+      phone: '',
+      smsOtp: '',
+    });
+  }
+
   onSetNewPswd() {
-    this.route.navigate(['auth/set-new-login-pwd']);
+    if (this.form.valid) {
+      this.route.navigate(['auth/set-new-login-pwd'], {
+        state: { phone: this.form.value.phone, smsOtp: this.form.value.smsOtp },
+      });
+    }
   }
   onRegister() {
     this.route.navigate(['auth/register']);
