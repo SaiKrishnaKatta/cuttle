@@ -1,0 +1,138 @@
+<!-- <div class="d-lg-none d-md-none">
+    <div class="section-heading text-center">
+        <h6 class="text-white opacity-80">Trusted by teams at over 1,000 of the world's leading organizations</h6>
+    </div>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="assets/img/client_logos/dell.png" class="d-block" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="assets/img/client_logos/zendesk.png" class="d-block" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="assets/img/client_logos/rakuten.png" class="d-block" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="assets/img/client_logos/pacific.png" class="d-block" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="assets/img/client_logos/ncr.png" class="d-block" alt="...">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="assets/img/client_logos/lattice.png" class="d-block" alt="...">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row align-items-center">
+
+                    <div class="col">
+                        <img src="assets/img/client_logos/ted.png" class="d-block" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-none d-md-block d-lg-block">
+    <div class="container">
+        <div class="section-heading text-center">
+            <h6 class="text-white opacity-80">Trusted by teams at over 1,000 of the world's leading organizations</h6>
+        </div>
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img src="assets/img/client_logos/dell.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/zendesk.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/rakuten.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/pacific.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/ncr.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/lattice.png" class="d-block" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img src="assets/img/client_logos/dell.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/zendesk.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/rakuten.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/pacific.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/ncr.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/lattice.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/client_logos/ted.png" class="d-block" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="section-heading text-center">
+    <h6 class="text-white opacity-80">Trusted by teams at over 1,000 of the world's leading organizations</h6>
+</div>
+<carousel [isAnimated]="true" [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset"
+    [showIndicators]="false">
+    <slide *ngFor="let slide of slides; let index=index">
+        <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+        <!-- <div class="carousel-caption">
+      <h4>Slide {{index}}</h4>
+    </div> -->
+    </slide>
+</carousel>

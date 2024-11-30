@@ -1,0 +1,13 @@
+.button_resp a{
+    text-decoration: none;
+}
+.feature-section{
+    padding: 90px 0px 90px 0px;
+}
+
+@media(max-width: 768px){
+
+    .feature-section{
+        padding: 90px 0px 30px 0px;
+    }
+  }

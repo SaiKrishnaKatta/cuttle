@@ -1,0 +1,390 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Overpass", sans-serif;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  //   navigation 
+  .top-bar {
+    padding: 10px 0 0
+  }
+
+  nav.navbar.navbar-expand-lg {
+    margin: 14px 0px 0px;
+  }
+
+  .top-bar svg {
+    width: 30px;
+    height: 14px;
+  }
+
+  .top-bar a {
+    color: #96A1C2 !important;
+    font-size: 14px;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: #BE7B2E !important
+  }
+
+  .nav-link {
+    color: #C5CDE9 !important;
+    cursor: pointer !important;
+  }
+
+  .btn-dark {
+    background-color: #232F52;
+    color: #BE7B2E;
+  }
+
+  .btn-light {
+    background-color: #BE7B2E;
+    color: #fff;
+  }
+
+  .btn-dark:hover {
+    background-color: #BE7B2E;
+    color: #fff;
+  }
+
+  .btn-light:hover {
+    background-color: #232F52;
+    color: #BE7B2E;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0 14px;
+  }
+
+  header {
+    position: sticky;
+    top: 0px;
+    background-color: #19233F;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .container {
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .logo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-btn {
+    display: flex;
+  }
+
+
+  .log-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .logo {
+  //   color: var(--clr-light);
+  //   font-size: 1.1rem;
+  //   font-weight: 600;
+  //   letter-spacing: 2px;
+  //   text-transform: uppercase;
+  //   line-height: 3rem;
+  // }
+
+  // .logo span {
+  //   font-weight: 300;
+  // }
+
+  .btn {
+    display: inline-block;
+    padding: .6rem 1.3rem;
+    font-size: .8rem;
+    border: none;
+    border-radius: 0.3rem;
+    line-height: 1;
+    margin: 0 14px;
+    transition: .3s;
+    // text-transform: uppercase;
+  }
+
+  .btn.transparent {
+    background-color: #232F52;
+    color: #BE7B2E;
+  }
+
+  .btn.solid {
+    background-color: #BE7B2E;
+    color: #fff;
+  }
+
+  .btn.transparent:hover {
+    background-color: #BE7B2E;
+    color: #fff;
+  }
+
+  .btn.solid:hover {
+    background-color: #232F52;
+    color: #BE7B2E;
+  }
+
+  .nav-links>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link>a {
+    line-height: 3rem;
+    color: #DEE5F7;
+    padding: 0 .8rem;
+    letter-spacing: 1px;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+  }
+
+  .nav-link>a>i {
+    margin-left: .2rem;
+  }
+
+  @keyframes animation {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @media (max-width: 920px) {
+    .hamburger-menu-container {
+      display: flex;
+    }
+
+    .nav-btn {
+      position: fixed;
+      height: calc(100vh - 3rem);
+      top: 3rem;
+      left: 0;
+      width: 100%;
+      background-color: var(--clr-btn);
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      overflow-x: hidden;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: .65s;
+    }
+
+    .nav-links {
+      flex: initial;
+      width: 100%;
+    }
+
+    .nav-links>ul {
+      flex-direction: column;
+    }
+
+    .nav-link {
+      width: 100%;
+      transform: translateY(15px);
+    }
+
+    .nav-link>a {
+      line-height: 1;
+      padding: 1.6rem 2rem;
+    }
+
+    .nav-link:hover>a {
+      transform: scale(1);
+      background-color: var(--clr-nav-hover);
+    }
+
+    .nav-link>a>i {
+      font-size: 1.1rem;
+      transform: rotate(-90deg);
+      transition: .7s;
+    }
+
+  }
+
+  //   navigation ends here
+
+  // home page start here
+
+  /*-----------------------------------------
+20. Cases
+-------------------------------------------*/
+  .section_bgc_l {
+    background-color: #1C2746;
+  }
+
+  .case-block {
+    position: relative;
+    background: #19233F;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 15px 0px;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+    box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+  }
+
+  .case-block:hover {
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.30);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.30);
+    box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.30);
+  }
+
+  .case-block img {
+    width: 100%;
+  }
+
+  .case-block-inner {
+    padding: 25px 25px 20px 30px;
+  }
+
+  @media (max-width: 767px) {
+    .case-block-inner {
+      padding: 25px;
+    }
+  }
+
+  .case-block h4 {
+    color: #ECF0FC;
+    font-size: 30px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+
+  .case-block p {
+    color: #96A1C2;
+    font-size: 15px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .case-block-inner a {
+    font-size: 12px;
+    font-weight: 500;
+    // color: #fff;
+  }
+
+
+
+
+
+
+
+  // why cuttle
+  .why-cuttle img {
+    transform: translate(18%, -16%);
+  }
+
+  /*--------------
+	Styles 3
+----------------*/
+  .feature-box {
+    position: relative;
+    background: #1C2746;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+    -webkit-box-shadow: 2px 2px 20px 0px rgba(50, 50, 50, 0.21);
+    -moz-box-shadow: 2px 2px 20px 0px rgba(50, 50, 50, 0.21);
+    box-shadow: 2px 2px 20px 0px rgba(50, 50, 50, 0.21);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+  }
+
+  .feature-box:hover {
+    -webkit-box-shadow: 4px 4px 22px 0px rgba(50, 50, 50, 0.29);
+    -moz-box-shadow: 4px 4px 22px 0px rgba(50, 50, 50, 0.29);
+    box-shadow: 4px 4px 22px 0px rgba(50, 50, 50, 0.29);
+  }
+
+  .feature-box i {
+    color: #BE7B2E;
+    font-size: 60px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+
+  .feature-box:hover i {
+    color: #111;
+  }
+
+  .feature-box h4 {
+    color: #DEE5F7;
+    font-size: 14px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 500;
+    padding-top: 10px;
+    line-height: 170%;
+    margin: 15px 0px;
+  }
+
+  .feature-box p {
+    color: #999;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 170%;
+  }
+
+  .hwToStart {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%);
+    background: #232F52;
+    width: 50px;
+    height: 50px;
+    padding: 6px;
+    padding-top: 10px;
+    border-radius: 50%;
+  }
+
+
+  .fund-security img {
+    transform: translate(18%, -16%);
+  }
+  .bg-img-world {
+    background-image: url("../assets/img/world.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+
+  }

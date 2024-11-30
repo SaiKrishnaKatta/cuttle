@@ -1,0 +1,190 @@
+
+/*-----------------------------------------
+17. Footer
+-------------------------------------------*/
+footer{
+	background: #1C2746;
+	padding: 60px 0px 20px 0px;
+}
+
+footer p{
+	font-size: 14px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+	color: #D9DBE1;
+	line-height: 1.7;
+}
+
+footer h3{
+	font-size: 24px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 500;
+	color: #fff;
+	line-height: 1;
+}
+
+.footer-list svg{
+    width: 30px;
+    height: 18px;
+}
+
+
+.footer-social-icons ul li{
+	display: inline-block;
+	background: #333D58;
+	border-radius: 50%;
+	color: #fff;
+	margin-right: 10px;		
+	margin-bottom: 5px;
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s;	
+}
+
+.footer-social-icons ul li a{
+	display: block;
+	font-size: 15px;
+	color: #fff;
+	width: 35px;
+	height: 35px;	
+	padding: 11px;
+	padding-top: 5px;
+}
+
+.footer-social-icons ul li:hover{
+	background: #BE7B2E;
+}
+
+
+
+.footer-list{
+	margin-top: 20px;
+}
+
+.footer-list li{
+	list-style-type: none;
+	color: #aaa;
+	padding: 6px 0px;
+}
+
+
+.footer-list li a{
+	font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+	color: #D9DBE1;
+}
+
+.footer-list li a:hover{
+	color: #fff;
+}
+.footer-list li a:hover:before{
+	color: #fff;
+}
+
+.footer-menu{
+    display: flex;
+}
+
+.footer-menu li{
+    position: relative;
+}
+
+.footer-menu li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform:translateY(-40%);
+    width: 1px;
+    height: 40%;
+    background-color: #D9DBE1;
+}
+
+
+
+
+.footer-recent-post{
+	margin: 15px 0px;
+}
+
+.footer-recent-post-thumb{
+	float: left;
+	width: 25%;
+}
+
+.footer-recent-post-content{
+	float: left;
+	width: 75%;	
+	padding-left: 10px;
+}
+
+.footer-recent-post-content a{
+	display: block;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: 5px;
+}
+
+.footer-recent-post-content span{
+	color: #ccc;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+
+
+.footer-tags a{
+	display: inline-block;
+	font-size: 11px;
+	padding: 10px 15px;
+	color: #fff;
+	font-weight: 400;
+	margin-top: 4px;
+	border-radius: 5px;
+}
+
+.footer-tags a:hover{
+	background: #BE7B2E;
+}
+
+
+
+.footer-bar{
+	border-top: 1px solid rgba(255, 255, 255, .1);
+	padding-top: 20px;
+	margin-top: 30px;
+}
+
+
+.footer-bar span{
+	color: #BE7B2E;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.footer-bar p{
+	color: #fff;
+	font-size: 15px;
+    font-family: "Overpass", sans-serif;
+	font-weight: 400;
+}
+
+
+@media (max-width: 991.98px) { 
+
+    .footer-menu li:not(:last-child)::after{
+        display: none;
+    }
+    .footer-menu a{
+        padding-left: 0px;
+    }
+ }
+
+ @media (max-width: 767.98px) { 
+    .footer-menu{
+        flex-direction: column;
+    }
+  
+ }

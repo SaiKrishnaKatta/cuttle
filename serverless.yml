@@ -1,0 +1,26 @@
+service: cuttle
+
+provider: 
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  app:
+    handler: dist/index.handler
+    events:
+      -http:
+        path: /
+        method: get
+      -http:
+        path: '{proxy+}'
+        method: any
+
+plugins:
+  -serverless-apigw-binary
+
+package:
+  exclude:
+    - node_modules/**
+    - src/**
+    - public/**
+    - server.ts

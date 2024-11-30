@@ -1,0 +1,33 @@
+.user-dashboard{
+    padding: 60px 0px 90px 0px;
+    background-color: #19233F;
+    .amount{
+        font-size: 26px;
+        font-family: "Overpass", sans-serif;
+        font-weight: 700;
+    }
+    .currency{
+        font-size: 12px;
+    }
+    .custom-card{
+        background: linear-gradient(to bottom, #242E48, #19233F);
+         color: #fff;
+         border: 2px solid #393C49;
+    }
+}
+
+li{
+    position: relative;
+}
+
+
+li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateX(24px) translateY(-8px);
+    width: 1px;
+    height: 40%;
+    background-color: #D9DBE1;
+}

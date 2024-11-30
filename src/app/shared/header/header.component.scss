@@ -1,0 +1,68 @@
+.bg-body-tertiary {
+    background-color: #19233F !important;
+  }
+  .btn-dark-cuttle {
+    background-color: #232F52;
+    color: #BE7B2E;
+  }
+
+  .btn-light-cuttle {
+    background-color: #BE7B2E;
+    color: #fff;
+  }
+
+  .btn-dark-cuttle:hover {
+    background-color: #BE7B2E;
+    color: #fff;
+  }
+
+  .btn-light-cuttle:hover {
+    background-color: #232F52;
+    color: #BE7B2E;
+  }
+
+  .navbar-toggler-icon{
+    background-image: url('../../../assets/img/icons/toggler_icon.png');
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0 14px;
+  }
+  nav.navbar.navbar-expand-lg{
+    margin: 8px 0px 8px;
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+
+
+// user-dashboard header
+.nav-item.dropdown:hover .dropdown-menu{
+  display: block;
+  margin-top: 0;
+}
+.notificaiton-dot{
+  height:12px;
+  width: 12px;
+  background-color: #E03137;
+  border-radius: 50%;
+  border:2px solid #96A1C2;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+
+.dropdown-icon{
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // width: 30px;
+  // height: 30px;
+  // border-radius: 50%;
+  // background-color: #96A1C2;
+}
+
+
+
+

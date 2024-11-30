@@ -1,0 +1,32 @@
+.section_bgc_l {
+    background-color: #1C2746;
+  }
+  .hwToStart svg{
+    width: 22px;
+  }
+  .divider-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .divider-image img{
+    max-width: 100%;
+    height: auto;
+  }
+  .step-cards .cuttle-card{
+    margin:0px;
+    padding:0px;
+  }
+  @media(max-width: 768px){
+    .divider-image{
+        display: none;
+    }
+    .feature-section{
+        padding: 90px 0px 30px 0px;
+    }
+    .step-cards .cuttle-card{
+        padding-right: calc(var(--bs-gutter-x)* .5);
+        padding-left: calc(var(--bs-gutter-x)* .5);
+    }
+  }
