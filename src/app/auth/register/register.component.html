@@ -1,87 +1,53 @@
-<section class="bg-dark-blue">
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-7 desk-resp-p-0">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../../../assets/img/login_bg.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../../../assets/img/register_bg.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../../../assets/img/login_bg.png" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-               
-              </div>
-        </div>
-          <div class="col-xl-5 p-0">
-            <div class="login-card">
-              <div>
-               
-                <div class="login-main"> 
-                    <div class="logo text-left">
-                        <span class="text-white">Register an account</span>
-                    </div>
-                  <form class="theme-form">
-                    <div class="form-group row">
-                      <div class="col-3">
-                        <label class="col-form-label text-white" for="areaCode">Area Code</label>
-                      <input class="form-control" type="text" id="areaCode" name="areaCode" required placeholder="+44">
-                      </div>
-                      <div class="col-9">
-                        <label class="col-form-label text-white" for="phoneNumber">Phone Number</label>
-                      <input class="form-control" type="text" id="phoneNumber" name="phoneNumber" required placeholder="7457413014">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-form-label text-white">Verification Code</label>
-                      <input class="form-control" type="password" name="login[password]" required="" placeholder="Verification Code">
-                      <div class="show-hide"><span class="show">                         </span></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-form-label text-white">Password</label>
-                        <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
-                        <div class="show-hide">
-                              <i class="bi bi-eye-slash-fill"></i>                        
-                      </div>
-                      </div>
-                      <div class="form-group mt-3 mb-4">
-                        <div class="checkbox p-0 d-flex align-items-center">
-                          <input id="checkbox1" type="checkbox" class="custom-checkbox">
-                          <label class="text-white font-sm" for="checkbox1">I have read and agreed to the Terms and Conditions</label>
-                        </div>
-                      </div>
-                    <div class="form-group mb-0 row my-4">
-                        <div class="col-12">
-                            <button class="btn btn-orange btn-block m-0 w-100" type="submit">Register</button>
-                        </div>
-                      </div>
-                    <div class="text-muted my-3">
-                        <div class="d-flex align-items-center">
-                            <hr class="flex-grow-1 custom-hr">
-                            <span class="mx-2 custom-text-secondary"> OR </span>
-                            <hr class="flex-grow-1 custom-hr">
-                        </div>
-                    </div>
-                    <div class="form-group mb-0 row">
-                        <div class="col-12">
-                            <button class="btn btn-blue btn-block m-0 w-100" type="submit">Already have an account,back to log in</button>
-                        </div>
-                      </div>
-                   
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="login-main"> 
+  <div class="logo text-left">
+      <span class="text-white">Register an account</span>
+  </div>
+<form class="theme-form">
+  <div class="form-group row">
+    <div class="col-3">
+      <label class="col-form-label text-white" for="areaCode">Area Code</label>
+    <input class="form-control" type="text" id="areaCode" name="areaCode" required placeholder="+44">
+    </div>
+    <div class="col-9">
+      <label class="col-form-label text-white" for="phoneNumber">Phone Number</label>
+    <input class="form-control" type="text" id="phoneNumber" name="phoneNumber" required placeholder="7457413014">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label text-white">Verification Code</label>
+    <input class="form-control" type="password" name="login[password]" required="" placeholder="Verification Code">
+    <div class="show-hide"><span class="show">                         </span></div>
+  </div>
+  <div class="form-group">
+      <label class="col-form-label text-white">Password</label>
+      <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+      <div class="show-hide">
+            <i class="bi bi-eye-slash-fill"></i>                        
+    </div>
+    </div>
+    <div class="form-group mt-3 mb-4">
+      <div class="checkbox p-0 d-flex align-items-center">
+        <input id="checkbox1" type="checkbox" class="custom-checkbox">
+        <label class="text-white font-sm" for="checkbox1">I have read and agreed to the Terms and Conditions</label>
       </div>
-</section>
+    </div>
+  <div class="form-group mb-0 row my-4">
+      <div class="col-12">
+          <button class="btn btn-orange btn-block m-0 w-100" type="submit" (click)="onRegister()">Register</button>
+      </div>
+    </div>
+  <div class="text-muted my-3">
+      <div class="d-flex align-items-center">
+          <hr class="flex-grow-1 custom-hr">
+          <span class="mx-2 custom-text-secondary"> OR </span>
+          <hr class="flex-grow-1 custom-hr">
+      </div>
+  </div>
+  <div class="form-group mb-0 row">
+      <div class="col-12">
+          <button class="btn btn-blue btn-block m-0 w-100" type="button" (click)="onBack()">Already have an account,back to log in</button>
+      </div>
+    </div>
+ 
+</form>
+</div>

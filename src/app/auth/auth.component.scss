@@ -1,0 +1,130 @@
+.bg-dark-blue {
+    background-color: #19233F;
+}
+
+.desk-resp-p-0 {
+    padding: 0;
+}
+
+.carousel-indicators {
+    bottom: 25%;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #BE7B2E;
+}
+
+.login-card ::ng-deep {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #19233F;
+    // background: url("../../../assets/img/login_bg.png");
+    // background-position: center;
+    padding: 30px 0;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .logo span {
+        padding-right: 30px;
+        font-size: 32px;
+        font-weight: 700;
+        font-family: "Overpass", sans-serif;
+    }
+
+    //  .btn-showcase .btn {
+    //   line-height: 1;
+    //   padding: 10px 15px;
+    //   margin: 0; }
+    .btn-showcase .btn+.btn {
+        margin-left: 5px;
+    }
+
+    .btn-showcase .btn svg {
+        height: 16px;
+        vertical-align: bottom;
+    }
+
+    .login-main {
+        width: 450px;
+        padding: 40px;
+        border-radius: 10px;
+        -webkit-box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
+        box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
+        margin: 0 auto;
+        background-color: #19233F;
+    }
+
+    .login-main .theme-form h4 {
+        margin-bottom: 5px;
+    }
+
+    .login-main .theme-form label {
+        font-size: 15px;
+        letter-spacing: 0.4px;
+        font-family: "Overpass", sans-serif;
+    }
+
+    .login-main .theme-form .checkbox label::before {
+        background-color: #f9f9fa;
+        border: 1px solid #dfdfdf;
+    }
+
+    .login-main .theme-form .or {
+        position: relative;
+    }
+
+    .login-main .theme-form input {
+        background-color: #232F52;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .login-main .theme-form input::-webkit-input-placeholder {
+        color: #999999;
+    }
+
+    .login-main .theme-form input:hover,
+    .login-main .theme-form input:focus {
+        border: 2px solid #363F54;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .login-main .theme-form p {
+        margin-bottom: 25px;
+        font-size: 14px;
+        color: #898989;
+    }
+
+    .login-main .theme-form .form-group {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .login-main .theme-form .link {
+        text-decoration: none;
+    }
+
+    .login-main .theme-form .link:hover {
+        text-decoration: underline;
+    }
+}
