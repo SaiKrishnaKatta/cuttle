@@ -5,20 +5,20 @@
       <img class="img-fluid for-light" src="../../../assets/img/login_logo.png" alt="looginpage">
     </a>
   </div>
-  <form class="theme-form">
+  <form class="theme-form" [formGroup]="loginForm">
     <div class="form-group row">
       <div class="col-3">
         <label class="col-form-label text-white" for="areaCode">Area Code</label>
-        <input class="form-control" type="text" id="areaCode" name="areaCode" required placeholder="+44">
+        <input class="form-control" formControlName="areaCode" type="text" id="areaCode" name="areaCode" required placeholder="+44">
       </div>
       <div class="col-9">
         <label class="col-form-label text-white" for="phoneNumber">Phone Number</label>
-        <input class="form-control" type="text" id="phoneNumber" name="phoneNumber" required placeholder="7457413014">
+        <input class="form-control" formControlName="phone" type="text" id="phoneNumber" name="phoneNumber" required placeholder="7457413014">
       </div>
     </div>
     <div class="form-group">
       <label class="col-form-label text-white">Password</label>
-      <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+      <input class="form-control" formControlName="password" type="password" name="login[password]" required="" placeholder="*********">
       <div class="show-hide">
         <span class="show">
           <i class="bi bi-eye-slash-fill"></i>
