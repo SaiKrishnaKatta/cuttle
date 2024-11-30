@@ -3,11 +3,11 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'user-dashboard',
+        redirectTo: 'landing',
         pathMatch: 'full'
       },
       {
-        path: 'user-dashboard',
+        path: 'dashboard',
         loadChildren: () => import('./user-dashboard/user-dashboard.module').then(m => m.UserDashboardModule)
       },
       {

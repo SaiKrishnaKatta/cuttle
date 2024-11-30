@@ -31,21 +31,6 @@ const routes: Routes = [
         path: '',
         redirectTo: 'login',
         pathMatch: 'full'
-      },
-      {
-        path: '',
-        redirectTo: 'register  ',
-        pathMatch: 'full'
-      },
-      {
-        path: '',
-        redirectTo: 'forgot-password  ',
-        pathMatch: 'full'
-      },
-      {
-        path: '',
-        redirectTo: 'set-new-login-pwd',
-        pathMatch: 'full'
       }
     ]
   }

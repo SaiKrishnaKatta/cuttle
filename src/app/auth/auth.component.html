@@ -1,2 +1,37 @@
 <!-- <p>auth works!</p> -->
-<router-outlet></router-outlet>
+<section class="bg-dark-blue">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-7 desk-resp-p-0">
+          <!-- <img class="bg-img-cover bg-center w-100" src="../../../assets/img/login_bg.png" alt="looginpage"> -->
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../../../assets/img/login_bg.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../../../assets/img/register_bg.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../../../assets/img/login_bg.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+  
+          </div>
+        </div>
+        <div class="col-xl-5 p-0">
+          <div class="login-card">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
