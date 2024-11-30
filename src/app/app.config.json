@@ -1,0 +1,6 @@
+{
+    "ENCRYPT_URL": "account/v1/private/encrypt",
+    "DECRYPT_URL": "account/v1/private/decypt",
+    "SIGN_UP_URL": "account/v1/sign-up",
+    "LOGIN_URL": "auth"
+}
