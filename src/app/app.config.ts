@@ -13,7 +13,6 @@ import { AngularDeviceInformationService } from 'angular-device-information';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    { provide: HTTP_INTERCEPTORS, useClass: ReqResInterceptor, multi: true },
     provideHttpClient(),
     HttpClientModule,
     AngularDeviceInformationService
