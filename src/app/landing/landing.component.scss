@@ -30,3 +30,24 @@
         padding-left: calc(var(--bs-gutter-x)* .5);
     }
   }
+
+  ::ng-deep .carousel-inner{
+    display: flex;
+        align-items: center !important;
+    }
+    slide img{
+        width: 50%;
+    }
+    .item {
+        justify-content: center;
+        display: flex;
+    }
+    ::ng-deep .carousel-control-next-icon{
+        display:none;
+    }
+    ::ng-deep .carousel-control-prev-icon{
+        display:none;
+    }
+.multilist-margin{
+    margin: 30px !important;
+}

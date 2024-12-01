@@ -31,9 +31,11 @@ export class LoginComponent implements OnInit {
   }
   onSignIn() {
     if (this.loginForm.valid) {
+      console.log("loginTest4", this.loginForm.valid)
       const payload = this.loginForm.value;
       delete payload['areaCode'];
       this.loginService.onLogin(payload).subscribe((res) => {
+        console.log("loginTest2", this.loginService )
         this.route.navigate(['/dashboard']);
       })
     }

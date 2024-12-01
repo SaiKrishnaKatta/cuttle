@@ -275,6 +275,18 @@
     .case-block-inner {
       padding: 25px;
     }
+    .case-block h4{
+      font-size: 28px !important;
+    }
+    .section-heading h4{
+      font-size: 28px !important;
+    }
+    .section-parners h4{
+      font-size: 28px !important;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+      padding: 4px 14px !important;
+    }
   }
 
   .case-block h4 {
@@ -308,7 +320,7 @@
 
   // why cuttle
   .why-cuttle img {
-    transform: translate(18%, -16%);
+    transform: translate(17%, -16%);
   }
 
   /*--------------
@@ -378,7 +390,7 @@
 
 
   .fund-security img {
-    transform: translate(18%, -16%);
+    transform: translate(17%, -16%);
   }
   .bg-img-world {
     background-image: url("../assets/img/world.png");
