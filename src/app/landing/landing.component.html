@@ -37,15 +37,15 @@
      
                  </div>
                  <h3>Offline Purchase</h3>
-                 <p>There are many variations of
+                 <!-- <p>There are many variations of
                      passages of Lorem Ipsum
                      available, but the majority have
                      suffered alteration in some
-                     form</p>
+                     form</p> -->
      
-                 <div class="mt-4">
+                 <!-- <div class="mt-4">
                      <a href="#" class="primary-button button-sm mb-15-xs">Know More</a>
-                 </div>
+                 </div> -->
              </div>
          </div>
      
@@ -66,15 +66,15 @@
      
                  </div>
                  <h3>Online Shopping</h3>
-                 <p>There are many variations of
+                 <!-- <p>There are many variations of
                      passages of Lorem Ipsum
                      available, but the majority have
                      suffered alteration in some
-                     form</p>
+                     form</p> -->
      
-                 <div class="mt-4">
+                 <!-- <div class="mt-4">
                      <a href="#" class="primary-button button-sm mb-15-xs">Know More</a>
-                 </div>
+                 </div> -->
              </div>
          </div>
      
@@ -95,15 +95,15 @@
      
                  </div>
                  <h3>ATM Withdrawal</h3>
-                 <p>There are many variations of
+                 <!-- <p>There are many variations of
                      passages of Lorem Ipsum
                      available, but the majority have
                      suffered alteration in some
-                     form</p>
+                     form</p> -->
      
-                 <div class="mt-4">
+                 <!-- <div class="mt-4">
                      <a href="#" class="primary-button button-sm mb-15-xs">Know More</a>
-                 </div>
+                 </div> -->
              </div>
          </div>
      
@@ -124,15 +124,15 @@
      
                  </div>
                  <h3>Fully Manged Servers</h3>
-                 <p>There are many variations of
+                 <!-- <p>There are many variations of
                      passages of Lorem Ipsum
                      available, but the majority have
                      suffered alteration in some
-                     form</p>
+                     form</p> -->
      
-                 <div class="mt-4">
+                 <!-- <div class="mt-4">
                      <a href="#" class="primary-button button-sm mb-15-xs">Know More</a>
-                 </div>
+                 </div> -->
              </div>
          </div>
      </div>
@@ -149,7 +149,7 @@
 </div>
 <!-- About us END -->
 <!-- Notice Section START -->
-<div class="notice-section notice-section-sm">
+<!-- <div class="notice-section notice-section-sm">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-8 col-sm-8 col-xs-12">
@@ -176,7 +176,26 @@
             </div>
         </div>
     </div>
+</div> -->
+
+<div class="section-partners-grey">
+    <div class="container">
+<div class="section-heading text-center">
+    <h4 class="text-black opacity-80">Our Business Partner</h4>
 </div>
+<carousel [isAnimated]="true" [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset"
+    [showIndicators]="false">
+    <slide *ngFor="let slide of slides; let index=index">
+        <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+        <!-- <div class="carousel-caption">
+      <h4>Slide {{index}}</h4>
+    </div> -->
+    </slide>
+</carousel>
+</div>
+</div>
+
+
 <!-- Notice Section END -->
 
 <!-- Feature Boxes Start -->

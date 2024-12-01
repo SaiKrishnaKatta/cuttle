@@ -79,6 +79,10 @@ a.nav-link {
 	background: #19233F;
 	padding: 50px 0px;
 }
+.section-partners-grey{
+	background: #FFF;
+	padding: 50px 0px;
+}
 
 .notice-section{
 	background: #BE7B2E;
@@ -181,6 +185,15 @@ a.nav-link {
 	margin-bottom: 10px;
 }
 .section-heading h4{
+	font-family: "Overpass", sans-serif;
+	font-weight: 700;
+	position: relative;
+	font-size: 30px;
+	color: #ECF0FC;
+	line-height: 160%;
+	margin-bottom: 20px;
+}
+.section-partners-grey h4{
 	font-family: "Overpass", sans-serif;
 	font-weight: 700;
 	position: relative;
@@ -429,6 +442,7 @@ c) Buttons
 
 .primary-button{
 	background: #BE7B2E;
+	border:2px solid #BE7B2E;
 	color: #fff;
 	font-size: 12px;
 	font-weight: 500;
@@ -443,6 +457,7 @@ c) Buttons
 .primary-button:hover {
 	background: #232F52;
 	color: #fff;
+	border:2px solid #393c49;
 }
 
 
@@ -513,7 +528,7 @@ c) Buttons
 	display: inline-block;
 	font-size: 10px;
 	font-weight: 500;
-	padding: 8px 17px 8px 17px;		
+	padding: 5px 17px 5px 17px;		
 }
 
 .button-sm{

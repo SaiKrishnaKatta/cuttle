@@ -7,15 +7,16 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
   constructor(
     public route: Router
-  ) {}
-
+  ) {  
+  }
   onAboutUs() {
-    if(document.getElementById('aboutUs')) {
+    if (document.getElementById('aboutUs')) {
       document.getElementById('aboutUs')?.scrollIntoView();
     }
   }
-
+  redirectTo(){
+    this.route.navigate(['/auth/login']);
+  }
 }
