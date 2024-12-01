@@ -2,17 +2,17 @@
   <div class="logo text-left">
     <span class="text-white">Set a new login password</span>
   </div>
-  <form class="theme-form">
+  <form class="theme-form" [formGroup]="form">
     <div class="form-group">
       <label class="col-form-label text-white">Login password</label>
-      <input class="form-control" type="password" name="login[password]" required="" placeholder="">
+      <input class="form-control" formControlName="oldPwd" type="password" name="login[password]" required="" placeholder="">
       <div class="show-hide">
         <i class="bi bi-eye-fill"></i>
       </div>
     </div>
     <div class="form-group">
       <label class="col-form-label text-white">Confirm login password</label>
-      <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+      <input class="form-control" formControlName="newPwd" type="password" name="login[password]" required="" placeholder="*********">
       <div class="show-hide">
         <i class="bi bi-eye-slash-fill"></i>
       </div>
