@@ -1,4 +1,4 @@
-.user-dashboard ::ng-deep {
+.user-dashboard{
     padding: 60px 0px 90px 0px;
     background-color: #19233F;
     .amount{
@@ -14,40 +14,41 @@
         padding: 0.5rem 0.5rem 0.5rem 0.5rem;
         font-size: 12px;
     }
-    li{
-        position: relative;
-    }
-    
-    
-    li:not(:last-child)::after{
-        content: "";
-        position: absolute;
-        right: 0px;
-        top: 50%;
-        transform: translateX(0px) translateY(-8px);
-        width: 1px;
-        height: 40%;
-        background-color: #D9DBE1;
-    }
-    
-    .table > :not(caption) > * > *{
-        color: #96A1C2;
-    }
-    .table td{
-        background-color: transparent;
-    }
-    .custom-table thead{
-        background-color: #17203A;
-    }
-    .myCard p{
-        font-size: 12px;
-    }
-    .myCard .arrow{
-        padding:12px;
-    }
-    .myCard .bg-primary-dark {
-        background-color:#2E335B;
-    }
+}
+
+li{
+    position: relative;
+}
+
+
+li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateX(0px) translateY(-8px);
+    width: 1px;
+    height: 40%;
+    background-color: #D9DBE1;
+}
+
+.table > :not(caption) > * > *{
+    color: #96A1C2;
+}
+.table td{
+    background-color: transparent;
+}
+.custom-table thead{
+    background-color: #17203A;
+}
+.myCard p{
+    font-size: 12px;
+}
+.myCard .arrow{
+    padding:12px;
+}
+.myCard .bg-primary-dark {
+    background-color:#2E335B;
 }
 
 .spend-limit{
@@ -69,7 +70,7 @@
         }
     }
     li:not(:last-child)::after{
-        transform: translateX(0px) translateY(5px);
+        transform: translateX(0px) translateY(5px) !important;
     }
     .card-management .card-text{
         margin-bottom: 20px !important;

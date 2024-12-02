@@ -1,0 +1,130 @@
+<!-- Modal -->
+ @if (type === 'SCAN_PAY') {
+    <ng-container>
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Scan to pay</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="section-block pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <p>Please note that this deposit address is valid for 15 mins only. Deposits to an
+                                invalid address will
+                                result in a failed transaction, so please be mindful of the time limit.
+                            </p>
+        
+                            <table class="table table-light">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Network</th>
+                                        <th scope="col">Ethereum Mainnet(ERC-20)</th>
+        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Deposit Token</th>
+                                        <td>USDT</td>
+        
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Deposit Amount</th>
+                                        <td>3000.00</td>
+        
+                                    </tr>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <img src="../../../assets/img/cuttle_card_logo_dark.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <h4>Scan the QR Code to pay</h4>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </ng-container>
+ }
+
+@if (type === 'WALLET') {
+    <ng-container #wallet>
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Wallet</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="section-block pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <p>Please note that this deposit address is valid for 15 mins only. Deposits to an
+                                invalid address will
+                                result in a failed transaction, so please be mindful of the time limit.
+                            </p>
+        
+                            <table class="table table-light">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Network</th>
+                                        <th scope="col">Ethereum Mainnet(ERC-20)</th>
+        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Deposit Token</th>
+                                        <td>USDT</td>
+        
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Deposit Amount</th>
+                                        <td>3000.00</td>
+        
+                                    </tr>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <img src="../../../assets/img/cuttle_card_logo_dark.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <h4>Scan the QR Code to pay</h4>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </ng-container>
+}
