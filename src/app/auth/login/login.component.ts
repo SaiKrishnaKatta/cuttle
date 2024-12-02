@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
+import { CommonService } from '../../services/common/common.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private route: Router,
     private _fb: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private commonService: CommonService
   ) {}
 
   ngOnInit(): void {
@@ -34,7 +36,10 @@ export class LoginComponent implements OnInit {
       const payload = this.loginForm.value;
       delete payload['areaCode'];
       this.authService.onLogin(payload).subscribe((res) => {
+        this.commonService.isUserLoggedInSub.next(true);
         this.route.navigate(['/dashboard']);
+      }, (error) => {
+        console.error(error);
       })
     }
   }
