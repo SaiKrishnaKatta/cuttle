@@ -5,7 +5,7 @@ import { UserDashboardRoutingModule } from './user-dashboard-routing.module';
 import { UserDashboardComponent } from './user-dashboard.component';
 import { SharedModule } from '../shared/shared.module';
 import { CollateralInjectionComponent } from './collateral-injection/collateral-injection.component';
-
+import { ModalModule } from "ngx-bootstrap/modal";
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { CollateralInjectionComponent } from './collateral-injection/collateral-
   imports: [
     CommonModule,
     UserDashboardRoutingModule,
-    SharedModule
+    SharedModule,
+    ModalModule.forRoot()
   ]
 })
 export class UserDashboardModule { }

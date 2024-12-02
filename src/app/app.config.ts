@@ -7,14 +7,16 @@ import {
   HTTP_INTERCEPTORS,
   HttpClientModule,
   provideHttpClient,
+  withInterceptorsFromDi,
 } from '@angular/common/http';
 import { AngularDeviceInformationService } from 'angular-device-information';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideHttpClient(),
+    provideHttpClient(withInterceptorsFromDi()),
     HttpClientModule,
-    AngularDeviceInformationService
+    AngularDeviceInformationService,
+    { provide: HTTP_INTERCEPTORS, useClass: ReqResInterceptor, multi: true}
   ],
 };

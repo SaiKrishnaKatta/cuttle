@@ -3,5 +3,6 @@
     "DECRYPT_URL": "account/v1/private/decypt",
     "SIGN_UP_URL": "account/v1/sign-up",
     "LOGIN_URL": "auth",
-    "RESET_PASSWORD_URL": "/v1/public/forgot-password"
+    "RESET_PASSWORD_URL": "v1/public/forgot-password",
+    "SEND_OTP_URL": "v1/public/send-otp"
 }

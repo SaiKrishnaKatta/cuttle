@@ -42,6 +42,8 @@ export class SetNewLoginPwdComponent implements OnInit, OnDestroy {
       };
       this.authService.resetPassword(payload).subscribe((res) => {
         this.route.navigate(['auth/login']);
+      }, (error) => {
+        console.error(error);
       });
     }
   }
