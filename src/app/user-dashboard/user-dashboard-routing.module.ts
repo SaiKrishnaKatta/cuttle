@@ -7,6 +7,22 @@ const routes: Routes = [
     path: '',
     component: UserDashboardComponent
   }
+
+  // {
+  //   path: '',
+  //   component: CollateralInjectionComponent,
+  //   children:[
+  //     {
+  //       path:'collateral-Injection',
+  //       component: CollateralInjectionComponent
+  //     },
+  //     {
+  //       path: '',
+  //       redirectTo: 'collateral-Injection',
+  //       pathMatch: 'full'
+  //     }
+  //   ]
+  // }
 ];
 
 @NgModule({
