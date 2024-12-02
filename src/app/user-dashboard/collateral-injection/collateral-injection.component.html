@@ -1,0 +1,208 @@
+<app-header></app-header>
+
+<div class="section-block-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.528758 0.528636C0.789108 0.268287 1.21122 0.268287 1.47157 0.528636L5.47157 4.52864C5.73192 4.78899 5.73192 5.2111 5.47157 5.47145L1.47157 9.47145C1.21122 9.7318 0.789108 9.7318 0.528758 9.47145C0.268409 9.2111 0.268409 8.78899 0.528758 8.52864L4.05735 5.00004L0.528758 1.47145C0.268409 1.2111 0.268409 0.788986 0.528758 0.528636Z' fill='white'/%3E%3C/svg%3E%0A&#34;);"
+                    aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Credit card List</a></li>
+                        <li class="breadcrumb-item active text-white fw-bold" aria-current="page">Apply for Platinum
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 col-lg-10 col-sm-10 col-xs-12 m-3 mx-auto">
+                <div class="card custom-card">
+                    <div class="card-header pt-4 border-0">
+                        <h5 class="text-white">Collateral Injection</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">   
+                            <div class="col-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="collateral-injection">
+                                    <ul class="nav nav-underline mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Scan to pay</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Connect Wallet</button>
+                                        </li>
+                                      </ul>
+                                      <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                            <div class="row">
+                                                <div class="col-6 col-lg-6 col-sm-6 col-xs-6 login-main">
+                                                    <form class="theme-form" >
+                                                        <div class="form-group">
+                                                            <label class="col-form-label text-white" for="phoneNumber">Payment Network</label>
+                                                            <input class="form-control" formControlName="paymentNetwork" type="text" id="paymentNetwork" name="paymentNetwork" required placeholder="Mainnet">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-form-label text-white" for="phoneNumber">Expected Arrival</label>
+                                                            <input class="form-control" formControlName="paymentNetwork" type="text" id="paymentNetwork" name="paymentNetwork" required placeholder="Please Enter Amount">
+                                                            <div class="show-hide"><span class="show"> </span></div>
+                                                        </div>
+                                                      </form>
+                                                </div>
+
+                                                <div class="col-6 col-lg-6 col-sm-6 col-xs-6 login-main">
+                                                    <form class="theme-form" >
+                                                        <div class="form-group">
+                                                            <label class="col-form-label text-white" for="phoneNumber">You Pay</label>
+                                                            <input class="form-control" formControlName="paymentNetwork" type="text" id="paymentNetwork" name="paymentNetwork" required placeholder="Please Enter Amount">
+                                                            <div class="show-hide"><span class="show"> </span></div>
+                                                        </div>
+                                                        <div class="form-group mb-0">
+                                                            <label  class="col-form-label text-white" for="exampleFormControlTextarea4">Example textarea</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea4" rows="5"></textarea>
+                                                          </div>
+                                                          <div class="form-group mb-0 row my-4">
+                                                            <div class="col-md-10 offset-md-2">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-md-6 col-lg-6">
+                                                                        <button class="btn btn-blue btn-block m-0 w-100" type="submit">Back</button>
+                                                                      </div>
+                                                                      <div class="col-12 col-md-6 col-lg-6">
+                                                                        <button class="btn btn-orange btn-block m-0 w-100" type="submit">Next Step </button>
+                                                                      </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                      </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                                            <div class="row">
+                                                <div class="col-6 col-lg-6 col-sm-6 col-xs-6 login-main">
+                                                    <form class="theme-form" >
+                                                        <div class="form-group">
+                                                            <label class="col-form-label text-white" for="phoneNumber">Payment Network</label>
+                                                            <input class="form-control" formControlName="paymentNetwork" type="text" id="paymentNetwork" name="paymentNetwork" required placeholder="Mainnet">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-form-label text-white" for="phoneNumber">Expected Arrival</label>
+                                                            <input class="form-control" formControlName="paymentNetwork" type="text" id="paymentNetwork" name="paymentNetwork" required placeholder="Please Enter Amount">
+                                                            <div class="show-hide"><span class="show"> </span></div>
+                                                        </div>
+                                                      </form>
+                                                </div>
+
+                                                <div class="col-6 col-lg-6 col-sm-6 col-xs-6 login-main">
+                                                    <form class="theme-form" >
+                                                        <div class="form-group">
+                                                            <label class="col-form-label text-white" for="phoneNumber">You Pay</label>
+                                                            <input class="form-control" formControlName="paymentNetwork" type="text" id="paymentNetwork" name="paymentNetwork" required placeholder="Please Enter Amount">
+                                                            <div class="show-hide"><span class="show"> </span></div>
+                                                        </div>
+                                                        <div class="form-group mb-0">
+                                                            <label  class="col-form-label text-white" for="exampleFormControlTextarea4">Example textarea</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea4" rows="5"></textarea>
+                                                          </div>
+                                                          <div class="form-group mb-0 row my-4">
+                                                            <div class="col-md-10 offset-md-2">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-md-6 col-lg-6">
+                                                                        <button class="btn btn-blue btn-block m-0 w-100" type="submit">Back</button>
+                                                                      </div>
+                                                                      <div class="col-12 col-md-6 col-lg-6">
+                                                                        <button class="btn btn-orange btn-block m-0 w-100" type="submit">Next Step </button>
+                                                                      </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                      </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Scan to pay</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="section-block pt-0">
+          <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <p>Please note that this deposit address is valid for 15 mins only. Deposits to an invalid address will result in a failed transaction, so please be mindful of the time limit.
+                    </p>
+
+                    <table class="table table-light">
+                        <thead>
+                          <tr>
+                            <th scope="col">Network</th>
+                            <th scope="col">Ethereum Mainnet(ERC-20)</th>
+                        
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Deposit Token</th>
+                            <td>USDT</td>
+                           
+                          </tr>
+                          <tr>
+                            <th scope="row">Deposit Amount</th>
+                            <td>3000.00</td>
+                    
+                          </tr>
+                       
+                        </tbody>
+                      </table>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="../../../assets/img/cuttle_card_logo_dark.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h4>Scan the QR Code to pay</h4>
+                        </div>
+                        <div class="col-12 text-center">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<app-faq></app-faq>
+
+<app-footer></app-footer>
+

@@ -83,6 +83,10 @@ a.nav-link {
 	background: #FFF;
 	padding: 50px 0px;
 }
+.section-qrCode{
+	background: #FFF;
+	padding: 50px 0px;
+}
 
 .notice-section{
 	background: #BE7B2E;
@@ -757,6 +761,38 @@ i) Animations
 
 // `md` applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { 
+	.login-card .login-main{
+		width: 100% !important;
+	}
+	.login-card .login-main{
+		padding:0px 20px !important;
+	}
+	.login-card .login-main .theme-form label{
+		font-size: 10px !important;
+	}
+	.carousel-indicators{
+		bottom:10% !important;
+	}
+	::placeholder{
+		font-size: 12px;
+	}
+	.login-card .logo span{
+		padding-right: 4px !important;
+		font-size: 20px !important;
+	}
+	.show-hide{
+		top: 48px !important;
+		right: 14px !important;
+	}
+	.show-hide span.show:before{
+		font-size: 12px !important;
+	}
+	.form-control{
+		padding: .2rem .75rem;
+	}
+	.login-card .logo{
+		margin-bottom: 16px !important;
+	}
     .navbar-brand img{
         width: 160px;
     }
@@ -839,10 +875,22 @@ i) Animations
 
 
 
+ @media (min-width: 375px) and (max-width: 767.98px) { 
+	.login-card .logo span{
+		padding-right:26px !important;
+	}
+	.login-card .login-main .theme-form label{
+		font-size: 12px !important;
+	}
+ }
+
 @media (min-width: 768px) and (max-width: 991.98px) { 
     .top-bar{
         padding: 10px 0 20px;
     }
+	.carousel-indicators{
+		bottom: 20% !important;
+	}
     .section-block-grey{
         padding: 60px 0px 60px 0px !important;
     }
@@ -932,6 +980,16 @@ i) Animations
 		transform: translate(8%, -16%);
 	}
  }
+
+//  custom card css
+.custom-card{
+	background: linear-gradient(to bottom, #242E48, #19233F);
+	 color: #FAFAFA !important;
+	 border: 2px solid #393C49;
+	 .card-header{
+		border-bottom: 2px solid #363F54;
+	 }
+}
 
 
 
