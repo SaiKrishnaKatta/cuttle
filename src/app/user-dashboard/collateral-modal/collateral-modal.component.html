@@ -1,15 +1,15 @@
 <!-- Modal -->
  @if (type === 'SCAN_PAY') {
     <ng-container>
-        <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Scan to pay</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-header border-bottom-0">
+            <h5 class="modal-title text-white" id="exampleModalLabel">Scan to pay</h5>
+            <button type="button" style="font-size: 20px; --bs-btn-close-bg:url(&#34;data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4 17L12 13.4L15.6 17L17 15.6L13.4 12L17 8.4L15.6 7L12 10.6L8.4 7L7 8.4L10.6 12L7 15.6L8.4 17ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88334 20.6867 5.825 19.9743 4.925 19.075C4.025 18.1757 3.31267 17.1173 2.788 15.9C2.26333 14.6827 2.00067 13.3827 2 12C1.99933 10.6173 2.262 9.31733 2.788 8.1C3.314 6.88267 4.02633 5.82433 4.925 4.925C5.82367 4.02567 6.882 3.31333 8.1 2.788C9.318 2.26267 10.618 2 12 2C13.382 2 14.682 2.26267 15.9 2.788C17.118 3.31333 18.1763 4.02567 19.075 4.925C19.9737 5.82433 20.6863 6.88267 21.213 8.1C21.7397 9.31733 22.002 10.6173 22 12C21.998 13.3827 21.7353 14.6827 21.212 15.9C20.6887 17.1173 19.9763 18.1757 19.075 19.075C18.1737 19.9743 17.1153 20.687 15.9 21.213C14.6847 21.739 13.3847 22.0013 12 22Z' fill='white'/%3E%3C/svg%3E%0A&#34;)" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <div class="section-block pt-0">
+            <div class="">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-7">
+                        <div class="col-md-7 d-flex flex-column">
                             <p>Please note that this deposit address is valid for 15 mins only. Deposits to an
                                 invalid address will
                                 result in a failed transaction, so please be mindful of the time limit.
@@ -18,38 +18,66 @@
                             <table class="table table-light">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Network</th>
-                                        <th scope="col">Ethereum Mainnet(ERC-20)</th>
+                                        <td scope="col">Network</td>
+                                        <td scope="col">Ethereum Mainnet(ERC-20)</td>
         
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Deposit Token</th>
+                                        <td scope="row">Deposit Token</td>
                                         <td>USDT</td>
         
                                     </tr>
                                     <tr>
-                                        <th scope="row">Deposit Amount</th>
-                                        <td>3000.00</td>
+                                        <td scope="row">Deposit Amount</td>
+                                        <th>3000.00</th>
         
                                     </tr>
         
                                 </tbody>
                             </table>
+
+                            <div  class="mt-auto mx-auto">
+                                <span>Powered by</span>
+                                <img src="../../../assets/img/modal_footer_logo.png" alt="" class="img-fluid">
+                            </div>
                         </div>
                         <div class="col-md-5">
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <img src="../../../assets/img/cuttle_card_logo_dark.png" alt="" class="img-fluid">
+                            <div class="scanner-section p-3 text-center">
+                                <div class="row">
+                                    <div class="col-12 text-center pb-3">
+                                        <img src="../../../assets/img/cuttle_card_logo_dark.png" alt="" class="img-fluid">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <h4>Scan the QR Code to pay</h4>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <img src="" alt="">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <h4>Scan the QR Code to pay</h4>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                     
+                                        <img src="../../../assets/img/qr_code_scanner.png" alt="">
+                                    </div>
+                                    <div class="scanner-details">'
+                                        <h6>Deposit Address</h6>
+                                        <!-- <div class="input-group mt-3">
+                                            <input type="text" class="form-control" id="copyTextField" [(ngModel)]="copyText" placeholder="Copy this text">
+                                            <button class="btn btn-outline-secondary" type="button" (click)="copyToClipboard()">
+                                                <i class="bi bi-clipboard"></i>
+                                            </button>
+                                        </div> -->
+                                        <div class="input-group mt-3">
+                                            <input type="text" class="form-control" id="copyTextField"  placeholder="0x2e1c5965...F3524fC674">
+                                            <button class="btn btn-outline-secondary" type="button">
+                                                <i class="bi bi-copy"></i>
+                                            </button>
+                                        </div>
+    
+                                        <p class="pt-3">This address is only for ERC-20 assets, Sending other assets will result in permanent loss.</p>
+    
+                                        <h6>Remaining valid time <strong>11:49</strong> mins</h6>
+    
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -57,10 +85,10 @@
                 </div>
             </div>
         </div>
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+        </div> -->
     </ng-container>
  }
 

@@ -16,7 +16,7 @@ export class CollateralInjectionComponent {
 
   showModal(type: string) {
     const config = {
-      class: 'modal-dialog-centered',
+      class: 'modal-dialog-centered modal-lg',
       initialState: {
         type: type
       },
