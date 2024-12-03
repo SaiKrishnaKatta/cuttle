@@ -9,6 +9,15 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 export class CollateralModalComponent implements OnInit {
 
   type: string = '';
+  // copyText: string = 'copy this text';
+  // copyToClipboard(){
+  //   const copyTextField = document.getElementById('copyTextField') as HTMLInputElement;
+  //   copyTextField.select();
+  //   copyTextField.setSelectionRange(0, 99999); //For mobile devices
+  //   navigator.clipboard.writeText(copyTextField.value).then(() => {
+  //     alert('copied to clipboard');
+  //   });
+  // }
   constructor(
     private modalService: BsModalService
   ) {}

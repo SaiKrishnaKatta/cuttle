@@ -1,0 +1,57 @@
+.modal-header{
+    background-color: #BE7B2E;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    h5{
+        font-family: "Montserrat", serif;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+.modal-body{
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    p{
+        font-family: "Overpass", serif;
+        font-weight: 500;
+        color: #000000;
+    }
+}
+
+
+table td{
+    font-family: "Overpass", serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+}
+table th{
+    font-family: "Overpass", serif;
+    font-weight: 800;
+}
+.scanner-section h4{
+    font-family: "Moul", serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.scanner-section{
+    background-color: #F4F4F4;
+}
+.scanner-details h6{
+    font-family: "Overpass", serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+.scanner-details p{
+    font-family: "Overpass", serif;
+    color:#FF0000;
+    font-size: 10px;
+    font-weight: 500;
+}
+::ng-deep .modal-content{
+    background-color: #BE7B2E !important;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
