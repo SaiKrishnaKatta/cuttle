@@ -14,21 +14,21 @@
         padding: 0.5rem 0.5rem 0.5rem 0.5rem;
         font-size: 12px;
     }
-    li{
-        position: relative;
-    }
+    // li{
+    //     position: relative;
+    // }
     
     
-    li:not(:last-child)::after{
-        content: "";
-        position: absolute;
-        right: 0px;
-        top: 50%;
-        transform: translateX(0px) translateY(-8px);
-        width: 1px;
-        height: 40%;
-        background-color: #D9DBE1;
-    }
+    // li:not(:last-child)::after{
+    //     content: "";
+    //     position: absolute;
+    //     right: 0px;
+    //     top: 50%;
+    //     transform: translateX(0px) translateY(-8px);
+    //     width: 1px;
+    //     height: 40%;
+    //     background-color: #D9DBE1;
+    // }
     
     .table > :not(caption) > * > *{
         color: #96A1C2;
@@ -68,9 +68,9 @@
             font-size: 14px;
         }
     }
-    li:not(:last-child)::after{
-        transform: translateX(0px) translateY(5px);
-    }
+    // li:not(:last-child)::after{
+    //     transform: translateX(0px) translateY(5px);
+    // }
     .card-management .card-text{
         margin-bottom: 20px !important;
     }
@@ -105,8 +105,8 @@
     }
  }
 
- @media (min-width: 768px) and (max-width: 991.98px) { 
-    li:not(:last-child)::after{
-        transform: translateX(0px) translateY(8px);
-    }
- }
+//  @media (min-width: 768px) and (max-width: 991.98px) { 
+//     li:not(:last-child)::after{
+//         transform: translateX(0px) translateY(8px);
+//     }
+//  }

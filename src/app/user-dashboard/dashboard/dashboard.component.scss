@@ -70,7 +70,7 @@ li:not(:last-child)::after{
         }
     }
     li:not(:last-child)::after{
-        transform: translateX(0px) translateY(5px) !important;
+        transform: translateX(0px) translateY(8px) !important;
     }
     .card-management .card-text{
         margin-bottom: 20px !important;
@@ -108,6 +108,6 @@ li:not(:last-child)::after{
 
  @media (min-width: 768px) and (max-width: 991.98px) { 
     li:not(:last-child)::after{
-        transform: translateX(0px) translateY(8px);
+        transform: translateX(0px) translateY(8px) !important;
     }
  }
