@@ -73,7 +73,7 @@ color:#fff;
 .custom-card{
 	background-color: #242E48;
 	 color: #FAFAFA;
-	 border: 2px solid #393C49;
+	 border: 2px solid #393C49 !important;
 	 .card-header{
 		border-bottom: 2px solid #363F54;
 	 }
@@ -237,3 +237,10 @@ color:#fff;
   /**=====================
       25. Authentication CSS Ends
   ==========================**/
+
+
+  @media (max-width: 767.98px) { 
+    .login-main{
+        padding: 20px;
+    }
+  }

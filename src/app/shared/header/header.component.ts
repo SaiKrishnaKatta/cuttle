@@ -19,4 +19,7 @@ export class HeaderComponent {
   redirectTo(){
     this.route.navigate(['/auth/login']);
   }
+  redirectToRegister(){
+    this.route.navigate(['/auth/register']);
+  }
 }
