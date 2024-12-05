@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonService } from '../../services/common/common.service';
+import { Constants } from '../../models/constants';
+import { OTPRequest } from '../../models/otpRequest.model';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +14,8 @@ import { CommonService } from '../../services/common/common.service';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup = new FormGroup({});
+  smsOtp: string = '';
+  showOPTVerify = false;
 
   constructor(
     private route: Router,
@@ -36,11 +40,36 @@ export class LoginComponent implements OnInit {
       const payload = this.loginForm.value;
       delete payload['areaCode'];
       this.authService.onLogin(payload).subscribe((res) => {
-        this.commonService.isUserLoggedInSub.next(true);
-        this.route.navigate(['/dashboard']);
+        if (res && res.body.data && res.body.data.BearerToken) {
+          this.commonService.isUserLoggedInSub.next(true);
+          this.route.navigate(['/dashboard']);
+        } else {
+          this.showOPTVerify = true;
+        }
       }, (error) => {
         console.error(error);
       })
+    }
+  }
+
+  submitOTP() {
+    console.log(this.smsOtp.length);
+    if (this.smsOtp.length === 6) {
+      const payload: OTPRequest = {
+        phone: this.loginForm.value.phone,
+        areaCode: this.loginForm.value.areaCode,
+        smsOtp: this.smsOtp
+      }
+      this.authService
+        .verifyOtp(payload, Constants.LOGIN_SMS_OTP)
+        .subscribe(
+          (res) => {
+            this.route.navigate(['/dashboard']);
+          },
+          (error) => {
+            console.error(error);
+          }
+        );
     }
   }
 

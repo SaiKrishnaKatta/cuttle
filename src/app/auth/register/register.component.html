@@ -15,14 +15,14 @@
     </div>
     <div class="form-group">
       <label class="col-form-label text-white">Verification Code</label>
-      <input class="form-control" formControlName="verificationCode" type="password" name="login[password]" required="" placeholder="Verification Code">
+      <input class="form-control" formControlName="verificationCode" type="password" name="login[password]" placeholder="Verification Code">
       <div class="show-hide"><a (click)="onSendOTP()"><span class="show"> </span></a></div>
     </div>
     <div class="form-group">
       <label class="col-form-label text-white">Password</label>
-      <input class="form-control" formControlName="password" type="password" name="login[password]" required="" placeholder="*********">
+      <input class="form-control" formControlName="password" [type]="showhidePswd" name="login[password]" required="" placeholder="*********">
       <div class="show-hide">
-        <i class="bi bi-eye-slash-fill"></i>
+        <i class="bi bi-eye-slash-fill" (click)="onShowPswd()"></i>
       </div>
     </div>
     <div class="form-group mt-3 mb-4">
