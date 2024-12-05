@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth-guard.guard';
 import { HelpCenterComponent } from './help-center/help-center.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 export const routes: Routes = [
     {
@@ -24,6 +25,10 @@ export const routes: Routes = [
       {
         path: 'help-center',
         component: HelpCenterComponent,
+      },
+      {
+        path: 'about-us',
+        component: AboutUsComponent,
       }
       
 ];
