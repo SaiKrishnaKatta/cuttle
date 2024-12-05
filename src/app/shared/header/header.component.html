@@ -57,24 +57,24 @@
                         </span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                       <ng-container *ngIf="route.url.includes('landing'); else dashboard">
+                       <ng-container *ngIf="!isLoggedInUser; else dashboard">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" routerLink="landing"
+                                <a class="nav-link" aria-current="page" (click)="redirectTo('landing')" 
                                     routerLinkActive="router-link-active"
                                     [ngClass]="{'active': route.url.includes('landing')}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" (click)="redirectToHelpCenter()">Help Center</a>
+                                <a class="nav-link" [ngClass]="{'active': route.url.includes('help-center')}" (click)="redirectTo('help-center')">Help Center</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" (click)="onAboutUs()">About us</a>
+                                <a class="nav-link" [ngClass]="{'active': route.url.includes('about-us')}" (click)="redirectTo('about-us')">About us</a>
                             </li>
                             <li class="nav-item d-block d-sm-block d-md-block d-lg-none">
-                                <a class="nav-link" (click)="redirectTo()">Login</a>
+                                <a class="nav-link" (click)="redirectTo('/auth/login')">Login</a>
                             </li>
                             <li class="nav-item d-block d-sm-block d-md-block d-lg-none">
-                                <a class="nav-link" (click)="redirectToRegister()">Apply Now</a>
+                                <a class="nav-link" (click)="redirectTo('/auth/register')">Apply Now</a>
                             </li>
                             <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -93,8 +93,8 @@
                         </ul>
 
                         <div class="d-flex d-none d-lg-block">
-                            <button (click)="redirectTo()" class="btn btn-dark-cuttle" >Login</button>
-                            <button (click)="redirectToRegister()" class="btn btn-light-cuttle" >Apply Now</button>
+                            <button (click)="redirectTo('/auth/login')" class="btn btn-dark-cuttle" >Login</button>
+                            <button (click)="redirectTo('/auth/register')" class="btn btn-light-cuttle" >Apply Now</button>
                         </div>
                        </ng-container>
                        <ng-template #dashboard>

@@ -1,28 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonService } from '../../services/common/common.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
-  constructor(
-    public route: Router
-  ) {  
+export class HeaderComponent implements OnInit {
+  isLoggedInUser: boolean = false;
+  constructor(public route: Router, private commonService: CommonService) {}
+
+  ngOnInit(): void {
+    this.commonService.isUserLoggedInSub.subscribe((res) => {
+      this.isLoggedInUser = res;
+    });
   }
   onAboutUs() {
     if (document.getElementById('aboutUs')) {
       document.getElementById('aboutUs')?.scrollIntoView();
     }
   }
-  redirectTo(){
-    this.route.navigate(['/auth/login']);
-  }
-  redirectToRegister(){
-    this.route.navigate(['/auth/register']);
-  }
-  redirectToHelpCenter(){
-    this.route.navigate(['/help-center']);
+  redirectTo(routeTo: string) {
+    this.route.navigate([routeTo]);
   }
 }

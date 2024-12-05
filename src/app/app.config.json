@@ -4,5 +4,7 @@
     "SIGN_UP_URL": "account/v1/sign-up",
     "LOGIN_URL": "auth",
     "RESET_PASSWORD_URL": "v1/public/forgot-password",
-    "SEND_OTP_URL": "v1/public/send-otp"
+    "SEND_OTP_URL": "v1/public/send-otp",
+    "CREDIT_BALANCE_URL": "account/v1/get-credit-balance",
+    "GET_PROFILE_DATA_URL": "account/v1/profile-data"
 }

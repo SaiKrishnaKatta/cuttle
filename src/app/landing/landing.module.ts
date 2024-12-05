@@ -21,7 +21,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     FeatureComponent,
     CreditCardComponent,
     FundSecurityComponent,
-    AboutUsComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,

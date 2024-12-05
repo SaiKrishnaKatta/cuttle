@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
 import { Constants } from '../../models/constants';
 
@@ -25,11 +25,11 @@ export class RegisterComponent implements OnInit {
 
   initForm() {
     this.registerForm = this._fb.group({
-      areaCode: '',
-      phone: '',
-      verificationCode: '',
-      password: '',
-      termsAndConditions: ''
+      areaCode: ['', Validators.required],
+      phone: ['', Validators.required],
+      verificationCode: ['', Validators.required],
+      password: ['', Validators.required],
+      termsAndConditions: ['', Validators.required]
     })
   }
 
