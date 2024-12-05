@@ -65,7 +65,7 @@
                                     [ngClass]="{'active': route.url.includes('landing')}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Help Center</a>
+                                <a class="nav-link" (click)="redirectToHelpCenter()">Help Center</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" (click)="onAboutUs()">About us</a>

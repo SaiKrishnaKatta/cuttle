@@ -22,4 +22,7 @@ export class HeaderComponent {
   redirectToRegister(){
     this.route.navigate(['/auth/register']);
   }
+  redirectToHelpCenter(){
+    this.route.navigate(['/help-center']);
+  }
 }
