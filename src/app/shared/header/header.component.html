@@ -47,7 +47,9 @@
         <div class="row">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" aria-current="page" (click)="redirectTo('landing')" 
+                    routerLinkActive="router-link-active"
+                    [ngClass]="{'active': route.url.includes('landing')}">
                         <img src="assets/img/logo.png" alt="Bootstrap" width="100%" height="100%">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

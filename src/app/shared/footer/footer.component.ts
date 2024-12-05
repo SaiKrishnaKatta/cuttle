@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 import { CommonService } from '../../services/common/common.service';
 
 @Component({
@@ -8,20 +8,20 @@ import { CommonService } from '../../services/common/common.service';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  // isLoggedInUser: boolean = false;
-  // constructor(public route: Router, private commonService: CommonService) {}
+  isLoggedInUser: boolean = false;
+  constructor(public route: Router, private commonService: CommonService) {}
 
-  // ngOnInit(): void {
-  //   this.commonService.isUserLoggedInSub.subscribe((res) => {
-  //     this.isLoggedInUser = res;
-  //   });
-  // }
-  // onAboutUs() {
-  //   if (document.getElementById('aboutUs')) {
-  //     document.getElementById('aboutUs')?.scrollIntoView();
-  //   }
-  // }
-  // redirectTo(routeTo: string) {
-  //   this.route.navigate([routeTo]);
-  // }
+  ngOnInit(): void {
+    this.commonService.isUserLoggedInSub.subscribe((res) => {
+      this.isLoggedInUser = res;
+    });
+  }
+  onAboutUs() {
+    if (document.getElementById('aboutUs')) {
+      document.getElementById('aboutUs')?.scrollIntoView();
+    }
+  }
+  redirectTo(routeTo: string) {
+    this.route.navigate([routeTo]);
+  }
 }

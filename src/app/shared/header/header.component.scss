@@ -24,6 +24,9 @@
   .navbar-toggler-icon{
     background-image: url('../../../assets/img/icons/toggler_icon.png');
   }
+  .navbar-brand{
+    cursor: pointer;
+  }
 
   .navbar-expand-lg .navbar-nav .nav-link {
     padding: 0 14px;
@@ -51,6 +54,19 @@
   position: absolute;
   top: 0px;
   right: 10px;
+}
+.top-bar li{
+  position: relative;
+}
+.top-bar li:not(:last-child)::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform:translateY(-55%);
+  width: 1px;
+  height: 40%;
+  background-color: #222E52;
 }
 
 .dropdown-icon{
