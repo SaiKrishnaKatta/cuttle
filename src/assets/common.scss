@@ -818,6 +818,7 @@ i) Animations
         display: flex;
         justify-content: center;
     }
+	.img-responsive{width:50% !important;}
     .why-cuttle img{
         transform: translate(0%, 20%);
     }
