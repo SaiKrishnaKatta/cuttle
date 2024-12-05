@@ -7,7 +7,9 @@
                 <!-- <h3>Help Center</h3> -->
 			
 				<div class="footer-logo">
-					<img src="assets/img/footer_logo.png" alt="footer-logo">
+					<img src="assets/img/footer_logo.png" alt="footer-logo" aria-current="page" (click)="redirectTo('landing')" 
+                    routerLinkActive="router-link-active"
+                    [ngClass]="{'active': route.url.includes('landing')}">
 					<ul class="footer-list px-0">
                         <li><a href="#"> 
                             <span>
@@ -132,10 +134,12 @@
 				</ul> -->
 				<h3>Quick Links</h3>
 				<ul class="footer-list px-0">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Help Center</a></li>
-					<!-- <li><a [ngClass]="{'active': route.url.includes('help-center')}" (click)="redirectTo('help-center')">Help Center</a></li> -->
-					<li><a href="#">About Us</a></li>
+					<li class="nav-item"><a class="nav-link" aria-current="page" (click)="redirectTo('landing')" 
+                        routerLinkActive="router-link-active"
+                        [ngClass]="{'active': route.url.includes('landing')}">Home</a></li>
+					<!-- <li><a href="#">Help Center</a></li> -->
+					<li class="nav-item"><a class="nav-link" [ngClass]="{'active': route.url.includes('help-center')}" (click)="redirectTo('help-center')">Help Center</a></li>
+					<li class="nav-item"><a class="nav-link" [ngClass]="{'active': route.url.includes('about-us')}" (click)="redirectTo('about-us')">About Us</a></li>
 				</ul>
 			</div>
 			<!-- Column 2 End -->
@@ -144,8 +148,8 @@
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<h3>Info</h3>
 				<ul class="footer-list px-0">
-					<li><a href="#">Service Charges</a></li>
-					<li><a href="#">Terms & Conditions</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Service Charges</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Terms & Conditions</a></li>
 				</ul>
 			</div>
 
@@ -153,8 +157,8 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <h3>Help Center</h3>
 				<ul class="footer-list px-0">
-					<li><a href="#">About Cuttle Card</a></li>
-					<li><a href="#">Step By Step Guide</a></li>
+					<li class="nav-item"><a class="nav-link" [ngClass]="{'active': route.url.includes('about-us')}" (click)="redirectTo('about-us')">About Cuttle Card</a></li>
+					<li class="nav-item"><a class="nav-link" [ngClass]="{'active': route.url.includes('help-center')}" (click)="redirectTo('help-center')">Step By Step Guide</a></li>
 				</ul>
 				<!-- <h3>Reach Us</h3>
 				<ul class="footer-list px-0">
@@ -214,7 +218,9 @@
                         
                         <ul class="nav footer-menu">
                             <li class="nav-item">
-                                <p class="mb-0 px-0 nav-link">© 2024 <span class="primary-color">Cuttle Card</span>. All Rights Reserved.</p>
+                                <p class="mb-0 px-0 nav-link">© 2024 <span class="primary-color" aria-current="page" (click)="redirectTo('landing')" 
+                                    routerLinkActive="router-link-active"
+                                    [ngClass]="{'active': route.url.includes('landing')}">Cuttle Card</span>. All Rights Reserved.</p>
                             </li>
                           </ul>
                     </div>
