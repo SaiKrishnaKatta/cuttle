@@ -33,7 +33,7 @@
     </div>
     <div class="form-group mb-0 row my-4">
       <div class="col-12">
-        <button class="btn btn-orange btn-block m-0 w-100" type="submit" (click)="onRegister()" [disabled]="registerForm.valid">Register</button>
+        <button class="btn btn-orange btn-block m-0 w-100" type="submit" (click)="onRegister()" [disabled]="!registerForm.valid">Register</button>
       </div>
     </div>
     <div class="text-muted my-3">
