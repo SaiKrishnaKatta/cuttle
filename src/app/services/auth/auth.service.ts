@@ -37,4 +37,11 @@ export class AuthService {
     req.destinationType = type;
     return this.http.post(url, req);
   }
+
+  verifyOtp(req: OTPRequest, type: string): Observable<any> {
+    const url = environment.apiBase + config.LOGIN_VERIFY_OTP_URL;
+    req.verificationType = type;
+    delete req.destinationType;
+    return this.http.post(url, req);
+  }
 }

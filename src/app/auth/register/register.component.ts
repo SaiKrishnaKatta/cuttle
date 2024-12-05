@@ -7,11 +7,11 @@ import { Constants } from '../../models/constants';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  styleUrl: './register.component.scss',
 })
 export class RegisterComponent implements OnInit {
-
   registerForm: FormGroup = new FormGroup({});
+  showhidePswd: string = 'password';
 
   constructor(
     private route: Router,
@@ -23,24 +23,39 @@ export class RegisterComponent implements OnInit {
     this.initForm();
   }
 
+  onShowPswd() {
+    this.showhidePswd = this.showhidePswd === 'text' ? 'password' : 'text';
+  }
+
   initForm() {
     this.registerForm = this._fb.group({
       areaCode: ['', Validators.required],
       phone: ['', Validators.required],
-      verificationCode: ['', Validators.required],
+      verificationCode: [''],
       password: ['', Validators.required],
-      termsAndConditions: ['', Validators.required]
-    })
+      termsAndConditions: ['', Validators.required],
+    });
   }
 
   onRegister() {
     if (this.registerForm.valid) {
-      this.authService.onSignUp(this.registerForm.value).subscribe((res) => {
-        console.log(res);
-        this.route.navigate(['/dashboard']);
-      }, (error) => {
-        console.error(error);
-      })
+      const payload = {
+        password: this.registerForm.value.password,
+        phone: this.registerForm.value.phone,
+        areaCode: this.registerForm.value.areaCode,
+        role: 'USER',
+        country: 'IN',
+        userType: 'INDIVIDUAL',
+      };
+      this.authService.onSignUp(payload).subscribe(
+        (res) => {
+          console.log(res);
+          this.route.navigate(['/dashboard']);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
     }
   }
 
@@ -49,12 +64,15 @@ export class RegisterComponent implements OnInit {
   }
 
   onSendOTP() {
-    if (this.registerForm.value.verificationCode) {
-      this.authService.sendOtp(this.registerForm.value, Constants.REGISTER_SMS_OTP).subscribe((res) => {
-        console.log('OTP sent to user!!')
-      }, (error) => {
-        console.error(error);
-      })
-    }
+    this.authService
+      .sendOtp(this.registerForm.value, Constants.REGISTER_SMS_OTP)
+      .subscribe(
+        (res) => {
+          console.log('OTP sent to user!!');
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
   }
 }

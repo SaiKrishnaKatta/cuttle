@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth/auth.service';
+import { Constants } from '../../models/constants';
 
 @Component({
   selector: 'app-forgot-password',
@@ -12,7 +14,8 @@ export class ForgotPasswordComponent implements OnInit {
 
   constructor(
     private route: Router, 
-    private _fb: FormBuilder
+    private _fb: FormBuilder,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -23,7 +26,7 @@ export class ForgotPasswordComponent implements OnInit {
     this.form = this._fb.group({
       areaCode: ['', Validators.required],
       phone: ['', Validators.required],
-      smsOtp: ['', Validators.required]
+      smsOtp: ['']
     });
   }
 
@@ -44,5 +47,18 @@ export class ForgotPasswordComponent implements OnInit {
   }
   onRegister() {
     this.route.navigate(['auth/register']);
+  }
+
+  onSendOTP() {
+    this.authService
+      .sendOtp(this.form.value, Constants.SMS_PASSWORD_VERIFICATION_CODE)
+      .subscribe(
+        (res) => {
+          console.log('OTP sent to user!!');
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
   }
 }
