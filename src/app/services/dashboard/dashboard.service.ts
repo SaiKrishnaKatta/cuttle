@@ -39,9 +39,9 @@ export class DashboardService {
     return this.http.post(url, req);
   }
 
-  getCardList(req: any): Observable<any> {
+  getCardList(): Observable<any> {
     const url = environment.apiBase + config.GET_CARD_LISTS;
-    return this.http.post(url, req);
+    return this.http.post(url, {});
   }
 
 }

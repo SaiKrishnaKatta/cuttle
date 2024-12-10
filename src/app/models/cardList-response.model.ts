@@ -1,0 +1,31 @@
+export interface CardDetails {
+  id?: string;
+  cardId?: number;
+  lastName?: string;
+  last4?: string;
+  typeName?: string;
+  expiryYear?: string;
+  embossedName?: string;
+  type?: number;
+  minDailyAtmLimit?: string;
+  timeout?: number;
+  network?: string;
+  physicalCard?: true;
+  email?: string;
+  maxDailyAtmLimit?: string;
+  feesUnpaid?: string;
+  minDailyPurchaseLimit?: string;
+  thirdPartyAccountId?: string;
+  expiryMonth?: string;
+  maxDailyPurchaseLimit?: string;
+  firstName?: string;
+  phone?: string;
+  typeImageUrl?: string;
+  thirdPartyCardAccountId?: string;
+  phoneArea?: string;
+  thirdPartyAccountNumber?: string;
+  status?: number;
+  userId?: string;
+  customerNo?: string;
+  customerId?: number;
+}

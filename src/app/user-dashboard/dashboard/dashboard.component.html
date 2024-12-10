@@ -11,7 +11,7 @@
                                     <p>Credit Available</p>
                                     <p class="mb-0">
                                         <span class="amount">${{credData.balanceInfo?.available}}</span>
-                                        <span class="currency">HKD</span>
+                                        <span class="currency">{{credData.balanceInfo?.currency}}</span>
                                     </p>
                                 </div>
                                 <div class="">
@@ -48,7 +48,7 @@
                                                                         fill="#96A1C2" />
                                                                 </svg>
                                                             </span>
-                                                            {{lockedCard ? 'Un Lock Card' : 'Lock Card 12'}}</a>
+                                                            {{lockedCard ? 'Un Lock Card' : 'Lock Card'}}</a>
                                                     </li>
                                                     <li class="nav-item">
 
@@ -199,8 +199,8 @@
                                 <div
                                     class="card-body flex-column flex-md-row justify-content-between align-items-center">
                                     <div class="d-flex spend-limit">
-                                        <p class="mx-2">Daily Spending Limit : <span class="fw-bold">$259.75</span></p>
-                                        <p class="mx-2 my-0">Daily Spending Limit : <span class="fw-bold">$259.75</span>
+                                        <p class="mx-2">Daily Spending Limit : <span class="fw-bold">${{credData.cardTxnRuleInfo?.maxDailyPurchaseLimit}}</span></p>
+                                        <p class="mx-2 my-0">Daily ATM Withdrawal Limit : <span class="fw-bold">${{credData.cardTxnRuleInfo?.maxDailyAtmLimit}}</span>
                                         </p>
                                     </div>
 
@@ -291,9 +291,9 @@
                     <div class="card-body">
                         <div class="myCard">
                             <div class="row">
-                                <div class="col-md-12 col-xl-12">
+                                <a class="col-md-12 col-xl-12" (click)="getCardSensitiveInfo()">
                                     <img src="../../assets/img/credit_card_user_dashboard.png" alt="" class="w-100">
-                                </div>
+                                </a>
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-6 col-md-12 col-lg-6 mb-3">
