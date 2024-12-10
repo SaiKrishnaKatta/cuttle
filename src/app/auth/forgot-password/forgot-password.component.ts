@@ -41,7 +41,7 @@ export class ForgotPasswordComponent implements OnInit {
     // }
     if (this.form.valid) { 
       this.route.navigate(['auth/set-new-login-pwd'], {
-        state: { phone: this.form.value.phone, smsOtp: this.form.value.smsOtp },
+        state: { phone: this.form.get('phone')?.value, smsOtp: this.form.get('smsOtp')?.value },
       });
     }
   }

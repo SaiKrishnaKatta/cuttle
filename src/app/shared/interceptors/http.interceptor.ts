@@ -50,12 +50,20 @@ export class ReqResInterceptor implements HttpInterceptor {
       brand: 'OnePlus',
       model: 'DN2101',
     };
-    const token = sessionStorage.getItem('token') || '';
-    req = req.clone({
-      headers: req.headers.set('Content-Type', 'application/json')
-      .set('token', token),
-      body: { ...req.body, metadata: this.metaData },
-    });
+    console.log(req)
+    if (!window.location.href.includes('auth')) {
+      const token = sessionStorage.getItem('token') || '';
+      req = req.clone({
+        headers: req.headers.set('Content-Type', 'application/json').set(
+        'Authorization', `Bearer ${token}`),
+        body: { ...req.body, metadata: this.metaData },
+      });
+    } else if (!req.url.includes('get-cards-list')) {
+      req = req.clone({
+        headers: req.headers.set('Content-Type', 'application/json'),
+        body: { ...req.body, metadata: this.metaData },
+      });
+    }
     return next.handle(req).pipe(
       map(event => {
         if (event instanceof HttpResponse) {

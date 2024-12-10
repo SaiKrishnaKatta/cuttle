@@ -11,6 +11,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class SetNewLoginPwdComponent implements OnInit, OnDestroy {
   form: FormGroup = new FormGroup({});
+  showhideOld: string = 'password';
+  showhideNew: string = 'password';
 
   constructor(
     private route: Router,
@@ -37,8 +39,8 @@ export class SetNewLoginPwdComponent implements OnInit, OnDestroy {
       const payload = {
         phone: window.history.state.phone,
         smsOtp: window.history.state.smsOtp,
-        oldPwd: this.form.value.oldPwd,
-        newPwd: this.form.value.newPwd,
+        oldPwd: this.form.get('oldPwd')?.value,
+        newPwd: this.form.get('newPwd')?.value,
       };
       this.authService.resetPassword(payload).subscribe((res) => {
         this.route.navigate(['auth/login']);
@@ -49,6 +51,14 @@ export class SetNewLoginPwdComponent implements OnInit, OnDestroy {
   }
   onReturn() {
     this.location.back();
+  }
+
+  onShow(type: string) {
+    if (type === 'OLD') {
+      this.showhideOld = this.showhideOld === 'text' ? 'password' : 'text';
+    } else {
+      this.showhideNew = this.showhideNew === 'text' ? 'password' : 'text';
+    }
   }
 
   ngOnDestroy(): void {

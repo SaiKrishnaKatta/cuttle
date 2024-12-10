@@ -2,14 +2,14 @@ import { ReqMetadata } from "./metadata.model";
 
 export class OTPRequest {
     phone: string = '';
-    country?: string = 'IN';
     areaCode: string = '';
-    destinationType?: string = '';
-    metadata?: ReqMetadata = {};
     smsOtp: string = '';
+    destinationType?: string = '';
     verificationType?: string = '';
+    country?: string = 'IN';
+    metadata?: ReqMetadata = {};
 
-    constructor(phone: string, areaCode: string, destinationType: string, smsOtp: string, verificationType: string) {
+    constructor(phone: string, areaCode: string, smsOtp: string, destinationType: string, verificationType: string ) {
         this.phone = phone;
         this.areaCode = areaCode;
         this.destinationType = destinationType;

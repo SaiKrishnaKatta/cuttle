@@ -23,4 +23,25 @@ export class DashboardService {
     const url = environment.apiBase + config.GET_PROFILE_DATA_URL;
     return this.http.post(url, req);
   }
+
+  onLockCard(req: any): Observable<any> {
+    const url = environment.apiBase + config.LOCK_CARD_URL;
+    return this.http.post(url, req);
+  }
+
+  onUnLockCard(req: any): Observable<any> {
+    const url = environment.apiBase + config.UNLOCK_CARD_URL;
+    return this.http.post(url, req);
+  }
+  
+  getCardSensitiveInfo(req: any): Observable<any> {
+    const url = environment.apiBase + config.GET_CARD_SENSITIVE_INFO_URL;
+    return this.http.post(url, req);
+  }
+
+  getCardList(req: any): Observable<any> {
+    const url = environment.apiBase + config.GET_CARD_LISTS;
+    return this.http.post(url, req);
+  }
+
 }

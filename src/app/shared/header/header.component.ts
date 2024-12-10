@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonService } from '../../services/common/common.service';
+import { ProfileData } from '../../models/profileData';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,7 @@ import { CommonService } from '../../services/common/common.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
+  @Input() profileData: ProfileData = {};
   isLoggedInUser: boolean = false;
   constructor(public route: Router, private commonService: CommonService) {}
 

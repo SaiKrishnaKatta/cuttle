@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { DashboardService } from '../services/dashboard/dashboard.service';
+import { ProfileData } from '../models/profileData';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -7,6 +8,22 @@ import { Router } from '@angular/router';
   styleUrl: './user-dashboard.component.scss'
 })
 export class UserDashboardComponent {
+  profileData: ProfileData = {};
+  constructor(
+    private dashboardService: DashboardService
+  ) {}
+
+  ngOnInit(): void {
+    this.getProfileData();
+  }
+
+  getProfileData() {
+    const payload = {};
+    this.dashboardService.getProfileData(payload).subscribe((res) => {
+      console.log(res);
+      this.profileData = res.data ? res.data : {};
+    }, (err) => {console.error(err)})
+  }
 
 
 }
