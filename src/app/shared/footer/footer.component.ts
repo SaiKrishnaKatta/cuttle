@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonService } from '../../services/common/common.service';
+import { CompanyConstants } from '../../models/constants';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +10,7 @@ import { CommonService } from '../../services/common/common.service';
 })
 export class FooterComponent {
   isLoggedInUser: boolean = false;
+  companyData = CompanyConstants;
   constructor(public route: Router, private commonService: CommonService) {}
 
   ngOnInit(): void {

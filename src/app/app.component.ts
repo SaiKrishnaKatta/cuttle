@@ -18,14 +18,11 @@ export class AppComponent implements OnInit {
     private commonService: CommonService
   ) {
     this.commonService.isLoaderOn.subscribe((res) => {
-      console.log(res);
       if (res) {
         this.isLoaderOn = res;
       }
     })
   }
 
-  ngOnInit(): void {
-    console.log(this.title);
-  }
+  ngOnInit(): void {}
 }

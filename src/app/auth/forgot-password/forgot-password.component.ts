@@ -50,8 +50,10 @@ export class ForgotPasswordComponent implements OnInit {
   }
 
   onSendOTP() {
+    const payload = this.form.value;
+    delete payload.smsOtp;
     this.authService
-      .sendOtp(this.form.value, Constants.SMS_PASSWORD_VERIFICATION_CODE)
+      .sendOtp(payload, Constants.SMS_PASSWORD_VERIFICATION_CODE)
       .subscribe(
         (res) => {
           console.log('OTP sent to user!!');

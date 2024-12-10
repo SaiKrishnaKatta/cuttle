@@ -1,4 +1,5 @@
 import {
+  HttpErrorResponse,
   HttpHandler,
   HttpHeaders,
   HttpInterceptor,
@@ -7,10 +8,11 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { EncryptService } from '../../services/common/encrypt.service';
-import { catchError, finalize, map } from 'rxjs';
+import { catchError, finalize, map, Observable, of, throwError } from 'rxjs';
 import { AngularDeviceInformationService } from 'angular-device-information';
 import { ReqMetadata } from '../../models/metadata.model';
 import { CommonService } from '../../services/common/common.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -21,11 +23,25 @@ export class ReqResInterceptor implements HttpInterceptor {
 
   constructor(
     private deviceInfoService: AngularDeviceInformationService,
-    private commonService: CommonService
+    private commonService: CommonService,
+    private router: Router
   ) {}
+
+  private handleAuthError(err: HttpErrorResponse): Observable<any> {
+    if (!err.status) {
+        sessionStorage.clear();
+        localStorage.clear();
+        this.router.navigate(['auth/login']);
+        return of(err.message); // or EMPTY may be appropriate here
+    }
+    return throwError(err);
+}
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     this.commonService.isLoaderOn.next(true);
+    if (sessionStorage.getItem('token')) {
+      this.commonService.isUserLoggedInSub.next(true);
+    }
     // this.metaData = this.deviceInfoService.getDeviceInfo();
     this.metaData = {
       deviceType: 'OnePlus Nord2 5G',
@@ -76,9 +92,10 @@ export class ReqResInterceptor implements HttpInterceptor {
         return event;
       }),
       finalize(() => {
-        console.log(req)
+        console.log(event)
         this.commonService.isLoaderOn.next(false);
-      })
+      }),
+      catchError((x)=> this.handleAuthError(x))
     );
   }
 }

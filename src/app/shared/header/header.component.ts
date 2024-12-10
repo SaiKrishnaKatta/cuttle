@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonService } from '../../services/common/common.service';
 import { ProfileData } from '../../models/profileData';
+import { CompanyConstants } from '../../models/constants';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,7 @@ import { ProfileData } from '../../models/profileData';
 export class HeaderComponent implements OnInit {
   @Input() profileData: ProfileData = {};
   isLoggedInUser: boolean = false;
+  companyData = CompanyConstants;
   constructor(public route: Router, private commonService: CommonService) {}
 
   ngOnInit(): void {
