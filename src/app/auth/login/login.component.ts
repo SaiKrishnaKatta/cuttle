@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonService } from '../../services/common/common.service';
-import { Constants } from '../../models/constants';
+import { Constants, PATTERNS } from '../../models/constants';
 import { OTPRequest } from '../../models/otpRequest.model';
 
 @Component({
@@ -31,8 +31,8 @@ export class LoginComponent implements OnInit {
   initForm() {
     this.loginForm = this._fb.group({
       areaCode: ['', Validators.required],
-      phone: ['', Validators.required],
-      password: ['', Validators.required],
+      phone: ['', [Validators.required, Validators.pattern(PATTERNS.PHONE_NUMBER_REGEX)]],
+      password: ['', [Validators.required, Validators.pattern(PATTERNS.PASSWORD_REGEX)]],
     });
   }
   onSignIn() {
@@ -83,6 +83,7 @@ export class LoginComponent implements OnInit {
   }
 
   onShowPswd() {
+    console.log(this.loginForm);
     this.showhidePswd = this.showhidePswd === 'text' ? 'password' : 'text';
   }
 }

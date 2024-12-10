@@ -88,4 +88,8 @@ export class DashboardComponent implements OnInit {
       this.credData = res.body.data ? res.body.data : {};
     }, (err) => {console.error(err)});
   }
+
+  onActivateCard() {
+    this.route.navigate(['dashboard/active-card']);
+  }
 }
