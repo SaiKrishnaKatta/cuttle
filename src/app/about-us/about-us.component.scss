@@ -102,3 +102,100 @@
     list-style-type: lower-alpha;
     padding-left: 20px;
 }
+
+// .gradient-left-border{
+//     border-left: 4px solid #d21e2b;
+//     font-size: 16px;
+//     font-weight: 500;
+//     margin: 25px 0px 25px 0px;
+//     padding: 20px 30px 30px 30px;
+// }
+
+
+.gradient-left-border{
+    position: relative;
+    padding-left: 30px;
+}
+
+.gradient-left-border::before {
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    width: 5px;
+    background: linear-gradient(to bottom, #BE7B2E, #6AF5FF);
+
+}
+
+.gradient-right-border::before{
+    content: '';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    width: 5px;
+    background: linear-gradient(to bottom, #BE7B2E, #6AF5FF);
+}
+
+.gradient-right-border{
+    position: relative;
+    padding-right: 30px;
+}
+
+
+/*-----------------------------------------
+6. CountUps
+-------------------------------------------*/
+
+.counter-box{
+	position: relative;
+	text-align: center;
+	margin: 15px 0px;
+}
+@media (max-width: 767px) {
+	.counter-box{
+		margin: 30px;
+	}	
+}
+
+.counter-box h4{
+	display: inline-block;
+	font-size: 35px;
+	font-weight: 600;
+	color: #111;
+}
+
+.counter-box h4:after{
+	content: '+';
+}
+
+
+.counter-box h3{
+	display: inline-block;
+	font-size: 45px;
+	font-weight: 600;
+	color: #111;
+}
+
+.counter-box h3:after{
+	content: '+';
+}
+
+.counter-box p{
+  font-size: 15px;
+  font-weight: 500;
+  color: #999;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.counter-box.left-holder p:before{
+	content: '';
+	display: block;
+	background: #d21e2b;
+	height: 3px;
+	width: 70px;
+	margin: 10px 0px;
+}
+
