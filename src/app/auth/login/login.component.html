@@ -18,10 +18,10 @@
     </div>
     <div class="form-group">
       <label class="col-form-label text-white">Password</label>
-      <input class="form-control" formControlName="password" type="password" name="login[password]" required="" placeholder="*********">
+      <input class="form-control" formControlName="password" [type]="showhidePswd" name="login[password]" required="" placeholder="*********">
       <div class="show-hide">
         <span class="show">
-          <i class="bi bi-eye-slash-fill"></i>
+          <i [ngClass]="showhidePswd === 'text' ? 'bi bi-eye-slash-fill' : 'bi bi-eye-fill'" (click)="onShowPswd()"></i>
         </span>
       </div>
     </div>

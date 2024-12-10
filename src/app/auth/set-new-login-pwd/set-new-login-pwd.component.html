@@ -5,16 +5,16 @@
   <form class="theme-form" [formGroup]="form">
     <div class="form-group">
       <label class="col-form-label text-white">Login password</label>
-      <input class="form-control" formControlName="oldPwd" type="password" name="login[password]" required="" placeholder="">
+      <input class="form-control" formControlName="oldPwd" [type]="showhideOld" name="login[password]" required="" placeholder="">
       <div class="show-hide">
-        <i class="bi bi-eye-fill"></i>
+        <i [ngClass]="showhideOld === 'text' ? 'bi bi-eye-slash-fill' : 'bi bi-eye-fill'" (click)="onShow('OLD')"></i>
       </div>
     </div>
     <div class="form-group">
       <label class="col-form-label text-white">Confirm login password</label>
-      <input class="form-control" formControlName="newPwd" type="password" name="login[password]" required="" placeholder="*********">
+      <input class="form-control" formControlName="newPwd" [type]="showhideNew" name="login[password]" required="" placeholder="*********">
       <div class="show-hide">
-        <i class="bi bi-eye-slash-fill"></i>
+        <i [ngClass]="showhideNew === 'text' ? 'bi bi-eye-slash-fill' : 'bi bi-eye-fill'" (click)="onShow('NEW')"></i>
       </div>
     </div>
     <div class="form-group row my-4">

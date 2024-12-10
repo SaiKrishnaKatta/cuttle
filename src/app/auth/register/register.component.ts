@@ -40,9 +40,9 @@ export class RegisterComponent implements OnInit {
   onRegister() {
     if (this.registerForm.valid) {
       const payload = {
-        password: this.registerForm.value.password,
-        phone: this.registerForm.value.phone,
-        areaCode: this.registerForm.value.areaCode,
+        password: this.registerForm.get('password')?.value,
+        phone: this.registerForm.get('phone')?.value,
+        areaCode: this.registerForm.get('areaCode')?.value,
         role: 'USER',
         country: 'IN',
         userType: 'INDIVIDUAL',

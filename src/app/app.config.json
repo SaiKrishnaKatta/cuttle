@@ -7,5 +7,9 @@
     "SEND_OTP_URL": "account/v1/public/send-otp",
     "LOGIN_VERIFY_OTP_URL": "account/v1/public/verify",
     "CREDIT_BALANCE_URL": "account/v1/get-credit-balance",
-    "GET_PROFILE_DATA_URL": "account/v1/profile-data"
+    "GET_PROFILE_DATA_URL": "account/v1/profile-data",
+    "LOCK_CARD_URL": "account/v1/lock-card",
+    "UNLOCK_CARD_URL": "account/v1/unlock-card",
+    "GET_CARD_SENSITIVE_INFO_URL": "/account/v1/get-cards-senstive-info",
+    "GET_CARD_LISTS": "account/v1/get-cards-list"
 }
