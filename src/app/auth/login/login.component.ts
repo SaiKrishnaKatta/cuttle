@@ -43,8 +43,7 @@ export class LoginComponent implements OnInit {
         (res) => {
           if (res && res.data && res.data.BearerToken) {
             this.commonService.isUserLoggedInSub.next(true);
-            // this.route.navigate(['/dashboard']);
-            this.showOPTVerify = true;
+            this.route.navigate(['/dashboard']);
           } else {
             this.showOPTVerify = true;
           }
