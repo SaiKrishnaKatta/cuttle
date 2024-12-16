@@ -30,6 +30,9 @@ export class DashboardComponent implements OnInit {
   onCollateralInj() {
     this.route.navigate(['/dashboard/collateral-injection'])
   }
+  onWallets() {
+    this.route.navigate(['/dashboard/wallets'])
+  }
 
   onLockCard() {
     const payload = {

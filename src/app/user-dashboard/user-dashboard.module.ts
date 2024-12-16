@@ -7,11 +7,13 @@ import { SharedModule } from '../shared/shared.module';
 import { CollateralInjectionComponent } from './collateral-injection/collateral-injection.component';
 import { ModalModule } from "ngx-bootstrap/modal";
 import { ActiveCardComponent } from './active-card/active-card.component';
+import { WalletsComponent } from './wallets/wallets.component';
 
 @NgModule({
   declarations: [
     UserDashboardComponent,
     CollateralInjectionComponent,
+    WalletsComponent,
     ActiveCardComponent
   ],
   imports: [
