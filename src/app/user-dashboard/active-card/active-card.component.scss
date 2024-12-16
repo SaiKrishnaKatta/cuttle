@@ -113,7 +113,7 @@
 }
 
 .login-card .login-main .theme-form h4 {
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
 }
 
 .login-card .login-main .theme-form label {
@@ -346,4 +346,19 @@
 
 .success_check h4 px{
     color:#FAFAFA
+}
+.modal-bg{
+    background: linear-gradient(to bottom, #242E48, #19233F);
+	 color: #FAFAFA !important;
+	 border: 2px solid #393C49 !important;
+}
+
+.success_check h4{
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    position: relative;
+    font-size: 30px;
+    color: #ECF0FC;
+    line-height: 160%;
+    margin: 20px 0 5px;
 }

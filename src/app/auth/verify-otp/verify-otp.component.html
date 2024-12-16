@@ -1,1 +1,35 @@
-<p>verify-otp works!</p>
+<div class="login-main">
+    <div class="">
+        <button type="button" class="btn btn-dark-bg mb-3 mx-0">
+            <i class="bi bi-arrow-left"></i>
+        </button>
+    </div>
+
+    <div class="logo text-left">
+      <span class="text-white">Verification code</span>
+    </div>
+    <form class="theme-form">
+      <div class="form-group row">
+      
+        <div class="form-group">
+          <label class="col-form-label text-white" for="verificationCode">Verification Code</label>
+          <input class="form-control" formControlName="verificationCode" type="text" id="verificationCode" name="verificationCode" required placeholder="Verification Code">
+        </div>
+      </div>   
+      <div class="form-group mb-0 text-end mb-2">
+        <p class="text-orange">00:59</p>
+      </div>
+      <div class="form-group row my-4">
+        <div class="col-12">
+          <button class="btn btn-orange btn-block m-0 w-100" type="submit">Verify</button>
+        </div>
+      </div>
+    
+      <div class="form-group row">
+        <div class="col-12">
+          <button class="btn btn-blue btn-block m-0 w-100" type="button" >Resend </button>
+        </div>
+      </div>
+  
+    </form>
+  </div>

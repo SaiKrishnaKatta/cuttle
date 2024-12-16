@@ -1,0 +1,101 @@
+/**=====================
+    25. Authentication CSS Start
+==========================**/
+.btn {
+    font-family: "Inter", serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .btn-orange {
+    background-color: #BE7B2E;
+    color: #fff;
+  }
+  
+  .btn-orange:hover {
+    background-color: #232F52;
+    color: #BE7B2E;
+  }
+  
+  .btn-blue {
+    background-color: #232F52;
+    color: #BE7B2E;
+  }
+  .text-orange{
+    color:#BE7B2E !important;
+}
+  
+  .custom-text-secondary {
+    color: #93A0B9;
+  }
+  
+  .btn-blue:hover {
+    background-color: #BE7B2E;
+    color: #fff;
+  }
+
+  
+.logo {
+    // display: flex;
+    align-items: center;
+    margin: 30px 0;
+    text-align: center;
+}
+  
+  .form-control {
+    border: 2px solid #363F54;
+  }
+  
+  .custom-hr {
+    border: 2px solid #363F54;
+  }
+  
+  
+  
+  
+  .theme-form .checkbox label {
+    padding-left: 10px;
+  }
+  
+  
+  .font-sm {
+    font-size: 12px !important;
+  }
+
+  
+  
+  .needs-validation .invalid-feedback {
+    color: #898989;
+  }
+  
+  .needs-validation .show-hide {
+    right: 30px;
+  }
+  
+  .needs-validation .invalid-tooltip {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .form-control{
+    color:#fff;
+  }
+  .input-has-value{
+  color:#fff;
+  }
+
+  .btn-dark-bg{
+    background-color: #232F52;
+    color:#E6ECFD;
+    padding:12px 20px;
+  }
+  .btn:first-child:active{
+    color:#E6ECFD;
+    border: 1px solid#363F54;
+  }
+  
+  /**=====================
+      25. Authentication CSS Ends
+  ==========================**/
+  
+  
