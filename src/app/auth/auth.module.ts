@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { SetNewLoginPwdComponent } from './set-new-login-pwd/set-new-login-pwd.component';
+import { WebSDKComponent } from './webSDK.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SetNewLoginPwdComponent } from './set-new-login-pwd/set-new-login-pwd.c
     LoginComponent,
     ForgotPasswordComponent,
     SetNewLoginPwdComponent,
+    WebSDKComponent
   ],
   imports: [CommonModule, AuthRoutingModule, ReactiveFormsModule, FormsModule],
 })
