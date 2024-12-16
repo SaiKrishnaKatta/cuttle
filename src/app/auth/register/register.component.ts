@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
 import { Constants } from '../../models/constants';
+import { WebSDKService } from '../webSDK.sevice';
 
 @Component({
   selector: 'app-register',
@@ -16,7 +17,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private route: Router,
     private authService: AuthService,
-    private _fb: FormBuilder
+    private _fb: FormBuilder,
+    private webSdkService: WebSDKService
   ) {}
 
   ngOnInit(): void {
@@ -31,7 +33,6 @@ export class RegisterComponent implements OnInit {
     this.registerForm = this._fb.group({
       areaCode: ['', Validators.required],
       phone: ['', Validators.required],
-      verificationCode: [''],
       password: ['', Validators.required],
       termsAndConditions: ['', Validators.required],
     });
@@ -47,15 +48,17 @@ export class RegisterComponent implements OnInit {
         country: 'IN',
         userType: 'INDIVIDUAL',
       };
-      this.authService.onSignUp(payload).subscribe(
-        (res) => {
-          console.log(res);
-          this.route.navigate(['/dashboard']);
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
+      this.route.navigate(['auth/verify-otp']);
+      // this.authService.onSignUp(payload).subscribe(
+      //   (res) => {
+      //     console.log(res);
+          // this.route.navigate(['/dashboard']);
+          // this.webSdkService.launchWebSdk('', 'saikrishnakatta69@gmail.com', '+917457413032', 'en');
+      //   },
+      //   (error) => {
+      //     console.error(error);
+      //   }
+      // );
     }
   }
 
