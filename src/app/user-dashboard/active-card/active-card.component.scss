@@ -348,9 +348,9 @@
     color:#FAFAFA
 }
 .modal-bg{
-    background: linear-gradient(to bottom, #242E48, #19233F);
+    background: linear-gradient(to bottom, #242D48, #19233F);
 	 color: #FAFAFA !important;
-	 border: 2px solid #393C49 !important;
+	//  border: 2px solid #393C49 !important;
 }
 
 .success_check h4{
@@ -361,4 +361,9 @@
     color: #ECF0FC;
     line-height: 160%;
     margin: 20px 0 5px;
+}
+
+.modal-footer button{
+    border-radius: 2px;
+    padding: 4px 40px 4px 40px;
 }
