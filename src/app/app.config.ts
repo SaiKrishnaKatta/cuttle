@@ -10,6 +10,7 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { AngularDeviceInformationService } from 'angular-device-information';
+import { BsModalService } from 'ngx-bootstrap/modal';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,6 +18,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withInterceptorsFromDi()),
     HttpClientModule,
     AngularDeviceInformationService,
-    { provide: HTTP_INTERCEPTORS, useClass: ReqResInterceptor, multi: true}
+    { provide: HTTP_INTERCEPTORS, useClass: ReqResInterceptor, multi: true},
+    BsModalService
   ],
 };

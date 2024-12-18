@@ -1,118 +1,79 @@
 <div class="row">
-    <div class="card custom-card custom-pading-30px">
-        <div class="card-body">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="card custom-card h-100">
-                            <div class="card-header py-3 border-0">
-                                <h5>My Card</h5>
+  <div class="card custom-card custom-pading-30px">
+    <div class="card-body">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="card custom-card h-100">
+              <div class="card-header py-3 border-0">
+                <h5>My Card</h5>
+              </div>
+              <div class="card-body">
+                <div class="myCard">
+                  <div class="row justify-content-center">
+                    <div class="col-md-12">
+                      <div class="card-background">
+                        <div class="card-details">
+                          <div class="d-flex justify-content-between align-items-center mb-1">
+                            <div class="card-holder">
+                              <small>Card Holder</small>
+                              <div>Prabhas Mishra</div>
                             </div>
-                            <div class="card-body">
-                                <div class="myCard">
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-12">
-                                            <div class="card-background">
-                                                <div class="card-details">
-                                                    <div class="d-flex justify-content-between align-items-center mb-1">
-                                                        <div class="card-holder">
-                                                            <small>Card Holder</small>
-                                                            <div>Prabhas Mishra</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <div class="col-md-7">
-                        <div class="row">
-                            <div class="col-xl-12 box-col-12">
-                                <div class="card custom-card card-management">
-                                    <div class="card-body flex-column flex-md-row justify-content-between align-items-center">
-                                        <div class="login-card">
-                                        <div class="login-main">
-                                        <div class="logo text-center">
-                                            <span class="text-white">Activate Card</span>
-                                          </div>
-                                        <form class="theme-form">
-                                            <div class="form-group">
-                                              <label class="col-form-label text-white" for="cardNumber">Card Number</label>
-                                              <input class="form-control" formControlName="cardNumber" type="text" id="cardNumber" name="cardNumber" required placeholder="2542 2222 8989 4545">
-                                            </div>
-                                            <div class="form-group">
-                                              <label class="col-form-label text-white">Activate Code</label>
-                                              <input class="form-control" formControlName="activateCard" type="text" id="activateCard" name="activateCard" required placeholder="35245">
-                                            </div>
-                                            <div class="form-group mb-0 text-end mb-2">
-                                                <p class="text-orange">00:59</p>
-                                              </div>
-                                            <div class="form-group row mt-2 mb-4">
-                                              <div class="col-12">
-                                                <button class="btn btn-orange btn-block m-0 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit">Activate Card</button>
-                                              
-                                            
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content modal-bg">
-        <!-- <div class="modal-header border-0">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div> -->
-        <div class="modal-body">
-          <div class="success_check">
-            <div class="row">
-                <div class="col-md-3 mx-auto">
-                    <div class="text-center">
-                        <img src="../../../assets/img/gif/card_check_success.gif" alt="" class="img-fluid">
-                    </div>
+                  </div>
                 </div>
-            </div>
-            
-            <div class="section-heading text-center">
-                <h4 class=""> Success</h4>
-                
-                <p class="text-white">
-                    Your card have been activated successfully.
-                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer border-0 d-flex justify-content-center">
-         
-          <button type="button" class="btn btn-orange">Done</button>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-xl-12 box-col-12">
+                <div class="card custom-card card-management">
+                  <div class="card-body flex-column flex-md-row justify-content-between align-items-center">
+                    <div class="login-card">
+                      <div class="login-main">
+                        <div class="logo text-center">
+                          <span class="text-white">Activate Card</span>
+                        </div>
+                        <form class="theme-form" [formGroup]="activeCardForm">
+                          <div class="form-group">
+                            <label class="col-form-label text-white" for="cardNumber">Card Number</label>
+                            <input class="form-control" formControlName="cardNumber" type="text" id="cardNumber"
+                              name="cardNumber" required placeholder="2542 2222 8989 4545">
+                          </div>
+                          <div class="form-group">
+                            <label class="col-form-label text-white">Activate Code</label>
+                            <input class="form-control" formControlName="activationCode" type="text" id="activateCard"
+                              name="activateCard" required placeholder="35245">
+                          </div>
+                          <div class="form-group mb-0 text-end mb-2">
+                            <p class="text-orange">00:59</p>
+                          </div>
+                          <div class="form-group row mt-2 mb-4">
+                            <div class="col-12">
+                              <button class="btn btn-orange btn-block m-0 w-100" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" type="submit" (click)="onActivateCard()">Activate Card</button>
+                            </div>
+                          </div>
+                          <div class="form-group mb-0 row">
+                            <div class="col-12">
+                              <button class="btn btn-blue btn-block m-0 w-100">Back</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-                                            </div>
-                                            </div>
-                                            
-                                            <div class="form-group mb-0 row">
-                                              <div class="col-12">
-                                                <button class="btn btn-blue btn-block m-0 w-100">Back</button>
-                                              </div>
-                                            </div>
-                                        
-                                          </form>
-                                          </div>
-                                          </div>
-                                    </div>
-        
-        
-                                </div>
-                            </div>
-        
-                        </div>
-                    </div>
-        
-                </div>
-            </div>
-        </div>
-    </div>
-   
+
 </div>

@@ -8,7 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { SetNewLoginPwdComponent } from './set-new-login-pwd/set-new-login-pwd.component';
-import { WebSDKComponent } from './webSDK.component';
+import { BsModalService, ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -16,8 +16,7 @@ import { WebSDKComponent } from './webSDK.component';
     RegisterComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    SetNewLoginPwdComponent,
-    WebSDKComponent
+    SetNewLoginPwdComponent
   ],
   imports: [CommonModule, AuthRoutingModule, ReactiveFormsModule, FormsModule],
 })

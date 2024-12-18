@@ -8,6 +8,7 @@ import { CollateralInjectionComponent } from './collateral-injection/collateral-
 import { ModalModule } from "ngx-bootstrap/modal";
 import { ActiveCardComponent } from './active-card/active-card.component';
 import { WalletsComponent } from './wallets/wallets.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import { WalletsComponent } from './wallets/wallets.component';
     CommonModule,
     UserDashboardRoutingModule,
     SharedModule,
+    ReactiveFormsModule,
+    FormsModule,
     ModalModule.forRoot()
   ]
 })

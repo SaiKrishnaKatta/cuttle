@@ -1,10 +1,23 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Injector, ViewChild } from '@angular/core';
 import snsWebSdk from '@sumsub/websdk';
+import { StatusModalComponent } from '../shared/status-modal/status-modal.component';
+import { AuthService } from '../services/auth/auth.service';
+import { CustomModalOptions } from '../models/modal-options';
+import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
+import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WebSDKService {
+  applicationId: any;
+  bsModalRef?: BsModalRef;
+
+  constructor(
+    public modalService: BsModalService,
+    private authService: AuthService,
+    private route: Router
+  ) {}
 
   /**
    * @param accessToken - access token that you generated on the backend
@@ -30,7 +43,7 @@ export class WebSDKService {
         lang: 'en', //language of WebSDK texts and comments (ISO 639-1 format)
         email: applicantEmail,
         phone: applicantPhone,
-        theme: 'dark'
+        theme: 'dark',
       })
       .withOptions({ addViewportTag: false, adaptIframeHeight: true })
       // see below what kind of messages WebSDK generates
@@ -39,9 +52,36 @@ export class WebSDKService {
       })
       .on('idCheck.onError', (error: any) => {
         console.log('onError', error);
+        setTimeout(() => {
+          document.getElementById('sumsub-websdk-container')?.remove();
+          this.route.navigate(['auth/register']);
+        }, 3000);
       })
-      .onMessage((type, payload) => {
-        console.log("onMessage", type, payload);
+      .onMessage((type, payload: any) => {
+        console.log('onMessage', type, payload);
+        if (type === 'idCheck.onApplicantLoaded') {
+          this.applicationId = payload.applicantId;
+        }
+        if (type === 'idCheck.onApplicantStatusChanged') {
+          const modalOptions = { status: payload.reviewResult.reviewAnswer };
+          if (
+            payload.reviewStatus === 'completed' &&
+            payload.reviewResult.reviewAnswer === 'RED'
+          ) {
+            this.openModal(modalOptions);
+          }
+          if (
+            payload.reviewStatus === 'completed' &&
+            payload.reviewResult.reviewAnswer === 'GREEN'
+          ) {
+            this.authService
+              .onPostKYC({ applicantId: this.applicationId })
+              .subscribe((res) => {
+                console.log('POST KYC', res);
+                this.openModal(modalOptions);
+              });
+          }
+        }
       })
       .build();
 
@@ -53,5 +93,22 @@ export class WebSDKService {
   getNewAccessToken() {
     const newAccessToken = '';
     return Promise.resolve(newAccessToken); // get a new token from your backend
+  }
+
+  openModal(options: CustomModalOptions) {
+    const config: ModalOptions = {
+      backdrop: 'static',
+      keyboard: false,
+      animated: true,
+      ignoreBackdropClick: true,
+      initialState: {
+        modalOptions: options,
+      }
+    };
+    this.modalService.show(StatusModalComponent, config);
+  }
+
+  getModalRef() {
+    return this.bsModalRef;
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import * as config from '../../app.config.json';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
@@ -39,9 +39,23 @@ export class AuthService {
   }
 
   verifyOtp(req: OTPRequest, type: string): Observable<any> {
-    const url = environment.apiBase + config.LOGIN_VERIFY_OTP_URL;
+    const url = environment.apiBase + config.VERIFY_OTP_URL;
     req.verificationType = type;
     delete req.destinationType;
+    return this.http.post(url, req);
+  }
+
+  generateKYCToken(): Observable<any> {
+    const token = sessionStorage.getItem('token') || '';
+    let headers = new HttpHeaders();
+    headers = headers.append('Content-Type', 'application/json');
+    headers = headers.append('Authorization', `Bearer ${token}`);
+    const url = environment.apiBase + config.GET_ACCESS_TOKEN_URL;
+    return this.http.get(url, { headers });
+  }
+
+  onPostKYC(req: any): Observable<any> {
+    const url = environment.apiBase + config.POST_KYC_URL;
     return this.http.post(url, req);
   }
 }

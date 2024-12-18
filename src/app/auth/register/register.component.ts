@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
 import { Constants } from '../../models/constants';
-import { WebSDKService } from '../webSDK.sevice';
 
 @Component({
   selector: 'app-register',
@@ -17,8 +16,7 @@ export class RegisterComponent implements OnInit {
   constructor(
     private route: Router,
     private authService: AuthService,
-    private _fb: FormBuilder,
-    private webSdkService: WebSDKService
+    private _fb: FormBuilder
   ) {}
 
   ngOnInit(): void {
@@ -48,17 +46,15 @@ export class RegisterComponent implements OnInit {
         country: 'IN',
         userType: 'INDIVIDUAL',
       };
-      this.route.navigate(['auth/verify-otp']);
-      // this.authService.onSignUp(payload).subscribe(
-      //   (res) => {
-      //     console.log(res);
-          // this.route.navigate(['/dashboard']);
-          // this.webSdkService.launchWebSdk('', 'saikrishnakatta69@gmail.com', '+917457413032', 'en');
-      //   },
-      //   (error) => {
-      //     console.error(error);
-      //   }
-      // );
+      this.authService.onSignUp(payload).subscribe(
+        (res) => {
+          console.log(res);
+          this.onSendOTP();
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
     }
   }
 
@@ -72,6 +68,9 @@ export class RegisterComponent implements OnInit {
       .subscribe(
         (res) => {
           console.log('OTP sent to user!!');
+          this.route.navigate(['auth/register/verify-otp'], {
+            state: { phone: this.registerForm.get('phone')?.value, areaCode: this.registerForm.get('areaCode')?.value }
+          });
         },
         (error) => {
           console.error(error);

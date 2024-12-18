@@ -4,6 +4,7 @@ import { DashboardService } from '../../services/dashboard/dashboard.service';
 import { CreditCardData } from '../../models/creditcard';
 import { CardDetails } from '../../models/cardList-response.model';
 import { AngularDeviceInformationService } from 'angular-device-information';
+import { SensitiveCardInfo } from '../../models/sensitve-info';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class DashboardComponent implements OnInit {
   unLockedCard: boolean = true;
   cardDetails: CardDetails = {};
   cardID: number = 0;
+  cardSensitiveInfo: SensitiveCardInfo = new SensitiveCardInfo;
   constructor(
     private route: Router,
     private dashboardService: DashboardService,
@@ -65,6 +67,7 @@ export class DashboardComponent implements OnInit {
     this.dashboardService.getCardSensitiveInfo(payload).subscribe((res) => {
       console.log(res.body.data);
       if (res.body.status === 200) {
+        this.cardSensitiveInfo = res.body.data;
         this.unLockedCard = true;
       }
     }, (err) => {console.error(err)});

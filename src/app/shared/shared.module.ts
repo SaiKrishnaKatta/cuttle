@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoaderComponent } from './loader/loader.component';
 import { NgxUiLoaderModule, NgxUiLoaderHttpModule, NgxUiLoaderConfig, SPINNER, POSITION, PB_DIRECTION } from  'ngx-ui-loader';
 import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -13,7 +14,8 @@ import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
   declarations: [HeaderComponent, FaqComponent, FooterComponent, LoaderComponent],
   imports: [
     CommonModule, 
-    NgxLoadingModule
+    NgxLoadingModule,
+    NgbModule
   ],
   exports: [HeaderComponent, FaqComponent, FooterComponent, LoaderComponent]
 })
