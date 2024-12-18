@@ -1,1 +1,457 @@
-<p>wallets works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-xl-12 box-col-12 mb-3">
+                        <div class="card custom-card">
+                            <div
+                                class="row card-body d-flex  flex-column flex-md-row justify-content-between align-items-center">
+                                <div class="col-12 col-md-6 card-text mb-3 mb-md-0">
+                                    <p>Total Wallet Balance</p>
+                                    <span class="amount bigText mx-1">HKD 1259.75 ≈</span>
+                                    <span class="currency smallText mx-1">$22545</span>
+                                    <!-- <p class="mb-0">
+                                        <span class="amount">${{credData.balanceInfo?.available}}</span>
+                                        <span class="currency">{{credData.balanceInfo?.currency}}</span>
+                                    </p> -->
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-end">
+                                    <div class="row">
+                                        <div class="col-12 col-md-12">
+                                            <div class="pt-1 primary-button button-xs d-flex align-items-center">
+                                                <span class="mx-1">
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 10.0002H3.41L11.71 1.71019C11.8983 1.52188 12.0041 1.26649 12.0041 1.00019C12.0041 0.733884 11.8983 0.478489 11.71 0.290185C11.5217 0.101882 11.2663 -0.00390625 11 -0.00390625C10.7337 -0.00390625 10.4783 0.101882 10.29 0.290185L2 8.59019V1.00019C2 0.734969 1.89464 0.480615 1.70711 0.293079C1.51957 0.105543 1.26522 0.00018549 1 0.00018549C0.734784 0.00018549 0.48043 0.105543 0.292893 0.293079C0.105357 0.480615 0 0.734969 0 1.00019V11.0002C0.00157999 11.1309 0.028759 11.26 0.0799999 11.3802C0.181475 11.6245 0.375651 11.8187 0.62 11.9202C0.740222 11.9714 0.869323 11.9986 1 12.0002H11C11.2652 12.0002 11.5196 11.8948 11.7071 11.7073C11.8946 11.5198 12 11.2654 12 11.0002C12 10.735 11.8946 10.4806 11.7071 10.2931C11.5196 10.1055 11.2652 10.0002 11 10.0002Z"
+                                                            fill="white" />
+                                                    </svg>
+
+                                                </span>
+                                                <a class="button-xs text-white text-decoration-none">
+
+                                                    Receive</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="">   
+                                <a (click)="onCollateralInj()" class="primary-button  button-xs mx-2 btn-dark-cuttle text-white">
+                                    <span class="mx-1">
+                                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.8337 3.83333H14.0003V3C14.0003 2.33696 13.7369 1.70107 13.2681 1.23223C12.7993 0.763392 12.1634 0.5 11.5003 0.5H3.16699C2.50395 0.5 1.86807 0.763392 1.39923 1.23223C0.930384 1.70107 0.666992 2.33696 0.666992 3V3V13C0.666992 13.663 0.930384 14.2989 1.39923 14.7678C1.86807 15.2366 2.50395 15.5 3.16699 15.5H14.8337C15.4967 15.5 16.1326 15.2366 16.6014 14.7678C17.0703 14.2989 17.3337 13.663 17.3337 13V6.33333C17.3337 5.67029 17.0703 5.03441 16.6014 4.56557C16.1326 4.09673 15.4967 3.83333 14.8337 3.83333ZM3.16699 2.16667H11.5003C11.7213 2.16667 11.9333 2.25446 12.0896 2.41074C12.2459 2.56702 12.3337 2.77899 12.3337 3V3.83333H3.16699C2.94598 3.83333 2.73402 3.74554 2.57774 3.58926C2.42146 3.43298 2.33366 3.22101 2.33366 3C2.33366 2.77899 2.42146 2.56702 2.57774 2.41074C2.73402 2.25446 2.94598 2.16667 3.16699 2.16667V2.16667ZM15.667 10.5H14.8337C14.6126 10.5 14.4007 10.4122 14.2444 10.2559C14.0881 10.0996 14.0003 9.88768 14.0003 9.66667C14.0003 9.44565 14.0881 9.23369 14.2444 9.07741C14.4007 8.92113 14.6126 8.83333 14.8337 8.83333H15.667V10.5ZM15.667 7.16667H14.8337C14.1706 7.16667 13.5347 7.43006 13.0659 7.8989C12.5971 8.36774 12.3337 9.00363 12.3337 9.66667C12.3337 10.3297 12.5971 10.9656 13.0659 11.4344C13.5347 11.9033 14.1706 12.1667 14.8337 12.1667H15.667V13C15.667 13.221 15.5792 13.433 15.4229 13.5893C15.2666 13.7455 15.0547 13.8333 14.8337 13.8333H3.16699C2.94598 13.8333 2.73402 13.7455 2.57774 13.5893C2.42146 13.433 2.33366 13.221 2.33366 13V5.35833C2.60138 5.45251 2.88319 5.50042 3.16699 5.5H14.8337C15.0547 5.5 15.2666 5.5878 15.4229 5.74408C15.5792 5.90036 15.667 6.11232 15.667 6.33333V7.16667Z" fill="white"/>
+                                            </svg>
+                                            
+                                    </span>
+                                    Wallets</a>                              
+                                        
+                                    <a (click)="onCollateralInj()" class="primary-button button-xs mx-2">
+                                        <span class="mx-1">
+                                            <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.66684 13.9998C7.88785 13.9998 8.09981 13.912 8.25609 13.7557C8.41237 13.5994 8.50017 13.3875 8.50017 13.1665L8.50017 3.50812L10.4085 5.42479C10.5654 5.58171 10.7783 5.66987 11.0002 5.66987C11.2221 5.66987 11.4349 5.58171 11.5918 5.42479C11.7488 5.26787 11.8369 5.05504 11.8369 4.83312C11.8369 4.61121 11.7488 4.39838 11.5918 4.24146L8.25851 0.908124C8.14132 0.792493 7.99251 0.714162 7.83085 0.683017C7.66919 0.651872 7.50193 0.669308 7.35017 0.733124C7.19799 0.795641 7.06772 0.901805 6.97577 1.03824C6.88383 1.17467 6.83433 1.33527 6.83351 1.49979L6.8335 13.1665C6.8335 13.3875 6.9213 13.5994 7.07758 13.7557C7.23386 13.912 7.44582 13.9998 7.66684 13.9998ZM4.65017 17.2665C4.80235 17.2039 4.93263 17.0978 5.02457 16.9613C5.11652 16.8249 5.16602 16.6643 5.16684 16.4998L5.16684 4.83312C5.16684 4.61211 5.07904 4.40015 4.92276 4.24387C4.76648 4.08759 4.55452 3.99979 4.33351 3.99979C4.11249 3.99979 3.90053 4.08759 3.74425 4.24387C3.58797 4.40015 3.50017 4.61211 3.50017 4.83312L3.50017 14.4915L1.59184 12.5748C1.51437 12.4967 1.4222 12.4347 1.32065 12.3924C1.2191 12.3501 1.11018 12.3283 1.00017 12.3283C0.890164 12.3283 0.781242 12.3501 0.679693 12.3924C0.578143 12.4347 0.485977 12.4967 0.408508 12.5748C0.330401 12.6523 0.268404 12.7444 0.226097 12.846C0.18379 12.9475 0.162008 13.0564 0.162008 13.1665C0.162008 13.2765 0.18379 13.3854 0.226097 13.4869C0.268404 13.5885 0.330401 13.6807 0.408508 13.7581L3.74184 17.0915C3.85902 17.2071 4.00784 17.2854 4.16949 17.3166C4.33115 17.3477 4.49841 17.3303 4.65017 17.2665V17.2665Z" fill="white"/>
+                                                </svg>
+                                        </span>
+                                        Collateral Injection</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 box-col-12 mt-3">
+                        <div class="card custom-card">
+                            <div class="card-header py-3">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-6 col-md-6 col-7">
+                                        <h6>Transaction History </h6>
+                                    </div>
+                                    <div class="col-12 col-xl-6 col-md-6">
+                                        <div class="row">
+                                            <div class="col-12 col-md-5">
+                                                <div
+                                                    class="pt-1 primary-button button-xs btn-dark-cuttle d-flex align-items-center">
+                                                    <span class="mx-1">
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M6.83333 3.33203C6.83333 2.77975 6.38562 2.33203 5.83333 2.33203C5.28105 2.33203 4.83333 2.77975 4.83333 3.33203V6.4987H2.5C1.94772 6.4987 1.5 6.94641 1.5 7.4987C1.5 8.05098 1.94772 8.4987 2.5 8.4987H4.83333V16.6654C4.83333 17.2176 5.28105 17.6654 5.83333 17.6654C6.38562 17.6654 6.83333 17.2176 6.83333 16.6654V8.4987H9.16667C9.71895 8.4987 10.1667 8.05098 10.1667 7.4987C10.1667 6.94641 9.71895 6.4987 9.16667 6.4987H6.83333V3.33203ZM15.1667 3.33203C15.1667 2.77975 14.719 2.33203 14.1667 2.33203C13.6144 2.33203 13.1667 2.77975 13.1667 3.33203V11.4987H10.8333C10.281 11.4987 9.83333 11.9464 9.83333 12.4987C9.83333 13.051 10.281 13.4987 10.8333 13.4987H13.1667V16.6654C13.1667 17.2176 13.6144 17.6654 14.1667 17.6654C14.719 17.6654 15.1667 17.2176 15.1667 16.6654V13.4987H17.5C18.0523 13.4987 18.5 13.051 18.5 12.4987C18.5 11.9464 18.0523 11.4987 17.5 11.4987H15.1667V3.33203Z"
+                                                                fill="white" />
+                                                        </svg>
+                                                    </span>
+                                                    <a class="button-xs text-white text-decoration-none">
+                                                        Filter</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <div
+                                                    class="pt-1 primary-button btn-dark-cuttle button-xs d-flex align-items-center">
+
+                                                    <a class="button-xs text-white text-decoration-none">
+
+                                                        All Records</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-xl-3 col-5 text-end">
+                                        <div class="pt-1 btn-dark-cuttle button-xs d-flex align-items-center">
+                                            <span class="mx-1">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.83333 3.33203C6.83333 2.77975 6.38562 2.33203 5.83333 2.33203C5.28105 2.33203 4.83333 2.77975 4.83333 3.33203V6.4987H2.5C1.94772 6.4987 1.5 6.94641 1.5 7.4987C1.5 8.05098 1.94772 8.4987 2.5 8.4987H4.83333V16.6654C4.83333 17.2176 5.28105 17.6654 5.83333 17.6654C6.38562 17.6654 6.83333 17.2176 6.83333 16.6654V8.4987H9.16667C9.71895 8.4987 10.1667 8.05098 10.1667 7.4987C10.1667 6.94641 9.71895 6.4987 9.16667 6.4987H6.83333V3.33203ZM15.1667 3.33203C15.1667 2.77975 14.719 2.33203 14.1667 2.33203C13.6144 2.33203 13.1667 2.77975 13.1667 3.33203V11.4987H10.8333C10.281 11.4987 9.83333 11.9464 9.83333 12.4987C9.83333 13.051 10.281 13.4987 10.8333 13.4987H13.1667V16.6654C13.1667 17.2176 13.6144 17.6654 14.1667 17.6654C14.719 17.6654 15.1667 17.2176 15.1667 16.6654V13.4987H17.5C18.0523 13.4987 18.5 13.051 18.5 12.4987C18.5 11.9464 18.0523 11.4987 17.5 11.4987H15.1667V3.33203Z" fill="white"/>
+                                                    </svg>
+                                                    
+                                                    
+                                            </span>
+                                            <a 
+                                                class="button-xs text-white text-decoration-none">
+
+                                                Filter</a>
+                                        </div>
+                                    </div> -->
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-borderless custom-table">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th scope="col">Coin</th>
+                                                <th scope="col">Operation</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-transparent">
+                                            <tr>
+                                                <td scope="row">
+                                                    <img src="../../../assets/img/crypto_icon.png" alt="">
+                                                </td>
+                                                <td>Sent BTC</td>
+                                                <td>Confirmed</td>
+                                                <td>2024-12-04T11:47:35.526Z</td>
+                                                <td>$0.014 </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">
+                                                    <img src="../../../assets/img/usdt.png" alt="">
+                                                </td>
+                                                <td>Received USDT</td>
+                                                <td>Pending</td>
+                                                <td>2024-12-04T11:47:35.526Z</td>
+                                                <td data-bs-toggle="modal" data-bs-target="#exampleModal">-0.014 USDT
+                                                </td>
+
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                                    Details</h1>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 text-end">
+                                                                            <a href="">View on Explorer</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row ">
+                                                                        <div class="col-md-3 mx-auto">
+                                                                            <img class="w-100" src="../../../assets/img/gif/card_check_success.gif"
+                                                                                alt="">
+                                                                        </div>
+                                                                        <div class="wallets-modal-heading text-center">
+                                                                            <p>Confirmed</p>
+                                                                            <h4>Received USDT</h4>
+                                                                            <p class="para">Sent Successfully ∙ 15 May 2020 9:00 pm</p>
+                                                                              <div class="d-flex align-items-center justify-content-center">
+                                                                                <button type="button" class="btn btn-primary btn-grey-sm d-flex align-items-center">
+                                                                                    <svg class="me-2" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path d="M9.49923 7.1673C9.15459 7.16958 8.81472 7.24818 8.50407 7.39746C8.19342 7.54673 7.91969 7.76297 7.70257 8.03064L4.72757 6.6598C4.86744 6.23149 4.86744 5.76978 4.72757 5.34147L7.70257 3.97064C8.05351 4.39412 8.54277 4.68001 9.08399 4.77788C9.62521 4.87574 10.1836 4.77927 10.6606 4.5055C11.1376 4.23172 11.5026 3.79825 11.6911 3.28157C11.8797 2.76489 11.8796 2.19823 11.691 1.68158C11.5024 1.16494 11.1373 0.731528 10.6603 0.457843C10.1832 0.184158 9.62477 0.0877909 9.08357 0.18575C8.54237 0.28371 8.05316 0.569698 7.7023 0.993241C7.35143 1.41679 7.16145 1.95066 7.1659 2.50064C7.16766 2.6396 7.18132 2.77817 7.20673 2.9148L4.12673 4.3323C3.79836 4.01122 3.38254 3.79419 2.93137 3.70839C2.4802 3.62258 2.01374 3.67183 1.59043 3.84996C1.16712 4.02809 0.805795 4.32718 0.551717 4.70976C0.297639 5.09233 0.162109 5.54138 0.162109 6.00064C0.162109 6.4599 0.297639 6.90894 0.551717 7.29152C0.805795 7.67409 1.16712 7.97318 1.59043 8.15131C2.01374 8.32944 2.4802 8.37869 2.93137 8.29289C3.38254 8.20709 3.79836 7.99005 4.12673 7.66897L7.20673 9.08647C7.18132 9.22311 7.16766 9.36167 7.1659 9.50064C7.1659 9.96213 7.30275 10.4133 7.55914 10.797C7.81553 11.1807 8.17995 11.4798 8.60631 11.6564C9.03267 11.833 9.50182 11.8792 9.95444 11.7891C10.4071 11.6991 10.8228 11.4769 11.1491 11.1506C11.4755 10.8242 11.6977 10.4085 11.7877 9.95585C11.8778 9.50322 11.8316 9.03407 11.655 8.60771C11.4783 8.18135 11.1793 7.81693 10.7956 7.56054C10.4118 7.30415 9.96072 7.1673 9.49923 7.1673ZM9.49923 1.33397C9.72998 1.33397 9.95554 1.40239 10.1474 1.53059C10.3393 1.65878 10.4888 1.84099 10.5771 2.05417C10.6654 2.26735 10.6885 2.50193 10.6435 2.72824C10.5985 2.95455 10.4874 3.16243 10.3242 3.32559C10.161 3.48876 9.95315 3.59987 9.72684 3.64489C9.50053 3.6899 9.26595 3.6668 9.05277 3.5785C8.83959 3.49019 8.65738 3.34066 8.52919 3.1488C8.40099 2.95694 8.33257 2.73138 8.33257 2.50064C8.33257 2.19122 8.45548 1.89447 8.67428 1.67568C8.89307 1.45689 9.18981 1.33397 9.49923 1.33397V1.33397ZM2.49923 7.1673C2.26849 7.1673 2.04293 7.09888 1.85107 6.97068C1.65921 6.84249 1.50968 6.66028 1.42137 6.4471C1.33307 6.23392 1.30997 5.99934 1.35498 5.77303C1.4 5.54672 1.51111 5.33884 1.67428 5.17568C1.83744 5.01252 2.04532 4.9014 2.27163 4.85639C2.49794 4.81137 2.73252 4.83447 2.9457 4.92278C3.15888 5.01108 3.34109 5.16061 3.46928 5.35247C3.59748 5.54433 3.6659 5.76989 3.6659 6.00064C3.6659 6.31006 3.54298 6.6068 3.32419 6.82559C3.1054 7.04439 2.80865 7.1673 2.49923 7.1673ZM9.49923 10.6673C9.26849 10.6673 9.04293 10.5989 8.85107 10.4707C8.65921 10.3425 8.50968 10.1603 8.42137 9.9471C8.33307 9.73392 8.30997 9.49934 8.35498 9.27303C8.4 9.04672 8.51112 8.83884 8.67428 8.67568C8.83744 8.51252 9.04532 8.4014 9.27163 8.35639C9.49794 8.31137 9.73252 8.33447 9.9457 8.42278C10.1589 8.51108 10.3411 8.66061 10.4693 8.85247C10.5975 9.04433 10.6659 9.26989 10.6659 9.50064C10.6659 9.81006 10.543 10.1068 10.3242 10.3256C10.1054 10.5444 9.80865 10.6673 9.49923 10.6673Z" fill="#030319" fill-opacity="0.6"/>
+                                                                                        </svg>
+                                                                                        Share
+                                                                                </button>
+                                                                              </div>  
+                                                                        </div>
+                                                                        <table class="table table-light">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <td scope="col">Network</td>
+                                                                                    <td scope="col">Ethereum Mainnet(ERC-20)</td>
+                                                    
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td scope="row">Deposit Token</td>
+                                                                                    <td>USDT</td>
+                                                    
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td scope="row">Deposit Amount</td>
+                                                                                    <th>3000.00</th>
+                                                    
+                                                                                </tr>
+                                                    
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save
+                                                                    changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">
+                                                    <img src="../../../assets/img/eth.png" alt="">
+                                                </td>
+                                                <td>-0.014 USDT </td>
+                                                <td>Failed</td>
+                                                <td>2024-12-04T11:47:35.526Z</td>
+                                                <td>$0.014 </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">
+                                                    <img src="../../../assets/img/XRP.png" alt="">
+                                                </td>
+                                                <td>Sent Ripple</td>
+                                                <td>Sent</td>
+                                                <td>2024-12-04T11:47:35.526Z</td>
+                                                <td>-0.123 XRP</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <div class="card-header py-3">
+                        <h5>My Assets</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="myCard">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12">
+                                    <div class="row mb-3">
+                                        <div class="col-md-8">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-md-3">
+                                                    <img class="img-fluid w-100" src="../../../assets/img/usdt.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="wallets_section">
+                                                        <h4>Tether</h4>
+                                                        <p>USDT</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="wallets_section">
+                                                <h4>USDT 1.52</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-8">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-md-3">
+                                                    <img class="img-fluid w-100"
+                                                        src="../../../assets/img/crypto_icon.png" alt="">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="wallets_section">
+                                                        <h4>Bitcoin</h4>
+                                                        <p>BTC</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="wallets_section">
+                                                <h4>BTC 29850.15</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-8">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-md-3">
+                                                    <img class="img-fluid w-100" src="../../../assets/img/eth.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="wallets_section">
+                                                        <h4>Ethereum</h4>
+                                                        <p>ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="wallets_section">
+                                                <h4>ETH 29850.15</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-8">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-md-3">
+                                                    <img class="img-fluid w-100" src="../../../assets/img/ltc.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="wallets_section">
+                                                        <h4>Litecoin</h4>
+                                                        <p>LTC</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="wallets_section">
+                                                <h4>LTC 29850.15</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-md-3">
+                                                    <img class="img-fluid w-100" src="../../../assets/img/ada.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="wallets_section">
+                                                        <h4>Cardona</h4>
+                                                        <p>USDT</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="wallets_section">
+                                                <h4>ADA 29850.15</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="table-responsive">
+                                        <table class="table table-hover table-borderless custom-table">
+                                          
+                                            <tbody class="bg-transparent">
+                                                <tr>
+                                                    <td scope="row">
+                                                        <tr class="align-middle">
+                                                            <td class="text-center" style="width: 46%;">
+                                                                <img class="img-fluid"  src="../../../assets/img/usdt.png" alt="">
+                                                            </td>
+                                                            <td>
+                                                                <h4>Tether</h4>
+                                                                <p class="mb-0">USDT</p>
+                                                            </td>
+                                                        </tr>
+                                                       
+                                                    </td>
+                                                    <td>USDT 1.52 </td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">
+                                                        <tr class="align-middle">
+                                                            <td class="text-center" style="width: 43%;">
+                                                                <img class="img-fluid"  src="../../../assets/img/crypto_icon.png" alt="">
+                                                            </td>
+                                                            <td>
+                                                                <h4>Bitcoin</h4>
+                                                                <p class="mb-0">BTC</p>
+                                                            </td>
+                                                        </tr>
+                                                       
+                                                    </td>
+                                                    <td>BTC 29850.15  </td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">
+                                                        <tr class="align-middle">
+                                                            <td class="text-center" style="width: 35%;">
+                                                                <img class="img-fluid" src="../../../assets/img/eth.png" alt="">
+                                                            </td>
+                                                            <td>
+                                                                <h4>Ethereum</h4>
+                                                                <p class="mb-0">ETH</p>
+                                                            </td>
+                                                        </tr>
+                                                       
+                                                    </td>
+                                                    <td>ETH 29850.15  </td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">
+                                                        <tr class="align-middle">
+                                                            <td class="text-center" style="width: 40%;">
+                                                                <img class="img-fluid"  src="../../../assets/img/ltc.png" alt="">
+                                                            </td>
+                                                            <td>
+                                                                <h4>Litecoin</h4>
+                                                                <p class="mb-0">LTC</p>
+                                                            </td>
+                                                        </tr>
+                                                       
+                                                    </td>
+                                                    <td>LTC 29850.15  </td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">
+                                                        <tr class="align-middle">
+                                                            <td class="text-center" style="width: 38%;">
+                                                                <img class="img-fluid"  src="../../../assets/img/ada.png" alt="">
+                                                            </td>
+                                                            <td>
+                                                                <h4>Cardona</h4>
+                                                                <p class="mb-0">USDT</p>
+                                                            </td>
+                                                        </tr>
+                                                       
+                                                    </td>
+                                                    <td>ADA 29850.15  </td>
+                                                   
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> -->
+                                </div>
+                                <!-- <a class="col-md-12 col-xl-12" (click)="getCardSensitiveInfo()">
+                                    <img src="../../assets/img/credit_card_user_dashboard.png" alt="" class="w-100">
+                                </a> -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

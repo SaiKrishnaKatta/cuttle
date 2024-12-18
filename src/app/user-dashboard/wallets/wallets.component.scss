@@ -1,0 +1,234 @@
+.user-dashboard{
+    padding: 60px 0px 90px 0px;
+    background-color: #19233F;
+    .amount{
+        font-size: 26px;
+        font-family: "Overpass", sans-serif;
+        font-weight: 700;
+    }
+    .currency{
+        font-size: 12px;
+    }
+    
+    .nav-link{
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        font-size: 12px;
+    }
+}
+
+li{
+    position: relative;
+}
+
+
+li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateX(0px) translateY(-8px);
+    width: 1px;
+    height: 40%;
+    background-color: #D9DBE1;
+}
+
+.table > :not(caption) > * > *{
+    color: #fff;
+}
+.table td{
+    background-color: transparent;
+}
+.custom-table thead{
+    background-color: #17203A;
+}
+.myCard p{
+    font-size: 12px;
+}
+.myCard .arrow{
+    padding:12px;
+}
+.myCard .bg-primary-dark {
+    background-color:#2E335B;
+}
+
+.spend-limit{
+    display: flex;
+}
+.spend-limit p{
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767.98px) { 
+    .user-dashboard{
+        padding:30px 0px 30px 0px;
+    }
+    .spend-limit{
+        flex-wrap: wrap;
+        p{
+            font-size: 14px;
+        }
+    }
+    li:not(:last-child)::after{
+        transform: translateX(0px) translateY(8px) !important;
+    }
+    .card-management .card-text{
+        margin-bottom: 20px !important;
+    }
+    .user-dashboard .nav-link{
+        padding-top:0px !important;
+    }
+    .custom-table {
+        th{
+            font-size: 14px;
+        }
+        td{
+            font-size: 12px;
+        }
+    }
+    .custom-card .arrow{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) { 
+    
+.spend-limit p{
+    flex: 0 0 50%;
+}
+
+    
+}
+@media (min-width: 992px) { 
+    .spend-limit p{
+        margin-bottom: 0px !important;
+    }
+ }
+
+ @media (min-width: 768px) and (max-width: 991.98px) { 
+    li:not(:last-child)::after{
+        transform: translateX(0px) translateY(8px) !important;
+    }
+ }
+
+ .card-background{
+    background-image: url('../../../assets/img/credit_card_user_dashboard.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+    border-radius: 8px;
+ }
+ .card-details{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    transform:translateX(0px) translateY(30px);
+ }
+ .card-number, .card-holder-head, .card-holder{
+    margin:5px 0;
+ } 
+
+ .card-number{
+    font-size: 16px;
+    font-weight: bold;
+ }
+
+ .card-holder-head{
+    font-size: 12px;
+ }
+
+  .card-holder{
+    font-size: 14px;
+ }
+
+ .bigText{
+    font-size: 26px;
+    font-weight: bold;
+ }
+ .smallText{
+    font-size: 12px;
+    color: #A5A9B4;
+    // font-weight: bold;
+ }
+
+ .btn-dark-cuttle {
+    background-color: #2E335B;
+    border-color: #2E335B;
+  }
+  .btn-dark-cuttle:hover{
+    background-color: #BE7B2E;
+    border-color: #BE7B2E;
+  }
+  .custom-color-orange{
+    color:#BE7B2E;
+  }
+
+  .wallets_section h4{
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    position: relative;
+    font-size: 16px;
+    color: #ECF0FC;
+    /* line-height: 160%; */
+    // /* margin-bottom: 20px;
+  }
+  .wallets_section p{
+  font-size: 12px;
+    font-weight: 400;
+    color: #aaa;
+    line-height: 160%;
+    padding-top: 0px;
+    margin-bottom: 0px;
+  }
+  .custom-table thead{
+    background-color: #17203A;
+}
+.table > :not(caption) > * > *{
+    background-color: transparent;
+}
+.wallets-modal-heading p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1A6AF4;
+    line-height: 160%;
+    padding-top: 15px;
+    margin-bottom: 0px;
+}
+.wallets-modal-heading h4{
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    position: relative;
+    font-size: 26px;
+    color: #1A6AF4;
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+.wallets-modal-heading .para{
+    color: #8F92A1;
+    font-family: "Overpass", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+.button-grey-cuttle{
+    background-color: #F2EFEF;
+
+}
+.button-grey-cuttle a{
+    color: #393C49;
+}
+.btn-grey-sm{
+    background-color: #F2EFEF;
+    color:#63616F;
+    border-color:#F2EFEF;
+}
