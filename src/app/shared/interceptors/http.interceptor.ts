@@ -28,7 +28,7 @@ export class ReqResInterceptor implements HttpInterceptor {
   ) {}
 
   private handleAuthError(err: HttpErrorResponse): Observable<any> {
-    if (!err.status) {
+    if (!err.status || err.status == 401) {
         sessionStorage.clear();
         localStorage.clear();
         this.router.navigate(['auth/login']);

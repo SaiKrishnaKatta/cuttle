@@ -44,4 +44,9 @@ export class DashboardService {
     return this.http.post(url, {});
   }
 
+  activateCard(req: any): Observable<any> {
+    const url = environment.apiBase + config.ACTIVATE_CARD_URL;
+    return this.http.post(url, req);
+  } 
+
 }

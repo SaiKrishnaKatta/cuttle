@@ -1,0 +1,39 @@
+
+.modal-dialog {
+    margin: 0 !important;
+    height: 350px !important;
+}
+.success_check h4 px{
+    color:#FAFAFA
+}
+.modal-bg{
+    background: linear-gradient(to bottom, #242D48, #19233F);
+	 color: #FAFAFA !important;
+	//  border: 2px solid #393C49 !important;
+    height: 100% !important;
+}
+
+.success_check h4{
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    position: relative;
+    font-size: 30px;
+    color: #ECF0FC;
+    line-height: 160%;
+    margin: 20px 0 5px;
+}
+
+.modal-footer button{
+    border-radius: 2px;
+    padding: 4px 40px 4px 40px;
+}
+
+.btn-orange {
+    background-color: #BE7B2E;
+    color: #fff;
+}
+
+.btn-orange:hover {
+    background-color: #232F52;
+    color: #BE7B2E;
+}

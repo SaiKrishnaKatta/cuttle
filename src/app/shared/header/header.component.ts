@@ -16,9 +16,13 @@ export class HeaderComponent implements OnInit {
   constructor(public route: Router, private commonService: CommonService) {}
 
   ngOnInit(): void {
+    if (sessionStorage.getItem('token')) {
+      this.isLoggedInUser = true;
+  } else {
     this.commonService.isUserLoggedInSub.subscribe((res) => {
       this.isLoggedInUser = res;
     });
+  }
   }
   onAboutUs() {
     if (document.getElementById('aboutUs')) {

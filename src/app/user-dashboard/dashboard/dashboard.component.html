@@ -363,25 +363,25 @@
                                         <div class="card-details">
                                             <div class="d-flex justify-content-between align-items-center mb-1">
                                                 <div class="card-number">
-                                                    <span class="me-5">**** **** **** 1234</span>
-                                                    <i class="bi bi-eye ms-5"></i>
+                                                    <span class="me-5">{{cardSensitiveInfo.cardNumber ? cardSensitiveInfo.cardNumber : ('**** **** ****' + ' ' + (cardDetails.last4 ? cardDetails.last4 : ''))}}</span>
+                                                    <i class="bi bi-eye ms-5" (click)="getCardSensitiveInfo()"></i>
                                                 </div>
                                                 </div>
                                                 <div class="d-flex justify-content-between align-items-center mb-1">
                                                 <div class="valid-thru me-5">
                                                     <small>Valid Thru</small>
-                                                    <span>12/24</span>
+                                                    <span>{{cardDetails.expiryMonth}}/{{cardDetails.expiryYear}}</span>
                                                 </div>
                                            
                                                 <div class="cvv ms-5">
                                                     <small>CVV</small>
-                                                    <span>123</span>
+                                                    <span>{{cardSensitiveInfo.securityCode ? cardSensitiveInfo.securityCode : '***'}}</span>
                                                 </div>
                                             </div>
                                             <div class="d-flex justify-content-between align-items-center mb-1">
                                                 <div class="card-holder">
                                                     <small>Card Holder</small>
-                                                    <div>Prabhas Mishra</div>
+                                                    <div>{{cardDetails.firstName}} {{cardDetails.lastName}}</div>
                                                 </div>
                                             </div>
                                         </div>

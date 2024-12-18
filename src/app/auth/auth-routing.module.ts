@@ -5,7 +5,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { SetNewLoginPwdComponent } from './set-new-login-pwd/set-new-login-pwd.component';
-import { WebSDKComponent } from './webSDK.component';
 import { VerifyOtpComponent } from './verify-otp/verify-otp.component';
 
 const routes: Routes = [
@@ -19,7 +18,16 @@ const routes: Routes = [
       },
       {
         path: 'register',
-        component: RegisterComponent
+        children: [
+          {
+            path: '',
+            component: RegisterComponent,
+          },
+          {
+            path: 'verify-otp',
+            component: VerifyOtpComponent
+          }
+        ]
       },
       {
         path: 'forgot-password',
@@ -28,14 +36,6 @@ const routes: Routes = [
       {
         path: 'set-new-login-pwd',
         component: SetNewLoginPwdComponent
-      },
-      {
-        path: 'launch-sdk',
-        component: WebSDKComponent
-      },
-      {
-        path: 'verify-otp',
-        component: VerifyOtpComponent
       },
       {
         path: '',

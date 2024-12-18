@@ -13,12 +13,15 @@ export class CommonService {
     constructor() {}
 
     userStatus() {
-        this.isUserLoggedInSub.subscribe((res) => {
-            if (res) {
-                this.isUserLoggedIn = res;
-            }
-        })
-
+        if (sessionStorage.getItem('token')) {
+            this.isUserLoggedIn = true;
+        } else {
+            this.isUserLoggedInSub.subscribe((res) => {
+                if (res) {
+                    this.isUserLoggedIn = res;
+                }
+            })
+        }
         return this.isUserLoggedIn;
     }
 }

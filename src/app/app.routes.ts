@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth-guard.guard';
 import { HelpCenterComponent } from './help-center/help-center.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { WebSDKComponent } from './shared/web-sdk/web-sdk.component';
 
 export const routes: Routes = [
     {
@@ -29,6 +30,9 @@ export const routes: Routes = [
       {
         path: 'about-us',
         component: AboutUsComponent,
-      }
-      
+      },
+      {
+        path: 'launch-sdk',
+        component: WebSDKComponent
+      },
 ];

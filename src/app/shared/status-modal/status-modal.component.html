@@ -1,0 +1,33 @@
+  <!-- Modal -->
+  <ng-container #successModal>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-bg">
+            <div class="modal-body">
+                <div class="success_check">
+                    <div class="row">
+                        <div class="col-md-3 mx-auto">
+                            <div class="text-center">
+                                <img *ngIf="modalOptions.status === 'RED'" src="../../../assets/img/gif/error_modal_check.webp" alt="" class="img-fluid">
+                                <img *ngIf="modalOptions.status === 'GREEN'" src="../../../assets/img/gif/card_check_success.gif" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-heading text-center">
+                        <h4 class=""> {{modalOptions.status === 'GREEN' ? 'Success' : 'OOPS!!'}}</h4>
+                        <p class="text-white">
+                            {{modalOptions.status === 'GREEN' ? 'Your card have been activated successfully.' : 'Your card have not been activated successfully.'}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0 d-flex justify-content-center">
+                @if (modalOptions.status === 'GREEN') {
+                    <button type="button" class="btn btn-orange" (click)="onDone()">Done</button>
+                }
+                @if (modalOptions.status === 'RED') {
+                    <button type="button" class="btn btn-orange" (click)="onDone()">Re-try</button>
+                }
+            </div>
+        </div>
+    </div>
+</ng-container>
