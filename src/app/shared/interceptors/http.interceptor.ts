@@ -66,7 +66,6 @@ export class ReqResInterceptor implements HttpInterceptor {
       brand: 'OnePlus',
       model: 'DN2101',
     };
-    console.log(req)
     if (!window.location.href.includes('auth')) {
       const token = sessionStorage.getItem('token') || '';
       req = req.clone({
@@ -83,7 +82,6 @@ export class ReqResInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       map(event => {
         if (event instanceof HttpResponse) {
-          console.log(event)
           if (event && event.body.data && event.body.data.BearerToken) {
             sessionStorage.setItem('token', event.body.data.BearerToken);
           }
@@ -92,7 +90,6 @@ export class ReqResInterceptor implements HttpInterceptor {
         return event;
       }),
       finalize(() => {
-        console.log(event)
         this.commonService.isLoaderOn.next(false);
       }),
       catchError((x)=> this.handleAuthError(x))

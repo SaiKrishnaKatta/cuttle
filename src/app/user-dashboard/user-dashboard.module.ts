@@ -10,6 +10,7 @@ import { ActiveCardComponent } from './active-card/active-card.component';
 import { WalletsComponent } from './wallets/wallets.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReceiveComponent } from './receive/receive.component';
+import { FormatDirective } from '../shared/directives/format.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { ReceiveComponent } from './receive/receive.component';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
-    ModalModule.forRoot()
-  ]
+    ModalModule.forRoot(),
+    FormatDirective
+  ],
+  providers: [FormatDirective]
 })
 export class UserDashboardModule { }
