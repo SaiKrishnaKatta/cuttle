@@ -1,0 +1,89 @@
+<div class="row">
+    <div class="card custom-card custom-pading-30px">
+      <div class="card-body">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="card custom-card h-100">
+                <div class="card-header py-3 border-0">
+                  <h5>My Card</h5>
+                </div>
+                <div class="card-body">
+                  <div class="myCard">
+                    <div class="row justify-content-center">
+                      <div class="col-md-12">
+                        <div class="dropdwon">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdwon" aria-expanded="false">
+                                select an option
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li class="dropdown-header">select an item</li>
+                               <li>
+                                <input type="text" class="form-control" placeholder="search" [(ngModel)="searchText"]>
+                               </li>
+                               <li *ngfor="let item of filteredItems()">
+                                <a href="" class="dropdown-item d-flex align-items-center" (click)="selectItem(item)">
+                                    <img src="../../../assets/img/crypto_icon.png" alt="" class="me-2" style="width: 50px; height: 50px;">
+                                    <div>
+                                        <h6 class="mb-0">{{item.heading}}</h6>
+                                        <p class="mb-0">{{item.text}}</p>
+                                    </div>
+                                </a>
+                               </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="row">
+                <div class="col-xl-12 box-col-12">
+                  <div class="card custom-card card-management">
+                    <div class="card-body flex-column flex-md-row justify-content-between align-items-center">
+                      <div class="login-card">
+                        <div class="login-main">
+                          <div class="logo text-center">
+                            <span class="text-white">Activate Card</span>
+                          </div>
+                          <form class="theme-form" >
+                            <div class="form-group">
+                              <label class="col-form-label text-white" for="cardNumber">Card Number</label>
+                              <input class="form-control" formControlName="cardNumber" type="text" id="cardNumber"
+                                name="cardNumber" required placeholder="2542 2222 8989 4545">
+                            </div>
+                            <div class="form-group">
+                              <label class="col-form-label text-white">Activate Code</label>
+                              <input class="form-control" formControlName="activationCode" type="text" id="activateCard"
+                                name="activateCard" required placeholder="35245">
+                            </div>
+                            <div class="form-group mb-0 text-end mb-2">
+                              <p class="text-orange">00:59</p>
+                            </div>
+                            <div class="form-group row mt-2 mb-4">
+                              <div class="col-12">
+                                <button class="btn btn-orange btn-block m-0 w-100" data-bs-toggle="modal"
+                                  data-bs-target="#exampleModal" type="submit" >Activate Card</button>
+                              </div>
+                            </div>
+                            <div class="form-group mb-0 row">
+                              <div class="col-12">
+                                <button class="btn btn-blue btn-block m-0 w-100">Back</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>

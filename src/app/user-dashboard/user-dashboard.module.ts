@@ -9,13 +9,15 @@ import { ModalModule } from "ngx-bootstrap/modal";
 import { ActiveCardComponent } from './active-card/active-card.component';
 import { WalletsComponent } from './wallets/wallets.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReceiveComponent } from './receive/receive.component';
 
 @NgModule({
   declarations: [
     UserDashboardComponent,
     CollateralInjectionComponent,
     WalletsComponent,
-    ActiveCardComponent
+    ActiveCardComponent,
+    ReceiveComponent
   ],
   imports: [
     CommonModule,

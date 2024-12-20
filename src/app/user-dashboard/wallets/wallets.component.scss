@@ -191,8 +191,11 @@ li:not(:last-child)::after{
     padding-top: 0px;
     margin-bottom: 0px;
   }
-  .custom-table thead{
+  .custom-table .table-head{
     background-color: #17203A;
+}
+.custom-table .table-head-light{
+    background-color: #EFEFEF;
 }
 .table > :not(caption) > * > *{
     background-color: transparent;
@@ -202,8 +205,9 @@ li:not(:last-child)::after{
     font-weight: 600;
     color: #1A6AF4;
     line-height: 160%;
-    padding-top: 15px;
+    // padding-top: 15px;
     margin-bottom: 0px;
+    font-family: "Open Sans", serif;
 }
 .wallets-modal-heading h4{
     font-family: "Overpass", sans-serif;
@@ -212,7 +216,7 @@ li:not(:last-child)::after{
     font-size: 26px;
     color: #1A6AF4;
     line-height: 160%;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 }
 .wallets-modal-heading .para{
     color: #8F92A1;
@@ -231,4 +235,24 @@ li:not(:last-child)::after{
     background-color: #F2EFEF;
     color:#63616F;
     border-color:#F2EFEF;
+    padding: 2px 15px;
 }
+.custom-table-modal .table-light{
+    background-color: #FAFAFA;
+}
+.custom-table-modal td, th{
+    color:#666673 !important;
+}
+.bottom-section p{
+    color:#666673
+}
+.wallets-modal .modal-title{ 
+    font-size: 18px;
+}
+.wallets-modal .modal-link{
+    font-family: "Manrope", serif;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
