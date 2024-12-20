@@ -9,7 +9,10 @@
     <div class="form-group row">
       <div class="col-3">
         <label class="col-form-label text-white" for="areaCode">Area Code</label>
-        <input class="form-control" formControlName="areaCode" type="text" id="areaCode" name="areaCode" required placeholder="+44">
+        <select class="form-select" formControlName="areaCode" type="text" id="areaCode" name="areaCode" required placeholder="+44">
+          <option *ngFor="let countryCode of countryCodes" value="{{countryCode}}">{{countryCode}}</option>
+          <option selected>+91</option>
+        </select>
       </div>
     <div class="col-9">
         <label class="col-form-label text-white" for="phoneNumber">Phone Number</label>

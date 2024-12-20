@@ -16,6 +16,9 @@ export class LoginComponent implements OnInit {
   smsOtp: string = '';
   showOPTVerify = false;
   showhidePswd = 'password';
+  countries: Array<any> = [];
+  countryCodes: Array<any> = [];
+  countryCode: string = Constants.COUNTRY_CODE;
 
   constructor(
     private route: Router,
@@ -25,21 +28,26 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getAllCountries();
     this.initForm();
   }
 
   initForm() {
     this.loginForm = this._fb.group({
       areaCode: ['', Validators.required],
-      phone: ['', [Validators.required, Validators.pattern(PATTERNS.PHONE_NUMBER_REGEX)]],
-      password: ['', [Validators.required, Validators.pattern(PATTERNS.PASSWORD_REGEX)]],
+      phone: [
+        '',
+        [Validators.required, Validators.pattern(PATTERNS.PHONE_NUMBER_REGEX)],
+      ],
+      password: [
+        '',
+        [Validators.required, Validators.pattern(PATTERNS.PASSWORD_REGEX)],
+      ],
     });
   }
   onSignIn() {
     if (this.loginForm.valid) {
-      const payload = this.loginForm.value;
-      delete payload['areaCode'];
-      this.authService.onLogin(payload).subscribe(
+      this.authService.onLogin(this.loginForm.value).subscribe(
         (res) => {
           if (res && res.data && res.data.BearerToken) {
             this.commonService.isUserLoggedInSub.next(true);
@@ -56,7 +64,6 @@ export class LoginComponent implements OnInit {
   }
 
   submitOTP() {
-    console.log(this.smsOtp.length);
     if (this.smsOtp.length === 6) {
       const payload: OTPRequest = {
         phone: this.loginForm.get('phone')?.value,
@@ -83,7 +90,30 @@ export class LoginComponent implements OnInit {
   }
 
   onShowPswd() {
-    console.log(this.loginForm);
     this.showhidePswd = this.showhidePswd === 'text' ? 'password' : 'text';
+  }
+
+  getAllCountries() {
+    this.authService.getCountries().subscribe(
+      (res: any) => {
+        const data = res.data.length ? res.data : [];
+        this.countries = data?.sort((a: any, b: any) => {
+          const x = a.phone_code[0].replace('+', '').replace('-', '');
+          const y = b.phone_code[0].replace('+', '').replace('-', '');
+          return x - y;
+        });
+        this.countries.forEach((country) => {
+          if (!this.countryCodes.includes(country.phone_code[0])) {
+            this.countryCodes.push(country.phone_code[0]);
+          }
+        })
+        // this.countries.filter((item, index, self) => {
+        //   return self.indexOf(item.phone_code[0]) == index;
+        // });
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
 }
