@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
       };
       this.authService.onSignUp(payload).subscribe(
         (res) => {
-          console.log(res);
+          sessionStorage.setItem('userId', res.data.id)
           this.onSendOTP();
         },
         (error) => {

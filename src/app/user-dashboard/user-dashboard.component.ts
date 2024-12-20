@@ -20,7 +20,6 @@ export class UserDashboardComponent {
   getProfileData() {
     const payload = {};
     this.dashboardService.getProfileData(payload).subscribe((res) => {
-      console.log(res);
       this.profileData = res.data ? res.data : {};
     }, (err) => {console.error(err)})
   }

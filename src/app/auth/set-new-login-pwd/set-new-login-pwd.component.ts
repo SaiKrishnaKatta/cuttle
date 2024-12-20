@@ -22,7 +22,6 @@ export class SetNewLoginPwdComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    console.log(window.history.state.phone, window.history.state.smsOtp)
     if ( !window.history.state.phone || !window.history.state.smsOtp ) {
       this.route.navigate(['auth/forgot-password']);
     }

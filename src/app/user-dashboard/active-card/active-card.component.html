@@ -17,7 +17,7 @@
                           <div class="d-flex justify-content-between align-items-center mb-1">
                             <div class="card-holder">
                               <small>Card Holder</small>
-                              <div>Prabhas Mishra</div>
+                              <div>{{cardHolderName}}</div>
                             </div>
                           </div>
                         </div>
@@ -42,7 +42,7 @@
                           <div class="form-group">
                             <label class="col-form-label text-white" for="cardNumber">Card Number</label>
                             <input class="form-control" formControlName="cardNumber" type="text" id="cardNumber"
-                              name="cardNumber" required placeholder="2542 2222 8989 4545">
+                              name="cardNumber" required placeholder="2542 2222 8989 4545" appFormat>
                           </div>
                           <div class="form-group">
                             <label class="col-form-label text-white">Activate Code</label>
@@ -60,7 +60,7 @@
                           </div>
                           <div class="form-group mb-0 row">
                             <div class="col-12">
-                              <button class="btn btn-blue btn-block m-0 w-100">Back</button>
+                              <button class="btn btn-blue btn-block m-0 w-100" (click)="onBack()">Back</button>
                             </div>
                           </div>
                         </form>

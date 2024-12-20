@@ -9,6 +9,7 @@ import { ModalModule } from "ngx-bootstrap/modal";
 import { ActiveCardComponent } from './active-card/active-card.component';
 import { WalletsComponent } from './wallets/wallets.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormatDirective } from '../shared/directives/format.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
-    ModalModule.forRoot()
-  ]
+    ModalModule.forRoot(),
+    FormatDirective
+  ],
+  providers: [FormatDirective]
 })
 export class UserDashboardModule { }

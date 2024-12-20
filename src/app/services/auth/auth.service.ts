@@ -46,10 +46,10 @@ export class AuthService {
   }
 
   generateKYCToken(): Observable<any> {
-    const token = sessionStorage.getItem('token') || '';
+    const token = sessionStorage.getItem('userId') || '';
     let headers = new HttpHeaders();
     headers = headers.append('Content-Type', 'application/json');
-    headers = headers.append('Authorization', `Bearer ${token}`);
+    headers = headers.append('userId', token);
     const url = environment.apiBase + config.GET_ACCESS_TOKEN_URL;
     return this.http.get(url, { headers });
   }
@@ -57,5 +57,10 @@ export class AuthService {
   onPostKYC(req: any): Observable<any> {
     const url = environment.apiBase + config.POST_KYC_URL;
     return this.http.post(url, req);
+  }
+
+  getCountries() {
+    const url = environment.apiBase + config.GET_COUNTRIES_URL;
+    return this.http.post(url, {});
   }
 }

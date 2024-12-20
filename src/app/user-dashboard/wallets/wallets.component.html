@@ -9,7 +9,7 @@
                                 class="row card-body d-flex  flex-column flex-md-row justify-content-between align-items-center">
                                 <div class="col-12 col-md-6 card-text mb-3 mb-md-0">
                                     <p>Total Wallet Balance</p>
-                                    <span class="amount bigText mx-1">HKD 1259.75 ≈</span>
+                                    <span class="amount bigText mx-1">HKD {{balanceAmt}} ≈</span>
                                     <span class="currency smallText mx-1">$22545</span>
                                     <!-- <p class="mb-0">
                                         <span class="amount">${{credData.balanceInfo?.available}}</span>
@@ -250,204 +250,29 @@
                         <div class="myCard">
                             <div class="row justify-content-center">
                                 <div class="col-md-12">
-                                    <div class="row mb-3">
+                                    <div *ngFor="let wallet of wallets" class="row mb-3">
                                         <div class="col-md-8">
                                             <div class="row d-flex align-items-center">
                                                 <div class="col-md-3">
-                                                    <img class="img-fluid w-100" src="../../../assets/img/usdt.png"
+                                                    <img class="img-fluid w-100" src="{{wallet.coinImage}}"
                                                         alt="">
                                                 </div>
                                                 <div class="col-md-9">
                                                     <div class="wallets_section">
-                                                        <h4>Tether</h4>
-                                                        <p>USDT</p>
+                                                        <h4>{{wallet.walletName}}</h4>
+                                                        <p>{{wallet.coinSymbol}}</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="wallets_section">
-                                                <h4>USDT 1.52</h4>
+                                                <h4>{{wallet.coinSymbol}} {{wallet.availableAmount | number: '1.0-2'}}</h4>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-8">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-md-3">
-                                                    <img class="img-fluid w-100"
-                                                        src="../../../assets/img/crypto_icon.png" alt="">
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="wallets_section">
-                                                        <h4>Bitcoin</h4>
-                                                        <p>BTC</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="wallets_section">
-                                                <h4>BTC 29850.15</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-8">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-md-3">
-                                                    <img class="img-fluid w-100" src="../../../assets/img/eth.png"
-                                                        alt="">
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="wallets_section">
-                                                        <h4>Ethereum</h4>
-                                                        <p>ETH</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="wallets_section">
-                                                <h4>ETH 29850.15</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-8">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-md-3">
-                                                    <img class="img-fluid w-100" src="../../../assets/img/ltc.png"
-                                                        alt="">
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="wallets_section">
-                                                        <h4>Litecoin</h4>
-                                                        <p>LTC</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="wallets_section">
-                                                <h4>LTC 29850.15</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-md-3">
-                                                    <img class="img-fluid w-100" src="../../../assets/img/ada.png"
-                                                        alt="">
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="wallets_section">
-                                                        <h4>Cardona</h4>
-                                                        <p>USDT</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="wallets_section">
-                                                <h4>ADA 29850.15</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="table-responsive">
-                                        <table class="table table-hover table-borderless custom-table">
-                                          
-                                            <tbody class="bg-transparent">
-                                                <tr>
-                                                    <td scope="row">
-                                                        <tr class="align-middle">
-                                                            <td class="text-center" style="width: 46%;">
-                                                                <img class="img-fluid"  src="../../../assets/img/usdt.png" alt="">
-                                                            </td>
-                                                            <td>
-                                                                <h4>Tether</h4>
-                                                                <p class="mb-0">USDT</p>
-                                                            </td>
-                                                        </tr>
-                                                       
-                                                    </td>
-                                                    <td>USDT 1.52 </td>
-                                                   
-                                                </tr>
-                                                <tr>
-                                                    <td scope="row">
-                                                        <tr class="align-middle">
-                                                            <td class="text-center" style="width: 43%;">
-                                                                <img class="img-fluid"  src="../../../assets/img/crypto_icon.png" alt="">
-                                                            </td>
-                                                            <td>
-                                                                <h4>Bitcoin</h4>
-                                                                <p class="mb-0">BTC</p>
-                                                            </td>
-                                                        </tr>
-                                                       
-                                                    </td>
-                                                    <td>BTC 29850.15  </td>
-                                                   
-                                                </tr>
-                                                <tr>
-                                                    <td scope="row">
-                                                        <tr class="align-middle">
-                                                            <td class="text-center" style="width: 35%;">
-                                                                <img class="img-fluid" src="../../../assets/img/eth.png" alt="">
-                                                            </td>
-                                                            <td>
-                                                                <h4>Ethereum</h4>
-                                                                <p class="mb-0">ETH</p>
-                                                            </td>
-                                                        </tr>
-                                                       
-                                                    </td>
-                                                    <td>ETH 29850.15  </td>
-                                                   
-                                                </tr>
-                                                <tr>
-                                                    <td scope="row">
-                                                        <tr class="align-middle">
-                                                            <td class="text-center" style="width: 40%;">
-                                                                <img class="img-fluid"  src="../../../assets/img/ltc.png" alt="">
-                                                            </td>
-                                                            <td>
-                                                                <h4>Litecoin</h4>
-                                                                <p class="mb-0">LTC</p>
-                                                            </td>
-                                                        </tr>
-                                                       
-                                                    </td>
-                                                    <td>LTC 29850.15  </td>
-                                                   
-                                                </tr>
-                                                <tr>
-                                                    <td scope="row">
-                                                        <tr class="align-middle">
-                                                            <td class="text-center" style="width: 38%;">
-                                                                <img class="img-fluid"  src="../../../assets/img/ada.png" alt="">
-                                                            </td>
-                                                            <td>
-                                                                <h4>Cardona</h4>
-                                                                <p class="mb-0">USDT</p>
-                                                            </td>
-                                                        </tr>
-                                                       
-                                                    </td>
-                                                    <td>ADA 29850.15  </td>
-                                                   
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div> -->
                                 </div>
-                                <!-- <a class="col-md-12 col-xl-12" (click)="getCardSensitiveInfo()">
-                                    <img src="../../assets/img/credit_card_user_dashboard.png" alt="" class="w-100">
-                                </a> -->
                             </div>
-
                         </div>
                     </div>
                 </div>

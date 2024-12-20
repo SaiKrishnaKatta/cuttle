@@ -23,7 +23,6 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
-    console.log(state.url);
     if (this.commonService.userStatus()) {
       this.redirectTo = state.url;
       return true;
