@@ -21,7 +21,8 @@ export class WalletsComponent implements OnInit {
   ) {}
 
   onReceive() {
-    this.route.navigate(['/dashboard/receive'])}
+    this.route.navigate(['/dashboard/receive'])
+  }
 
   ngOnInit(): void {
     this.getAllWallets();

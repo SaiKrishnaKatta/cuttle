@@ -1,89 +1,303 @@
+
 <div class="row">
-    <div class="card custom-card custom-pading-30px">
-      <div class="card-body">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="card custom-card h-100">
-                <div class="card-header py-3 border-0">
-                  <h5>My Card</h5>
-                </div>
-                <div class="card-body">
-                  <div class="myCard">
-                    <div class="row justify-content-center">
-                      <div class="col-md-12">
-                        <div class="dropdwon">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdwon" aria-expanded="false">
-                                select an option
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li class="dropdown-header">select an item</li>
-                               <li>
-                                <input type="text" class="form-control" placeholder="search" [(ngModel)="searchText"]>
-                               </li>
-                               <li *ngfor="let item of filteredItems()">
-                                <a href="" class="dropdown-item d-flex align-items-center" (click)="selectItem(item)">
-                                    <img src="../../../assets/img/crypto_icon.png" alt="" class="me-2" style="width: 50px; height: 50px;">
-                                    <div>
-                                        <h6 class="mb-0">{{item.heading}}</h6>
-                                        <p class="mb-0">{{item.text}}</p>
-                                    </div>
-                                </a>
-                               </li>
-                            </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  <div class="card custom-card custom-pading-30px receive-section">
+    <div class="card-body">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="card custom-card h-100">
+              <div class="card-header py-3 border-0">
+                <h5>My Card</h5>
               </div>
-            </div>
-            <div class="col-md-7">
-              <div class="row">
-                <div class="col-xl-12 box-col-12">
-                  <div class="card custom-card card-management">
-                    <div class="card-body flex-column flex-md-row justify-content-between align-items-center">
-                      <div class="login-card">
-                        <div class="login-main">
-                          <div class="logo text-center">
-                            <span class="text-white">Activate Card</span>
-                          </div>
-                          <form class="theme-form" >
-                            <div class="form-group">
-                              <label class="col-form-label text-white" for="cardNumber">Card Number</label>
-                              <input class="form-control" formControlName="cardNumber" type="text" id="cardNumber"
-                                name="cardNumber" required placeholder="2542 2222 8989 4545">
-                            </div>
-                            <div class="form-group">
-                              <label class="col-form-label text-white">Activate Code</label>
-                              <input class="form-control" formControlName="activationCode" type="text" id="activateCard"
-                                name="activateCard" required placeholder="35245">
-                            </div>
-                            <div class="form-group mb-0 text-end mb-2">
-                              <p class="text-orange">00:59</p>
-                            </div>
-                            <div class="form-group row mt-2 mb-4">
-                              <div class="col-12">
-                                <button class="btn btn-orange btn-block m-0 w-100" data-bs-toggle="modal"
-                                  data-bs-target="#exampleModal" type="submit" >Activate Card</button>
-                              </div>
-                            </div>
-                            <div class="form-group mb-0 row">
-                              <div class="col-12">
-                                <button class="btn btn-blue btn-block m-0 w-100">Back</button>
-                              </div>
-                            </div>
-                          </form>
+              <div class="card-body">
+                <div class="myCard">
+                  <div class="row justify-content-center">
+                    <!-- <ng-select [items]="options" bindLabel="label" bindValue="value" [searchable]="true"
+                    placeholder="Select an option">
+                    <ng-template ng-option-tmp let-item="item">
+                      <div class="d-flex align-items-center">
+                        <img [src]="item.imgSrc" class="img-thumbnail" style="width: 30px; height: 30px; margin-right:10px" alt="">
+                        <div>
+                          <div>{{item.heading}}</div>
+                          <small>{{item.description}}</small>
                         </div>
                       </div>
+                    </ng-template>
+                      
+                    </ng-select> -->
+
+                    <!-- <div class="col-md-12">
+                      <h6>Coin</h6>
+                      
+                       <div class="receive-options">
+                        <div class="dropdown">
+                          <button class="btn btn-secondary btn-dark-cuttle m-0 d-flex justify-content-between align-items-center w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Coin
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">
+                              <div class="d-flex align-items-center">
+                                <img src="../../../assets/img/usdt-small.png" alt="" class="dropdown-image me-1">
+                                <div class="dropdown-content">
+                                  <h6>USDT</h6>
+                                  <p>USDT</p>
+                                </div>
+                              </div>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                              <div class="d-flex align-items-center">
+                                <img src="../../../assets/img/usdt-small.png" alt="" class="dropdown-image me-1">
+                                <div class="dropdown-content">
+                                  <h6>ADA</h6>
+                                  <p>Cardona</p>
+                                </div>
+                              </div>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                              <div class="d-flex align-items-center">
+                                <img src="../../../assets/img/usdt-small.png" alt="" class="dropdown-image me-1">
+                                <div class="dropdown-content">
+                                  <h6>AEVO</h6>
+                                  <p>ALICE</p>
+                                </div>
+                              </div>
+                            </a></li>
+                          </ul>
+                        </div>
+                       </div>
+                   
+                  
+                      <div class="dropdown">
+                          <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdwon" aria-expanded="false">
+                              select an option
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <li class="dropdown-header">select an item</li>
+                             <li>
+                              <input type="text" class="form-control" placeholder="search">
+                             </li>
+                             <li *ngfor="let item of filteredItems()">
+                              <a href="" class="dropdown-item d-flex align-items-center" >
+                                  <img src="../../../assets/img/crypto_icon.png" alt="" class="me-2" style="width: 50px; height: 50px;">
+                                  <div>
+                                      <h6 class="mb-0">heading</h6>
+                                      <p class="mb-0">para</p>
+                                  </div>
+                              </a>
+                             </li>
+                          </ul>
+                      </div> 
+                    </div> -->
+
+                    <div class="col-md-12 mt-3">
+                      <h6>Coin</h6>
+                      <select class="form-select custom-select-bg" aria-label="Default select example">
+                        <option selected>USDT</option>
+                        <option value="1">
+                          <div class="row d-flex align-items-center">
+                            <div class="col-md-3">
+                                <img class="img-fluid w-100" src="../../../assets/img/usdt-small.png"
+                                    alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="wallets_section">
+                                    <h4>USDT</h4>
+                                    <p>USDT</p>
+                                </div>
+                            </div>
+                        </div>
+                        </option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+
+                     
                     </div>
+
+                    <div class="col-md-12 mt-3">
+                      <h6>Network</h6>
+                      <select class="form-select custom-select-bg" aria-label="Default select example">
+                        <option selected>Select Network</option>
+                        <option value="1">
+                          <div class="row d-flex align-items-center">
+                            <div class="col-md-3">
+                                <img class="img-fluid w-100" src="../../../assets/img/usdt-small.png"
+                                    alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="wallets_section">
+                                    <h4>USDT</h4>
+                                    <p>USDT</p>
+                                </div>
+                            </div>
+                        </div>
+                        </option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+
+                     
+                    </div>
+
+                    <div class="col-md-12 mx-auto text-center">
+                      <div class="section-heading">
+                        <div class="mt-4">
+                          <img src="../../../assets/img/search-network.png" alt="">
+                        </div>
+                        <p>Select Network to obtain address</p>
+        
+                        <div class="mt-4">
+                          <button class="btn btn-orange btn-block m-0 w-100"  type="submit">Download As Image</button>
+                        </div>
+        
+                      </div>
+                      </div>
+
+                   
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-xl-12 box-col-12">
+                <div class="card custom-card card-management">
+                  <div class="card-body flex-column flex-md-row justify-content-between align-items-center">
+                   <div class="stepper d-flex flex-column mt-5 ml-2">
+                    <div class="d-flex mb-1">
+                      <div class="d-flex flex-column pe-4 align-items-center">
+                        <div class="rounded-circle py-2 px-3 bg-stepper text-white mb-1">1</div>
+                        <div class="line h-100"></div>
+                      </div>
+                      <div>
+                        <h6 class="text-white">Select Network</h6>
+                        <p class="lead pb-3">Select a network to obtain the receiving address and memo(if required)
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d-flex mb-1">
+                      <div class="d-flex flex-column pe-4 align-items-center">
+                        <div class="rounded-circle py-2 px-3 bg-stepper text-white mb-1">2</div>
+                        <div class="line h-100"></div>
+                      </div>
+                      <div>
+                        <h6 class="text-white">Initiate Withdrawal</h6>
+                        <p class="lead pb-3">Select a network to obtain the receiving address and memo(if required)</p>
+                      </div>
+                    </div>
+                    <div class="d-flex mb-1">
+                      <div class="d-flex flex-column pe-4 align-items-center">
+                        <div class="rounded-circle py-2 px-3 bg-stepper text-white mb-1">3</div>
+                        <div class="line h-100"></div>
+                      </div>
+                      <div>
+                        <h6 class="text-white">Network Confirmation</h6>
+                        <p class="lead pb-3">Select a network to obtain the receiving address and memo(if required)</p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex mb-1">
+                      <div class="d-flex flex-column pe-4 align-items-center">
+                        <div class="rounded-circle py-2 px-3 bg-stepper text-white mb-1">4</div>
+                        <div class="line h-100 d-none"></div>
+                      </div>
+                      <div>
+                        <h6 class="text-white">Deposit Successful</h6>
+                        <p class="lead pb-3">Select a network to obtain the receiving address and memo(if required)</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row wallet-address">
+              <div class="qr-code-section text-center">
+                <div class="">
+                  <img src="../../../assets/img/qr_code_scanner.png" alt="">
+                </div>
+                <p>Please ensure you are sending coins of the designated <br>
+                  network to this address.</p>
+                  <hr>
+                  
+              </div>
+              <div class="col-md-7">
+                <h6>Wallet Address</h6>
+                <div class="d-flex align-items-center">
+                  <span class="mr-2">0x4a6fd189d40ff9856ed593a7f296a448d7e8db4e</span>
+                  <button class="btn btn-outline-secondary border-0">
+                    <i class="bi bi-copy"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="mt-4">
+                  <button class="btn btn-orange btn-block m-0 w-100"  type="submit">Download As Image</button>
+                </div>
+              </div>
+
+              <div class="card custom-card custom-card-modal my-3 custom-pading-20px">
+                <div class="card-body custom-card">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="mb-0">Minimum Receive</p>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <p class="mb-0">>0.01 USDT</p>
+                                </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="mb-0">Expected Arrival</p>
+                                    </div>
+                                    <div class="col-md-6 text-end">
+                                        <p class="mb-0">1 Network Confirmation(s)</p>
+                                    </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="mb-0">Expected Unlock</p>
+                                        </div>
+                                        <div class="col-md-6 text-end">
+                                            <p class="mb-0">1 Network Confirmation(s)</p>
+                                        </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                              <p class="mb-0">Contract Information</p>
+                                          </div>
+                                          <div class="col-md-6 text-end">
+                                            <div class="">
+                                              <span class="mr-2">0x4a6fd189d40ff9856ed593a7f296a448d7e8db4e</span>
+                                              <button class="btn btn-outline-secondary border-0">
+                                                <i class="bi bi-copy"></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          </div>
+
+
+                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            
+
+             
+          </div>
         </div>
       </div>
     </div>
-  
   </div>
+
+</div>

@@ -11,6 +11,7 @@ import { WalletsComponent } from './wallets/wallets.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReceiveComponent } from './receive/receive.component';
 import { FormatDirective } from '../shared/directives/format.directive';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,8 @@ import { FormatDirective } from '../shared/directives/format.directive';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
+    NgSelectModule,
+
     ModalModule.forRoot(),
     FormatDirective
   ],
