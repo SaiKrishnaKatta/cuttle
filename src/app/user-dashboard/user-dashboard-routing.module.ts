@@ -5,6 +5,7 @@ import { CollateralInjectionComponent } from './collateral-injection/collateral-
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ActiveCardComponent } from './active-card/active-card.component';
 import { WalletsComponent } from './wallets/wallets.component';
+import { ReceiveComponent } from './receive/receive.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'wallets',
         component: WalletsComponent,
+      },
+      {
+        path: 'receive',
+        component: ReceiveComponent,
       },
       {
         path: 'active-card',

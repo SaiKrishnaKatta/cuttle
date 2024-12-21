@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { WalletsService } from '../../services/wallets/wallets.service';
 import { WalletInfo } from '../../models/wallet';
@@ -7,14 +8,21 @@ import { WalletInfo } from '../../models/wallet';
   templateUrl: './wallets.component.html',
   styleUrl: './wallets.component.scss'
 })
+
+
 export class WalletsComponent implements OnInit {
 
   balanceAmt: string = '';
   wallets: Array<WalletInfo> = [];
 
   constructor(
+    private route: Router,
     private walletsService: WalletsService
   ) {}
+
+  onReceive() {
+    this.route.navigate(['/dashboard/receive'])
+  }
 
   ngOnInit(): void {
     this.getAllWallets();

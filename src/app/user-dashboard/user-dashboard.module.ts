@@ -9,14 +9,17 @@ import { ModalModule } from "ngx-bootstrap/modal";
 import { ActiveCardComponent } from './active-card/active-card.component';
 import { WalletsComponent } from './wallets/wallets.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReceiveComponent } from './receive/receive.component';
 import { FormatDirective } from '../shared/directives/format.directive';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
     UserDashboardComponent,
     CollateralInjectionComponent,
     WalletsComponent,
-    ActiveCardComponent
+    ActiveCardComponent,
+    ReceiveComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +27,8 @@ import { FormatDirective } from '../shared/directives/format.directive';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
+    NgSelectModule,
+
     ModalModule.forRoot(),
     FormatDirective
   ],
