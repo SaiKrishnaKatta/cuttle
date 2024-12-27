@@ -283,7 +283,7 @@
                                         <h6>Transaction Record </h6>
                                     </div>
                                     <div class="col-xl-3 col-5 text-end">
-                                        <a href="#" class="primary-button button-xs">All Records</a>
+                                        <a (click)="onTransactionHistory()" class="primary-button button-xs">All Records</a>
                                     </div>
                                 </div>
                             </div>
@@ -305,8 +305,101 @@
                                                 <td>McDonald’s Hk</td>
                                                 <td>Hongkong</td>
                                                 <td>23/10/2024</td>
-                                                <td>-845 HKD</td>
+                                                <td data-bs-toggle="modal" data-bs-target="#exampleModal">-845 HKD</td>
+
+       
+                                                
                                             </tr>
+
+                                                                                     
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog p-0">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title text-black" id="exampleModalLabel">Transaction History </h1>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body">
+          <div class="transaction-history">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Transaction Type</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Mortgage</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Merchant</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Cuttle Card Credit</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Amount of the transaction</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>762.74 HKD</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Settlement Amount</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>762.74 HKD</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>State</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Credited</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Transaction Time</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>16/11/2024 14:12:30</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Recorded Time</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>16/11/2024 14:12:30</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Card Number</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>*** *** *** 9119</p>
+                </div>
+            </div>
+
+          </div>
+        </div>
+     
+      </div>
+    </div>
+  </div>
                                             <tr>
                                                 <td scope="row">2</td>
                                                 <td>McDonald’s Hk</td>
@@ -402,7 +495,7 @@
                                     <img src="../../assets/img/credit_card_user_dashboard.png" alt="" class="w-100">
                                 </a> -->
                             </div>
-                            <div class="row align-items-center">
+                            <div class="row align-items-center mt-3">
                                 <div class="col-6 col-md-12 col-lg-6 mb-3">
                                     <div class="row align-items-center">
                                         <div class="col-3 px-0 ps-1">

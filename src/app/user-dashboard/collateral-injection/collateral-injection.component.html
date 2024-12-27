@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-12">
       <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.528758 0.528636C0.789108 0.268287 1.21122 0.268287 1.47157 0.528636L5.47157 4.52864C5.73192 4.78899 5.73192 5.2111 5.47157 5.47145L1.47157 9.47145C1.21122 9.7318 0.789108 9.7318 0.528758 9.47145C0.268409 9.2111 0.268409 8.78899 0.528758 8.52864L4.05735 5.00004L0.528758 1.47145C0.268409 1.2111 0.268409 0.788986 0.528758 0.528636Z' fill='white'/%3E%3C/svg%3E%0A&#34;);"
           aria-label="breadcrumb">
@@ -9,117 +9,80 @@
           </ol>
       </nav>
   </div>
-</div>
+</div> -->
 <div class="container">
   <div class="row">
-      <div class="col-12 col-md-12 col-lg-10 col-sm-10 col-xs-12 m-3 mx-auto">
+      <div class="col-12 col-md-6 col-lg-6 col-sm-10 col-xs-12 m-3 mx-auto">
           <div class="card custom-card">
-              <div class="card-header pt-4 border-0">
-                  <h5 class="text-white">Collateral Injection</h5>
-              </div>
+            
               <div class="card-body">
-                  <div class="row">   
-                      <div class="col-12 col-lg-12 col-sm-12 col-xs-12">
-                          <div class="collateral-injection">
-                              <ul class="nav nav-underline mb-3" id="pills-tab" role="tablist">
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Scan to pay</button>
-                                  </li>
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Connect Wallet</button>
-                                  </li>
-                                </ul>
-                                <div class="tab-content" id="pills-tabContent">
-                                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                                      <div class="row">
-                                          <div class="col-12 col-lg-6 col-sm-6 col-xs-6 login-main">
-                                              <form class="theme-form" >
-                                                  <div class="form-group">
-                                                      <label class="col-form-label text-white" for="phoneNumber">Payment Network</label>
-                                                      <input class="form-control" type="text" id="paymentNetwork" required placeholder="Mainnet">
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <label class="col-form-label text-white" for="phoneNumber">Expected Arrival</label>
-                                                      <input class="form-control" type="text" id="expectedArrival" required placeholder="Please Enter Amount">
-                                                      <div class="show-hide"><span class="show"> </span></div>
-                                                  </div>
-                                                </form>
-                                          </div>
-
-                                          <div class="col-12 col-lg-6 col-sm-6 col-xs-6 login-main">
-                                              <form class="theme-form" >
-                                                  <div class="form-group">
-                                                      <label class="col-form-label text-white" for="phoneNumber">You Pay</label>
-                                                      <input class="form-control"  type="text" id="youPay"  required placeholder="Please Enter Amount">
-                                                      <div class="show-hide"><span class="show"> </span></div>
-                                                  </div>
-                                                  <div class="form-group mb-0">
-                                                      <label  class="col-form-label text-white" for="exampleFormControlTextarea4">Example textarea</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea4" rows="5"></textarea>
-                                                    </div>
-                                                    <div class="form-group mb-0 row my-4">
-                                                      <div class="col-md-10 offset-md-2">
-                                                          <div class="row">
-                                                              <div class="col-12 col-md-6 col-lg-6">
-                                                                  <button class="btn btn-blue btn-block m-0 w-100" type="submit">Back</button>
-                                                                </div>
-                                                                <div class="col-12 col-md-6 col-lg-6">
-                                                                  <button class="btn btn-orange btn-block m-0 w-100" type="button" (click)="showModal('SCAN_PAY')">Next Step </button>
-                                                                </div>
-                                                          </div>
-                                                      </div>
-                                                    </div>
-                                                </form>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                                      <div class="row">
-                                          <div class="col-12 col-lg-6 col-sm-6 col-xs-6 login-main">
-                                              <form class="theme-form" >
-                                                  <div class="form-group">
-                                                      <label class="col-form-label text-white" for="phoneNumber">Payment Network</label>
-                                                      <input class="form-control" formControlName="paymentNetwork" type="text" id="paymentNetwork" name="paymentNetwork" required placeholder="Mainnet">
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <label class="col-form-label text-white" for="phoneNumber">Expected Arrival</label>
-                                                      <input class="form-control" formControlName="paymentNetwork" type="text" id="paymentNetwork" name="paymentNetwork" required placeholder="Please Enter Amount">
-                                                      <div class="show-hide"><span class="show"> </span></div>
-                                                  </div>
-                                                </form>
-                                          </div>
-
-                                          <div class="col-12 col-lg-6 col-sm-6 col-xs-6 login-main">
-                                              <form class="theme-form" >
-                                                  <div class="form-group">
-                                                      <label class="col-form-label text-white" for="phoneNumber">You Pay</label>
-                                                      <input class="form-control" formControlName="paymentNetwork" type="text" id="paymentNetwork" name="paymentNetwork" required placeholder="Please Enter Amount">
-                                                      <div class="show-hide"><span class="show"> </span></div>
-                                                  </div>
-                                                  <div class="form-group mb-0">
-                                                      <label  class="col-form-label text-white" for="exampleFormControlTextarea4">Example textarea</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea4" rows="5"></textarea>
-                                                    </div>
-                                                    <div class="form-group mb-0 row my-4">
-                                                      <div class="col-md-10 offset-md-2">
-                                                          <div class="row">
-                                                              <div class="col-12 col-md-6 col-lg-6">
-                                                                  <button class="btn btn-blue btn-block m-0 w-100" type="submit">Back</button>
-                                                                </div>
-                                                                <div class="col-12 col-md-6 col-lg-6">
-                                                                  <button class="btn btn-orange btn-block m-0 w-100" type="button" (click)="showModal('WALLET')">Next Step </button>
-                                                                </div>
-                                                          </div>
-                                                      </div>
-                                                    </div>
-                                                </form>
-                                          </div>
-                                      </div>
-                                  </div>
+                
+                <div class="row">
+                    <div class="mx-auto">
+                       
+                        <div class="col-12 col-lg-12 col-sm-6 col-xs-6 login-main">
+                            <div class="section-heading mb-5">
+                                <h5 class="text-white">Collateral Injection</h5>
+                            </div>
+                            <form class="theme-form" >
+                               <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group mb-5">
+                                        <h5 class="text-white">From</h5>
+                                        <div class="input-group mb-3 d-flex align-items-center">
+                                            <input type="text" class="form-control border-0" placeholder="Please Enter Quantity" aria-label="Amount">
+                                            <div class="input-group-append">
+                                                <select class="custom-select border-0" name="" id="inputGroupSelect1">
+                                                    <option selected>USDT</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
                                 </div>
-                          </div>
-                      </div>
-                  </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <div class="d-grid gap-2 mx-auto">
+                                        <button class="btn btn-primary btn-blue m-0" type="button">1 USDT = 16.4572 HKD</button>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-end">
+                                        <button class="btn btn-primary btn-blue m-0 rounded-circle" type="button">
+                                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.44361 11.4633C6.62009 11.4633 6.78935 11.3932 6.91414 11.2684C7.03893 11.1436 7.10903 10.9743 7.10903 10.7978L7.10903 3.08459L8.63285 4.61526C8.75815 4.74057 8.92809 4.81098 9.10529 4.81098C9.2825 4.81098 9.45244 4.74057 9.57774 4.61526C9.70304 4.48994 9.77344 4.31997 9.77344 4.14275C9.77344 3.96552 9.70304 3.79555 9.57774 3.67023L6.91606 1.0082C6.82249 0.915852 6.70366 0.853297 6.57458 0.828424C6.44549 0.803551 6.31193 0.817476 6.19075 0.86844C6.06923 0.918366 5.96521 1.00315 5.89179 1.11211C5.81838 1.22107 5.77885 1.34932 5.77819 1.48071L5.77819 10.7978C5.77819 10.9743 5.8483 11.1436 5.97309 11.2684C6.09788 11.3932 6.26713 11.4633 6.44361 11.4633ZM4.03479 14.0721C4.15631 14.0222 4.26033 13.9374 4.33375 13.8285C4.40717 13.7195 4.4467 13.5913 4.44735 13.4599L4.44735 4.14275C4.44735 3.96624 4.37724 3.79697 4.25245 3.67216C4.12766 3.54735 3.95841 3.47724 3.78193 3.47724C3.60545 3.47724 3.4362 3.54735 3.31141 3.67216C3.18662 3.79697 3.11651 3.96624 3.11651 4.14275L3.11651 11.856L1.5927 10.3253C1.53084 10.2629 1.45724 10.2134 1.37616 10.1797C1.29507 10.1459 1.20809 10.1285 1.12025 10.1285C1.03241 10.1285 0.945432 10.1459 0.864345 10.1797C0.783257 10.2134 0.709662 10.2629 0.647802 10.3253C0.585433 10.3872 0.535929 10.4608 0.502146 10.5419C0.468364 10.623 0.450971 10.71 0.450971 10.7978C0.450971 10.8857 0.468364 10.9727 0.502146 11.0538C0.535929 11.1349 0.585433 11.2085 0.647802 11.2703L3.30948 13.9324C3.40306 14.0247 3.52188 14.0873 3.65097 14.1122C3.78005 14.137 3.91361 14.1231 4.03479 14.0721V14.0721Z" fill="white"/>
+                                                </svg>
+                                                
+                                        </button>
+                                    </div>
+                                </div>
+                               </div>
+                               
+                                
+
+                                                                     
+                                <div class="form-group mt-4 mb-5">
+                                    <label class="col-form-label text-white" for="phoneNumber">To</label>
+                                    <input class="form-control" type="text" id="expectedArrival" required placeholder="0.00">
+                                    <div class="show-hide"><span class="show"> </span></div>
+                                </div>
+                              <div class="row pt-5">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <button class="btn btn-blue btn-block m-0 w-100 text-white" type="submit">Back</button>
+                                  </div>
+                                  <div class="col-12 col-md-6 col-lg-6">
+                                    <button class="btn btn-orange btn-block m-0 w-100" type="button" (click)="showModal('SCAN_PAY')">Preview Details </button>
+                                  </div>
+                              </div>
+                               
+                              </form>
+                        </div>
+                    </div>
+                </div>
               </div>
           </div>
       </div>

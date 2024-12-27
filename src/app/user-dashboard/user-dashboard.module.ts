@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReceiveComponent } from './receive/receive.component';
 import { FormatDirective } from '../shared/directives/format.directive';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     CollateralInjectionComponent,
     WalletsComponent,
     ActiveCardComponent,
-    ReceiveComponent
+    ReceiveComponent,
+    TransactionHistoryComponent
   ],
   imports: [
     CommonModule,
