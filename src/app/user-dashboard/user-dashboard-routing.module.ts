@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ActiveCardComponent } from './active-card/active-card.component';
 import { WalletsComponent } from './wallets/wallets.component';
 import { ReceiveComponent } from './receive/receive.component';
+import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'active-card',
         component: ActiveCardComponent
+      },
+      {
+        path: 'transaction-history',
+        component: TransactionHistoryComponent
       }
     ]
   }
