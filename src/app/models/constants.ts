@@ -20,3 +20,9 @@ export const PATTERNS: any = {
     PASSWORD_ERROR_MESSAGE: "Your password must contain the following:" + "\n 1. At least 8 characters and at most 16 characters." + "\n 2. At least one digit." + "\n 3. At least one uppercase letter." + "\n 4. At least one lowercase letter." + "\n 5. At least one special character (e.g., !@#$%^&+=)." + "\n 6. No whitespace.",
     PHONE_NUMBER_REGEX: /^\+?(?:\d{1,3})?[-.\s]?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/
 }
+
+export const KycStatus: any = {
+    APPROVED: 'APPROVED',
+    REVIEW: 'REVIEWING',
+    PENDING: 'PENDING'
+}

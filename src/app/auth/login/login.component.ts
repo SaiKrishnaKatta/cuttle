@@ -3,8 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonService } from '../../services/common/common.service';
-import { Constants, PATTERNS } from '../../models/constants';
+import { Constants, KycStatus, PATTERNS } from '../../models/constants';
 import { OTPRequest } from '../../models/otpRequest.model';
+import { jwtDecode } from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ import { OTPRequest } from '../../models/otpRequest.model';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = new FormGroup({});
   smsOtp: string = '';
-  showOPTVerify = false;
+  showOTPVerify = false;
   showhidePswd = 'password';
   countries: Array<any> = [];
   countryCodes: Array<any> = [];
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getAllCountries();
+    this.countryCodes = this.commonService.getAllCountries();
     this.initForm();
   }
 
@@ -50,10 +51,21 @@ export class LoginComponent implements OnInit {
       this.authService.onLogin(this.loginForm.value).subscribe(
         (res) => {
           if (res && res.data && res.data.BearerToken) {
-            this.commonService.isUserLoggedInSub.next(true);
-            this.route.navigate(['/dashboard']);
+            const token = this.getDecodedAccessToken(res.data.BearerToken);
+            const status = token?.KycStatus;
+            if (status === KycStatus.REVIEW) {
+              this.commonService.generateKYCToken(this.loginForm.get('phone')?.value);
+            } else if (status === KycStatus.PENDING) {
+              this.applyCard(res.data.BearerToken);
+            } else if (status === KycStatus.APPROVED) {
+              this.commonService.isUserLoggedInSub.next(true);
+              this.route.navigate(['/dashboard']);
+            } else {
+              alert('Failed to login try again!!');
+              sessionStorage.clear();
+            }
           } else {
-            this.showOPTVerify = true;
+            this.showOTPVerify = true;
           }
         },
         (error) => {
@@ -61,6 +73,16 @@ export class LoginComponent implements OnInit {
         }
       );
     }
+  }
+
+  applyCard(token: string) {
+    this.authService.onApplyCard(token).subscribe((res) => {
+      console.log('Applied Card Successfully!!');
+      this.commonService.isUserLoggedInSub.next(true);
+      this.route.navigate(['/dashboard']);
+    }, (err) => {
+      console.error(err);
+    })
   }
 
   submitOTP() {
@@ -93,27 +115,11 @@ export class LoginComponent implements OnInit {
     this.showhidePswd = this.showhidePswd === 'text' ? 'password' : 'text';
   }
 
-  getAllCountries() {
-    this.authService.getCountries().subscribe(
-      (res: any) => {
-        const data = res.data.length ? res.data : [];
-        this.countries = data?.sort((a: any, b: any) => {
-          const x = a.phone_code[0].replace('+', '').replace('-', '');
-          const y = b.phone_code[0].replace('+', '').replace('-', '');
-          return x - y;
-        });
-        this.countries.forEach((country) => {
-          if (!this.countryCodes.includes(country.phone_code[0])) {
-            this.countryCodes.push(country.phone_code[0]);
-          }
-        })
-        // this.countries.filter((item, index, self) => {
-        //   return self.indexOf(item.phone_code[0]) == index;
-        // });
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+  getDecodedAccessToken(token: string): any {
+    try {
+      return jwtDecode(token);
+    } catch (Error) {
+      return null;
+    }
   }
 }

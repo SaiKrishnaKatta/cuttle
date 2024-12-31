@@ -3,6 +3,7 @@ import { CustomModalOptions } from '../../models/modal-options';
 import { CommonModule } from '@angular/common';
 import { BsModalRef, BsModalService, ModalModule } from 'ngx-bootstrap/modal';
 import { WebSDKService } from '../../auth/webSDK.sevice';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-status-modal',
@@ -18,7 +19,7 @@ export class StatusModalComponent implements OnInit {
   modalOptions: CustomModalOptions = new CustomModalOptions('');
   bsModalRef?: BsModalRef;
   constructor(
-    private modalService: BsModalService,
+    private route: Router,
     private webSdkService: WebSDKService
   ) {}
 
@@ -32,5 +33,8 @@ export class StatusModalComponent implements OnInit {
     // this.bsModalRef = this.webSdkService.getModalRef();
     // this.bsModalRef?.hide();
     this.webSdkService.modalService.hide();
+    const doc = document.querySelector('sumsub-websdk-container');
+    doc?.classList.add('d-none');
+    this.route.navigate(['auth/login']);
   }
 }

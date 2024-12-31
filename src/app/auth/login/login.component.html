@@ -31,7 +31,7 @@
     <div class="form-group d-flex justify-content-end">
       <a class="link text-white" (click)="onForgotPassword()">Forgot password?</a>
     </div>
-    <div *ngIf="showOPTVerify" class="form-group row">
+    <div *ngIf="showOTPVerify" class="form-group row">
       <div class="col-9">
         <label class="col-form-label text-white" for="otp">Enter OTP</label>
         <input class="form-control" [(ngModel)]="smsOtp" [ngModelOptions]="{standalone: true}" type="text" id="otp" placeholder="745741" (keyup)="submitOTP()">
