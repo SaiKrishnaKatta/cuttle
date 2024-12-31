@@ -17,5 +17,8 @@
     "ACTIVATE_CARD_URL": "account/v1/activate-card",
     "GET_WALLETS_URL": "account/v1/wallets",
     "GET_WALLET_BALANCE_URL": "account/v1/total-portfolio/balance",
-    "GET_COUNTRIES_URL": "account/v2/public/supported_countries"
+    "GET_COUNTRIES_URL": "account/v2/public/supported_countries",
+    "DEPOSIT_ADDRESS_URL": "account/v1/deposit-address",
+    "GENERATE_QR_IMAGE_URL": "account/v1/get-image",
+    "APPLY_CARD_URL": "account/v1/apply-card"
 }

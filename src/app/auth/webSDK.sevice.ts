@@ -63,7 +63,7 @@ export class WebSDKService {
           this.applicationId = payload.applicantId;
         }
         if (type === 'idCheck.onApplicantStatusChanged') {
-          const modalOptions = { status: payload.reviewResult.reviewAnswer };
+          const modalOptions = { status: payload?.reviewResult?.reviewAnswer };
           if (
             payload.reviewStatus === 'completed' &&
             payload.reviewResult.reviewAnswer === 'RED'

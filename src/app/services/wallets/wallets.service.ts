@@ -21,5 +21,19 @@ export class WalletsService {
   getWallets(): Observable<any> {
     const url = environment.apiBase + config.GET_WALLETS_URL;
     return this.http.post(url, {});
-  } 
+  }
+
+  getDepositAddress(req: any): Observable<any> {
+    const url = environment.apiBase + config.DEPOSIT_ADDRESS_URL;
+    return this.http.post(url, req);
+  }
+
+  generateQRCode(req: any): Observable<any> {
+    const url = environment.apiBase + config.GENERATE_QR_IMAGE_URL;
+    return this.http.post(url, req);
+  }
+
+  onDownloadQR(url: any) {
+    return this.http.get(url);
+  }
 }

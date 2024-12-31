@@ -63,4 +63,12 @@ export class AuthService {
     const url = environment.apiBase + config.GET_COUNTRIES_URL;
     return this.http.post(url, {});
   }
+
+  onApplyCard(token: string) {
+    let headers = new HttpHeaders();
+    headers = headers.append('Content-Type', 'application/json');
+    headers = headers.append('Authorization', `Bearer ${token}`);
+    const url = environment.apiBase + config.APPLY_CARD_URL;
+    return this.http.post(url, { headers });
+  }
 }

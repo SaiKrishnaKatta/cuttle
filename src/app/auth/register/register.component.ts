@@ -69,7 +69,7 @@ export class RegisterComponent implements OnInit {
         (res) => {
           console.log('OTP sent to user!!');
           this.route.navigate(['auth/register/verify-otp'], {
-            state: { phone: this.registerForm.get('phone')?.value, areaCode: this.registerForm.get('areaCode')?.value }
+            state: { phone: this.registerForm.get('phone')?.value, areaCode: this.registerForm.get('areaCode')?.value, password: this.registerForm.get('password')?.value }
           });
         },
         (error) => {

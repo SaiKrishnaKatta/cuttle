@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Constants } from '../../models/constants';
 import { OTPRequest } from '../../models/otpRequest.model';
 import { FormsModule } from '@angular/forms';
+import { CommonService } from '../../services/common/common.service';
 
 @Component({
   selector: 'app-verify-otp',
@@ -14,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class VerifyOtpComponent implements OnInit {
   smsOtp: any;
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router, private commonService: CommonService) {}
 
   ngOnInit(): void {}
 
@@ -32,24 +33,11 @@ export class VerifyOtpComponent implements OnInit {
       .verifyOtp(payload, Constants.REGISTER_SMS_OTP)
       .subscribe((res) => {
         if (res && res.status == 200) {
-          this.generateKYCToken();
+          const state: any = payload;
+          state['password'] = window.history.state.password;
+          delete state.smsOtp;
+          this.commonService.generateKYCToken(window.history.state.phone, state);
         }
       });
-  }
-
-  generateKYCToken() {
-    this.authService.generateKYCToken().subscribe(
-      (res) => {
-        if (res.data && res.data.token) {
-          this.router.navigate(['/launch-sdk'], {
-            state: {
-              sdkToken: res.data.token,
-              phone: window.history.state.phone,
-            },
-          });
-        }
-      },
-      (error) => {}
-    );
   }
 }
