@@ -34,6 +34,10 @@ export class DashboardComponent implements OnInit {
   onWallets() {
     this.route.navigate(['/dashboard/wallets']);
   }
+  onTransactionHistory(){
+    this.route.navigate(['/dashboard/transaction-history']);
+  }
+
 
   onLockCard() {
     const payload = {

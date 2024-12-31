@@ -38,6 +38,7 @@
 .btn-blue{
     background-color: #232F52;
     color:#BE7B2E;
+    border:2px solid #34445D;
 }
 .btn-blue:hover{
     background-color: #BE7B2E;
@@ -51,8 +52,11 @@
 .custom-text-secondary{
     color:#93A0B9;
 }
+.form-group .input-group{
+    border:2px solid #363F54;
+}
 .form-control{
-    border: 2px solid #363F54;
+    border: 2px solid #34445D;
     color:#fff;
 }
 .input-has-value{
@@ -80,6 +84,9 @@ color:#fff;
      .primary-button {
         cursor: pointer !important;
      }
+}
+.d-grid .btn-blue{
+    border-radius:20px;
 }
 .section-block{
     background-color: #fff;
@@ -243,4 +250,9 @@ color:#fff;
     .login-main{
         padding: 20px;
     }
+  }
+
+  .input-group-append select{
+    background-color: #232F52;
+    color: #BE7B2E;
   }

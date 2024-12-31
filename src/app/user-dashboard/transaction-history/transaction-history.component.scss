@@ -1,0 +1,47 @@
+
+.btn-dark-cuttle {
+    background-color: #232F52;
+    color: #BE7B2E;
+    border:2px solid #393C49;
+  }
+
+  .btn-dark-cuttle:hover {
+    background-color: #BE7B2E;
+    color: #fff;
+  }
+
+  
+.myCard p{
+    font-size: 12px;
+    color:#A6AAB5;
+}
+.myCard .arrow{
+    padding:12px;
+}
+.myCard .bg-primary-dark {
+    background-color:#2E335B;
+}
+
+.breadcrumb .breadcrumb-item a{
+    color:#96A1C2;
+    text-decoration: none;
+    .breadcrumb-item a:hover{
+        text-decoration: underline !important;
+    }
+}
+.nav-underline .nav-link.active{
+    border-bottom-color: #BE7B2E;
+}
+.nav-underline .nav-link:focus, .nav-underline .nav-link:hover{
+    border-bottom-color: #BE7B2E;
+}
+.section-block-grey {
+    padding: 30px 0px 90px 0px !important;
+    background-color: #19233F;
+}
+.nav-underline{
+    border-bottom:1px solid #393C49;
+}
+.card.custom-card{
+    border-radius:15px;
+}

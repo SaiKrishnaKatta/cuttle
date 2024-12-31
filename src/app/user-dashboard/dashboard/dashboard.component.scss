@@ -173,3 +173,15 @@ li:not(:last-child)::after{
   .custom-color-orange{
     color:#BE7B2E;
   }
+
+  .modal-header h1{
+    font-size: 20px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+  }
+
+.modal-body p{
+    color:#4D4D4D;
+    font-family: "Overpass", sans-serif;
+
+}
