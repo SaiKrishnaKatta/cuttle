@@ -91,8 +91,9 @@
 
                     <div class="col-md-12 mt-3">
                       <h6>Coin</h6>
-                      <select class="form-select custom-select-bg" formControlName="coin" aria-label="Default select example">
-                        <option selected>USDT</option>
+                      <select class="form-select custom-select-bg" formControlName="coin" aria-label="Default select example" (change)="onSelectCoin()">
+                        <option value="''">Select Coin</option>
+                        <!-- <option selected>USDT</option>
                         <option value="1">
                           <div class="row d-flex align-items-center">
                             <div class="col-md-3">
@@ -107,8 +108,8 @@
                             </div>
                         </div>
                         </option>
-                        <option value="TRON">TRON</option>
-                        <option value="3">Three</option>
+                        <option value="TRON">TRON</option> -->
+                        <option *ngFor="let coin of coins" value="{{coin}}">{{coin}}</option>
                       </select>
 
                      
@@ -117,8 +118,8 @@
                     <div class="col-md-12 mt-3">
                       <h6>Network</h6>
                       <select class="form-select custom-select-bg" formControlName="network" aria-label="Default select example">
-                        <option selected>Select Network</option>
-                        <option value="USDT">
+                        <option value="''">Select Network</option>
+                        <!-- <option value="USDT">
                           <div class="row d-flex align-items-center">
                             <div class="col-md-3">
                                 <img class="img-fluid w-100" src="../../../assets/img/usdt-small.png"
@@ -132,8 +133,8 @@
                             </div>
                         </div>
                         </option>
-                        <option value="TRON">TRON</option>
-                        <option value="3">Three</option>
+                        <option value="TRON">TRON</option> -->
+                        <option *ngFor="let network of netWorks" value="{{network}}">{{network}}</option>
                       </select>
 
                      
@@ -215,10 +216,7 @@
             <div *ngIf="downloadedTxt" class="row wallet-address">
               <div class="qr-code-section text-center">
                 <div class="">
-                  <!-- <img src="{{downloadedImg}}" alt=""> -->
-                   <div>
-                    <qrcode [qrdata]="downloadedTxt" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-                   </div>
+                  <img src="{{downloadedImg}}" alt="" width="300">
                 </div>
                 <p>Please ensure you are sending coins of the designated <br>
                   network to this address.</p>

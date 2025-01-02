@@ -19,7 +19,7 @@
                                 <div class="col-12 col-md-6 d-flex justify-content-end">
                                     <div class="row">
                                         <div class="col-12 col-md-12">
-                                            <div class="pt-1 primary-button button-xs d-flex align-items-center">
+                                            <a  (click)="onReceive()" class="pt-1 primary-button button-xs d-flex align-items-center">
                                                 <span class="mx-1">
                                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -27,12 +27,10 @@
                                                             d="M11 10.0002H3.41L11.71 1.71019C11.8983 1.52188 12.0041 1.26649 12.0041 1.00019C12.0041 0.733884 11.8983 0.478489 11.71 0.290185C11.5217 0.101882 11.2663 -0.00390625 11 -0.00390625C10.7337 -0.00390625 10.4783 0.101882 10.29 0.290185L2 8.59019V1.00019C2 0.734969 1.89464 0.480615 1.70711 0.293079C1.51957 0.105543 1.26522 0.00018549 1 0.00018549C0.734784 0.00018549 0.48043 0.105543 0.292893 0.293079C0.105357 0.480615 0 0.734969 0 1.00019V11.0002C0.00157999 11.1309 0.028759 11.26 0.0799999 11.3802C0.181475 11.6245 0.375651 11.8187 0.62 11.9202C0.740222 11.9714 0.869323 11.9986 1 12.0002H11C11.2652 12.0002 11.5196 11.8948 11.7071 11.7073C11.8946 11.5198 12 11.2654 12 11.0002C12 10.735 11.8946 10.4806 11.7071 10.2931C11.5196 10.1055 11.2652 10.0002 11 10.0002Z"
                                                             fill="white" />
                                                     </svg>
-
                                                 </span>
-                                                <a (click)="onReceive()" class="button-xs text-white text-decoration-none">
-
-                                                    Receive</a>
-                                            </div>
+                                                <span class="button-xs text-white text-decoration-none">
+                                                    Receive</span>
+                                                </a>
                                         </div>
                                     </div>
                                 </div>

@@ -53,9 +53,11 @@ export class LoginComponent implements OnInit {
           if (res && res.data && res.data.BearerToken) {
             const token = this.getDecodedAccessToken(res.data.BearerToken);
             const status = token?.KycStatus;
+            console.log('%%%%%%%%%', status);
             if (status === KycStatus.REVIEW) {
               this.commonService.generateKYCToken(this.loginForm.get('phone')?.value);
             } else if (status === KycStatus.PENDING) {
+              console.log('%%%%%%%%%', res.data);
               this.applyCard(res.data.BearerToken);
             } else if (status === KycStatus.APPROVED) {
               this.commonService.isUserLoggedInSub.next(true);
