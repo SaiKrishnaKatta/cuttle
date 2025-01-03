@@ -189,5 +189,22 @@ footer h3{
     .footer-menu{
         flex-direction: column;
     }
-  
+	.footer-bg{
+	background-size: 50%!important;
+	}
+ }
+ @media (min-width: 768px) and (max-width: 991px) {
+	.footer-bg{
+		background-size: 18%!important;
+		}
+ }
+
+ .footer-bg{
+	position: relative;
+	background-image: url('../../../assets/img/footer-bg.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain;
+	transform: translate(0%, 0%); 
+	// height: 200px;
  }
