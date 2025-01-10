@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "node ./node_modules/@angular/cli/bin/ng build --configuration=production --output-path=dist/browser --base-href /cuttle-app/",
+    "build": "node ./node_modules/@angular/cli/bin/ng build --configuration=production --output-path=dist/browser --base-href /",
+    "stage": "node ./node_modules/@angular/cli/bin/ng build --configuration=stage --output-path=dist/browser --base-href /",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
