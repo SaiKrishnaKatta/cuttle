@@ -154,10 +154,84 @@
 	text-align: center;
 	margin: 15px 0px;
 }
+
+@media (min-width: 320px) and (max-width: 374.98px) { 
+    .why-cuttle img{
+        transform: translate(5%, -17%) !important;
+    }
+ }
+ @media (min-width: 375px) and (max-width: 424.98px) { 
+    .why-cuttle img{
+        transform: translate(5%, -15%) !important;
+    }
+ }
+ @media (min-width: 425px) and (max-width: 767.98px) { 
+    .why-cuttle img{
+        transform: translate(5%, -14%) !important;
+    }
+ }
+ 
+ @media (min-width: 768px) and (max-width: 991.98px) { 
+    .video-gif .v-right{
+        transform: translate(9%, 0%) !important;
+    }
+    .video-gif .v-left{
+        transform: translate(-10%, 0%) !important;
+    }
+    .why-cuttle img{
+        transform: translate(5%, -19%) !important;
+    }
+ }
+
+ @media (min-width: 992px) and (max-width: 1199.98px) { 
+    .video-gif .v-right{
+        transform: translate(8%, 0%) !important;
+    }
+    .video-gif .v-left{
+        transform: translate(-9%, 0%) !important;
+    }
+    .why-cuttle img{
+        transform: translate(5%, -15%) !important;
+    }
+ }
+
+ @media (min-width: 1400px) and (max-width: 2559.98px) { 
+    .video-gif .v-right{
+        transform: translate(26%, 0%) !important;
+    }
+    .video-gif .v-left{
+        transform: translate(-11%, 0%) !important;
+    }
+    .why-cuttle img{
+        transform: translate(5%, -12%) !important;
+    }
+ }
 @media (max-width: 767px) {
 	.counter-box{
 		margin: 30px;
 	}	
+    .video-gif .v-right{
+        transform: translate(0%, 0%) !important;
+    }
+    .video-gif .v-left{
+        transform: translate(0%, 0%) !important;
+    }
+    .count-client .bg-orange{
+        margin:10px;
+    }
+    .section-block-parallax .count-client{
+        transform:none !important;
+    }
+    .cutom-color-border::before{
+        position: inherit !important;
+    }
+    .cutom-color-border::after{
+        position: inherit !important;
+    }
+    
+    .mob-pad-bottom-40{
+        padding-bottom:40px;
+    }
 }
 
 .counter-box h4{
@@ -330,8 +404,39 @@
     transform: translate(0%, 30%);
 }
 .why-cuttle img{
-    transform: translate(5%, -13%) !important;
+    transform: translate(5%, -13%);
+   
 }
+
+// .carousel-inner{
+//     display: flex;
+//     align-items: center !important;
+// }
+
+// .carousel-slide-section img{
+//     width: 50% !important;
+//     height: 100% !important;
+// }
+
+
+
+::ng-deep .carousel-inner{
+    display: flex;
+        align-items: center !important;
+    }
+    .carousel-slide-section img{
+        width: 100% !important;
+    }
+    .item {
+        justify-content: center;
+        display: flex;
+    }
+    ::ng-deep .carousel-control-next-icon{
+        display:none;
+    }
+    ::ng-deep .carousel-control-prev-icon{
+        display:none;
+    }
 
 
 

@@ -34,6 +34,6 @@ export class AboutUsComponent {
     { image: 'assets/img/client_logos/pacific.png' },
     { image: 'assets/img/client_logos/ncr.png' },
     { image: 'assets/img/client_logos/lattice.png' },
-    { image: 'assets/img/client_logos/ted.png' },
+    { image: 'assets/img/client_logos/ted.png' }
   ];
 }

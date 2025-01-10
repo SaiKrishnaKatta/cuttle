@@ -124,8 +124,8 @@
 			</div> -->
 			<div class="col-md-8 cutom-color-border count-client">
                 <div class="row">
-                    <div class="col-md-9 col-sm-7 col-xs-12 bg-orange">
-                        <div class="row">
+                    <div class="col-md-9 col-sm-7 col-xs-12">
+                        <div class="row bg-orange">
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <div class="counter-box white-color">
                                     <h4 class="countup">12</h4>
@@ -280,12 +280,12 @@
 </div>
 <!-- Number Boxes END -->
 
-<div class="section-block why-cuttle bg-orange">
+<div class="section-block why-cuttle bg-orange mob-pad-bottom-40">
     <div class="container">
         <!-- Info Section START -->
 
         <div class="row">
-            <div class="col-md-5 col-sm-6 col-xs-12">
+            <div class="col-md-5 col-sm-6 col-xs-12 order-last order-md-first">
                 <div class="section-heading mt-30">
                     <!-- <span>Welcome To Our Agency</span> -->
                     <h4>Manage your services from your mobile</h4>
@@ -296,15 +296,15 @@
                 <div class="section-heading row">
                     <!-- <span>Welcome To Our Agency</span> -->
                     <h6 class="text-white fw-bold">Get the App</h6>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-6">
                         <img src="../../assets/img/google_play.png" alt="">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-6">
                         <img src="../../assets/img/apple_play_store.png" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-md-7 col-sm-6 col-xs-12">
+            <div class="col-md-7 col-sm-6 col-xs-12 order-first order-md-last">
                 <img src="assets/img/mobile_screen.png" alt="image" class="w-100">
             </div>
         </div>
@@ -313,25 +313,21 @@
 
     </div>
 </div>
-<div class="section-block why-cuttle">
+<div class="section-block">
     <div class="container">
         <div class="section-heading text-center">
             <h6 class="text-white opacity-80">Trusted by teams at over 1,000 of the world's leading organizations</h6>
         </div>
-        <carousel [isAnimated]="true" [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset"
+        <carousel [isAnimated]="true"  [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset"
             [showIndicators]="false">
             <slide *ngFor="let slide of slides; let index=index">
-                <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
-                <!-- <div class="carousel-caption">
+                <img [src]="slide.image" alt="image slide" class="mx-auto img-responsive" style="display: block; width: 100%;">
+                 <!-- <div class="carousel-caption">
               <h4>Slide {{index}}</h4>
-            </div> -->
+            </div>  -->
             </slide>
         </carousel>
     </div>
 </div>
-
-
-
-
 
 <app-footer></app-footer>
