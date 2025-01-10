@@ -21,7 +21,7 @@ export class WalletsComponent implements OnInit {
   ) {}
 
   onReceive() {
-    this.route.navigate(['/dashboard/receive'])
+    this.route.navigate(['/dashboard/receive'], { state: {wallets: this.wallets}});
   }
 
   ngOnInit(): void {

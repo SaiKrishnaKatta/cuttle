@@ -66,14 +66,14 @@ export class ReqResInterceptor implements HttpInterceptor {
       brand: 'OnePlus',
       model: 'DN2101',
     };
-    if (!window.location.href.includes('auth')) {
+    if (!req.url.includes('/get-image') && (!window.location.href.includes('auth') || req.url.includes('/apply-card'))) {
       const token = sessionStorage.getItem('token') || '';
       req = req.clone({
         headers: req.headers.set('Content-Type', 'application/json').set(
         'Authorization', `Bearer ${token}`),
         body: { ...req.body, metadata: this.metaData },
       });
-    } else if (!req.url.includes('get-cards-list')) {
+    } else if (!req.url.includes('/get-cards-list') && !req.url.includes('/get-image')) {
       req = req.clone({
         headers: req.headers.set('Content-Type', 'application/json'),
         body: { ...req.body, metadata: this.metaData },

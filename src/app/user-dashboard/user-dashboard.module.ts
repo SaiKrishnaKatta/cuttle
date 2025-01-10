@@ -12,7 +12,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReceiveComponent } from './receive/receive.component';
 import { FormatDirective } from '../shared/directives/format.directive';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { QRCodeModule } from 'angularx-qrcode';
 import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { TransactionHistoryComponent } from './transaction-history/transaction-h
     ReactiveFormsModule,
     FormsModule,
     NgSelectModule,
-    QRCodeModule,
     ModalModule.forRoot(),
     FormatDirective
   ],

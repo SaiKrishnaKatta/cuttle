@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WalletsService } from '../../services/wallets/wallets.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { saveAs } from 'file-saver';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-receive',
@@ -12,6 +13,9 @@ export class ReceiveComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   downloadedTxt: any;
   downloadedImg: any;
+  coins: any = [];
+  netWorks: any = [];
+  wallets: any = [];
   options = [
     {
       value: 1,
@@ -38,10 +42,17 @@ export class ReceiveComponent implements OnInit {
 
   constructor(
     private walletsService: WalletsService,
-    private _fb: FormBuilder
+    private _fb: FormBuilder,
+    private route: Router
   ) {}
 
   ngOnInit(): void {
+    if (window.history.state.wallets) {
+      this.wallets = window.history.state.wallets;
+      this.coins = this.wallets.map((w: any) => w.coinSymbol);
+    } else {
+      this.route.navigate(['/dashboard/wallets']);
+    }
     this.initForm();
   }
 
@@ -77,8 +88,7 @@ export class ReceiveComponent implements OnInit {
     };
     this.walletsService.generateQRCode(payload).subscribe(
       (res) => {
-        this.downloadedImg = res;
-        console.log(res);
+        this.downloadedImg = URL.createObjectURL(res);
       },
       (err) => {
         console.error(err);
@@ -88,7 +98,16 @@ export class ReceiveComponent implements OnInit {
   }
 
   downloadQR() {
-    var blob = new Blob([this.downloadedImg], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, "depositQR.jpg");
+    saveAs(this.downloadedImg, 'depositQR.jpg');
+  }
+
+  onSelectCoin() {
+    const selectedCoin = this.form.get('coin')?.value;
+    this.netWorks = [];
+    this.wallets.forEach((coin: any) => {
+      if (coin.coinSymbol === selectedCoin) {
+        this.netWorks = coin.network;
+      }
+    });
   }
 }
