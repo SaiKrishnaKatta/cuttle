@@ -18,6 +18,24 @@
     margin:0px;
     padding:0px;
   }
+  @media (max-width: 767px) {
+    .feature-box-long{
+      margin: 15px 30px;
+    }
+  }
+  @media (max-width: 767px) {
+    .business-partners img{
+        width: 50% !important;
+    }
+    }
+    
+    // @media (max-width: 767px) {
+    //     slide img{
+    //         width: 50% !important;
+    //     }
+    // }
+
+  
   @media(max-width: 768px){
     .divider-image{
         display: none;

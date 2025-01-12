@@ -28,6 +28,10 @@ footer h3{
     height: 18px;
 }
 
+.footer-list .nav-link{
+	display: inline;
+}
+
 
 .footer-social-icons ul li{
 	display: inline-block;
@@ -192,7 +196,22 @@ footer h3{
 	.footer-bg{
 	background-size: 50%!important;
 	}
+	.footer-list{
+		margin-top:10px;
+	}
+	.footer-list li{
+		padding: 3px 0px;
+	}
+	.footer-logo img{
+		margin-bottom:8px;
+	}
+	
  }
+ @media (max-width: 991px) {
+	footer h3{
+		margin-top: 30px;
+	}	
+}
  @media (min-width: 768px) and (max-width: 991px) {
 	.footer-bg{
 		background-size: 18%!important;

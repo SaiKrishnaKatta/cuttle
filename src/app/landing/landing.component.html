@@ -12,7 +12,7 @@
     </div>
 </div>
 <!-- Feature Boxes Section START -->
-<div class="section-block why-cuttle">
+<div class="section-block why-cuttle mob-pad-bottom-40">
     <div class="container">
         <app-feature></app-feature>
     </div>
@@ -187,8 +187,7 @@
         <div class="section-heading text-center">
             <h4 class="text-black opacity-80">Our Business Partner</h4>
         </div>
-        <carousel [isAnimated]="true" [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset"
-            [showIndicators]="false">
+        <carousel class="business-partners" [isAnimated]="true" [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset" [showIndicators]="false">
             <slide *ngFor="let slide of slides; let index=index">
                 <img [src]="slide.image" alt="image slide" class="mx-auto img-responsive" style="display: block; width: 100%;">
                 <!-- <div class="carousel-caption">
